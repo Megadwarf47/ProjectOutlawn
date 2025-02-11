@@ -80,7 +80,6 @@ void Patch_FUN_1400076e0()
         memcpy(addrParam3, patchParam3, sizeof(patchParam3));
         VirtualProtect(addrParam3, sizeof(patchParam3), oldProtect, &oldProtect);
     }
-
     unsigned char patchParam2[4] = { 0x41, 0xB6, 0x01, 0x90 }; // MOV r14b,1; NOP
     LPVOID addrParam2 = (LPVOID)0x14000771A;
     if (VirtualProtect(addrParam2, sizeof(patchParam2), PAGE_EXECUTE_READWRITE, &oldProtect))
@@ -88,6 +87,28 @@ void Patch_FUN_1400076e0()
         memcpy(addrParam2, patchParam2, sizeof(patchParam2));
         VirtualProtect(addrParam2, sizeof(patchParam2), oldProtect, &oldProtect);
     }
+
+    //Fix Start Profiling button.
+    {
+        unsigned char patch[2] = { 0x90, 0x90 };
+        LPVOID address = (LPVOID)0x140007c1f;
+        if (VirtualProtect(address, sizeof(patch), PAGE_EXECUTE_READWRITE, &oldProtect))
+        {
+            memcpy(address, patch, sizeof(patch));
+            VirtualProtect(address, sizeof(patch), oldProtect, &oldProtect);
+        }
+    }
+
+    {
+        unsigned char patch[2] = { 0x90, 0x90 };
+        LPVOID address = (LPVOID)0x140007d3a;
+        if (VirtualProtect(address, sizeof(patch), PAGE_EXECUTE_READWRITE, &oldProtect))
+        {
+            memcpy(address, patch, sizeof(patch));
+            VirtualProtect(address, sizeof(patch), oldProtect, &oldProtect);
+        }
+    }
+
 }
 
 //Change the call FUN_1401c28b0(0) to FUN_1401c28b0(3).
@@ -181,7 +202,7 @@ void Patch_FUN_140549020()
     uintptr_t addr = (uintptr_t)patchAddr;
     int32_t relOffset = (int32_t)(target - (addr + patchLen));
     unsigned char patch[5];
-    patch[0] = 0xE8; 
+    patch[0] = 0xE8;
     memcpy(patch + 1, &relOffset, 4);
     if (VirtualProtect(patchAddr, patchLen, PAGE_EXECUTE_READWRITE, &oldProtect))
     {
@@ -201,13 +222,13 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         DisableThreadLibraryCalls(hModule);
 
         Patch_FUN_1406fa060(); //Changes the title bar to the server one, Makes the game crash when its loading.
-		Patch_FUN_1400076e0(); //Makes the game show the dedicated server UI when the game loads. Quickly blocked by game rendering. Changes the title bar to PVZ Garden Warfare Server. Blocks mouse input in the game UI buttons.
-        Patch_FUN_1409dca10(); //????
-        Patch_FUN_1406eea10(); //????
-        Patch_FUN_1403c9c00(); //????
+        Patch_FUN_1400076e0(); //Makes the game show the dedicated server UI when the game loads. Quickly blocked by game rendering. Changes the title bar to PVZ Garden Warfare Server. Blocks mouse input in the game UI buttons.
         Patch_FUN_140549020(); //Makes the game load forever on the title screen. Fixes a crash.
 
-
+        //Other
+        //Patch_FUN_1409dca10();//????
+        //Patch_FUN_1406eea10();//????
+        //Patch_FUN_1403c9c00();//????
 
         HMODULE hReal = LoadDInput8();
         if (hReal)
@@ -217,7 +238,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
                 );
         }
 
-        
+
         break;
     }
     case DLL_PROCESS_DETACH:
