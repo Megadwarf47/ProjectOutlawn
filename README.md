@@ -6,7 +6,7 @@ Private servers for plants vs zombies garden warfare.
 
 # Credits 📜
 
-### CRZYECKS (Did %90 of the work)
+### CRZYECKS (Did 90% of the work)
 
 ### Twig6943 (Gathered the crew + resources)
 
