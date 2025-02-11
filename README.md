@@ -18,8 +18,8 @@ Private servers for plants vs zombies garden warfare.
 
 # Shoutouts
 
-Ardishko
+Ardishko 😎
 
-ZapZeus
+ZapZeus 🐻
 
-misyltoad
+misyltoad 🐸
