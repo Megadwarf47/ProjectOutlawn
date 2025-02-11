@@ -8,6 +8,10 @@ Private servers for plants vs zombies garden warfare.
 
 ### CRZYECKS (Did most of the work)
 
-###
+### Twig6943 (Gathered the crew + resources)
 
-###
+### daegalus (placeholder) 
+
+### Windows81 (placeholder)
+
+### Rockpikmin888 (placeholder)
