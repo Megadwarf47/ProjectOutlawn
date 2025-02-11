@@ -15,3 +15,9 @@ Private servers for plants vs zombies garden warfare.
 ### Windows81 (placeholder)
 
 ### Rockpikmin888 (placeholder)
+
+# Shoutouts
+
+Ardishko
+
+ZapZeus
