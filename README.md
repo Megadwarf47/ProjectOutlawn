@@ -2,6 +2,8 @@
 
 Private servers for plants vs zombies garden warfare.
 
+# [Todo 📋](https://github.com/Twig6943/PVZGWPrivateServers/blob/main/todo.md)
+
 # [Documentation 📄](https://github.com/Twig6943/PVZGWPrivateServers/tree/main/docs)
 
 # Credits 📜
