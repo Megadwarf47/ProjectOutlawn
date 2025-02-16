@@ -111,81 +111,10 @@ void Patch_FUN_1400076e0()
 
 }
 
-//Change the call FUN_1401c28b0(0) to FUN_1401c28b0(3).
-void Patch_FUN_1409dca10()
-{
-    DWORD oldProtect = 0;
-    unsigned char* patchAddr = (unsigned char*)0x1409dcdaf;
-    const SIZE_T patchLen = 7;
-    unsigned char originalBytes[patchLen];
-    memcpy(originalBytes, patchAddr, patchLen);
-    if (originalBytes[0] != 0x33 || originalBytes[1] != 0xC9 || originalBytes[2] != 0xE8)
-        return;
-    int32_t relOffset = *(int32_t*)(patchAddr + 3);
-    uintptr_t originalCallReturn = (uintptr_t)(patchAddr + 7);
-    uintptr_t callTarget = originalCallReturn + relOffset;
-    SIZE_T trampolineSize = 15;
-    void* trampoline = VirtualAlloc(NULL, trampolineSize, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
-    if (!trampoline)
-        return;
-    unsigned char tramp[15] = { 0 };
-    SIZE_T offset = 0;
-    tramp[offset++] = 0xB9;
-    tramp[offset++] = 0x03;
-    tramp[offset++] = 0x00;
-    tramp[offset++] = 0x00;
-    tramp[offset++] = 0x00;
-    tramp[offset++] = 0xE8;
-    int32_t callRel = (int32_t)(callTarget - ((uintptr_t)trampoline + offset + 5));
-    memcpy(tramp + offset, &callRel, 4);
-    offset += 4;
-    tramp[offset++] = 0xE9;
-    int32_t jmpRel = (int32_t)(((uintptr_t)patchAddr + patchLen) - ((uintptr_t)trampoline + offset + 5));
-    memcpy(tramp + offset, &jmpRel, 4);
-    offset += 4;
-    memcpy(trampoline, tramp, trampolineSize);
-    if (VirtualProtect(patchAddr, patchLen, PAGE_EXECUTE_READWRITE, &oldProtect))
-    {
-        int32_t jmpOffset = (int32_t)(((uintptr_t)trampoline) - ((uintptr_t)patchAddr + 5));
-        patchAddr[0] = 0xE9;
-        memcpy(patchAddr + 1, &jmpOffset, 4);
-        for (SIZE_T i = 5; i < patchLen; i++)
-            patchAddr[i] = 0x90;
-        VirtualProtect(patchAddr, patchLen, oldProtect, &oldProtect);
-    }
-}
 
-// Make if (1 < iVar6 - 3U) { never execute.  forces DAT_141c29068 to 0.
-void Patch_FUN_1406eea10()
-{
-    DWORD oldProtect = 0;
-    unsigned char patchJump[6] = { 0xE9, 0xF1, 0x00, 0x00, 0x00, 0x90 };
-    LPVOID addrJump = (LPVOID)0x1406eecfd;
-    if (VirtualProtect(addrJump, sizeof(patchJump), PAGE_EXECUTE_READWRITE, &oldProtect))
-    {
-        memcpy(addrJump, patchJump, sizeof(patchJump));
-        VirtualProtect(addrJump, sizeof(patchJump), oldProtect, &oldProtect);
-    }
-    LPVOID addrDAT = (LPVOID)0x141c29068;
-    if (VirtualProtect(addrDAT, sizeof(uint64_t), PAGE_READWRITE, &oldProtect))
-    {
-        memset(addrDAT, 0, sizeof(uint64_t));
-        VirtualProtect(addrDAT, sizeof(uint64_t), oldProtect, &oldProtect);
-    }
-}
 
-//Make FUN_1403c9c00 do nothing.
-void Patch_FUN_1403c9c00()
-{
-    DWORD oldProtect = 0;
-    LPVOID addrFUN = (LPVOID)0x1403c9c00;
-    unsigned char patch[8] = { 0xC3, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 };
-    if (VirtualProtect(addrFUN, sizeof(patch), PAGE_EXECUTE_READWRITE, &oldProtect))
-    {
-        memcpy(addrFUN, patch, sizeof(patch));
-        VirtualProtect(addrFUN, sizeof(patch), oldProtect, &oldProtect);
-    }
-}
+
+
 
 
 extern "C" void __stdcall FUN_140549020_Nop(long long param_1)
@@ -223,12 +152,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 
         Patch_FUN_1406fa060(); //Changes the title bar to the server one, Makes the game crash when its loading.
         Patch_FUN_1400076e0(); //Makes the game show the dedicated server UI when the game loads. Quickly blocked by game rendering. Changes the title bar to PVZ Garden Warfare Server. Blocks mouse input in the game UI buttons.
-        Patch_FUN_140549020(); //Makes the game load forever on the title screen. Fixes a crash.
+        Patch_FUN_140549020(); //Makes the game load forever on the title screen.
 
-        //Other
-        //Patch_FUN_1409dca10();//????
-        //Patch_FUN_1406eea10();//????
-        //Patch_FUN_1403c9c00();//????
 
         HMODULE hReal = LoadDInput8();
         if (hReal)
