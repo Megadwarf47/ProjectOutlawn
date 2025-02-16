@@ -10,22 +10,14 @@ Private servers for plants vs zombies garden warfare.
 
 # Credits 📜
 
-### CRZYECKS (Did 90% of the work)
+### Silkker (The main dev)
 
 ### Twig6943 (Gathered the crew + resources)
-
-### daegalus (placeholder) 
-
-### Windows81 (placeholder)
-
-### Rockpikmin888 (placeholder)
 
 # Shoutouts
 
 Ardishko 😎
 
 Jediclank134 🇬🇧
-
-ZapZeus 🐻
 
 misyltoad 🐸
