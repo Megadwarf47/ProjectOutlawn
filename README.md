@@ -10,7 +10,7 @@ Private servers for plants vs zombies garden warfare.
 
 # Credits 📜
 
-### Silkker (The lead dev for the project so pretty much made everything here)
+### Placeholder (Lead dev)
 
 ### Twig6943 (Gathered the crew + resources)
 
