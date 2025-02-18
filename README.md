@@ -1,8 +1,8 @@
 # ProjectOutlawn
 
-Private servers for plants vs zombies garden warfare.
+<img src="https://raw.githubusercontent.com/Twig6943/ProjectOutlawn/refs/heads/main/Outlawn.jpg" width="800"/>
 
-<img src="https://raw.githubusercontent.com/Twig6943/ProjectOutlawn/refs/heads/main/Outlawn.jpg" width="400"/>
+### Private servers for plants vs zombies garden warfare.
 
 # [Todo 📋](https://github.com/Twig6943/PVZGWPrivateServers/blob/main/todo.md)
 
