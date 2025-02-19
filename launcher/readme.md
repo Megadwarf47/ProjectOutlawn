@@ -1,7 +1,11 @@
 # To-do
 
-[ ] Use QT
+[❌] Use QT
 
-[ ] GW1 support
+[❌] Hosting
 
-[ ]
+[❌] Joining
+
+[❌] Modpack support
+
+[❌] Game directory detection
