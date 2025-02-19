@@ -1,6 +1,6 @@
 # To-do
 
-[❌] Use QT
+[✅] Decide UI toolkit (WPF) 
 
 [❌] Hosting
 
@@ -8,4 +8,4 @@
 
 [❌] Modpack support
 
-[❌] Game directory detection
+[❌] Game directory detection button
