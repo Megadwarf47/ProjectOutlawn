@@ -12,4 +12,4 @@
 
 [❌] Modpack support
 
-[❌] Game directory detection button
+[❌] Buttons for both manual/auto game install detection
