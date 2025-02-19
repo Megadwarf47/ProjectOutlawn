@@ -4,7 +4,7 @@
 
 # Not done
 
-[❌] Abolute first alpha release (we're trying to get there)
+[❌] Absolute first alpha release (we're trying to get there)
 
 [❌] Launcher initial release
 
