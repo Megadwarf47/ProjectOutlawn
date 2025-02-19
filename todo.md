@@ -1,8 +1,4 @@
-# Done 
-
-[]
-
-# Not done
+# To-do
 
 [❌] Absolute first alpha release (we're trying to get there)
 
