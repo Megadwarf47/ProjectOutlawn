@@ -1,4 +1,4 @@
-# ProjectOutlawn
+# Project Outlawn ✊
 
 <img src="https://raw.githubusercontent.com/Twig6943/ProjectOutlawn/refs/heads/main/Outlawn.jpg" width="800"/>
 
