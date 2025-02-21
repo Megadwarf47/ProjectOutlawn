@@ -21,6 +21,8 @@ if "%choice%"=="3" exit
 echo Invalid option. Please try again.
 goto menu
 
+:: Some sort of cli-dll injector might be required to make the launch args actually pass through the game.
+
 :host
 set /p servername=Enter Servername:
 set /p modpack=Enter Modpack (leave blank for none):
