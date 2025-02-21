@@ -34,7 +34,7 @@ jobs:
         cp -r ProjectOutlawn/launcher/RushedQTLauncher/build/artifacts/* artifacts/
 
     - name: Upload Windows Build as Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2  # Updated to v2
       with:
         name: windows-build
         path: artifacts
