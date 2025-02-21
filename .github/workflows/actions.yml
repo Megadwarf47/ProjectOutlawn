@@ -1,75 +1,32 @@
-name: Build Qt C++ Application for Windows (Release Mode)
+name: AppImage CI
 
+# Controls when the action will run.
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-  workflow_dispatch: {}
+ workflow_dispatch:
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
-    name: "Build Windows Executable in Release Mode"
+    name: "build"
     runs-on: ubuntu-latest
-
     steps:
-      # Automatically clone the repository
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
 
-      # Install MinGW (for Windows cross-compilation)
-      - name: Install MinGW (cross-compilation)
+      - name: Setup enviroment
         run: |
-          sudo apt update
-          sudo apt install -y mingw-w64
+        git clone https://github.com/Twig6943/ProjectOutlawn.git
+        cd ProjectOutlawn
 
-      # Install Git for Windows (via MinGW)
-      - name: Install Git for Windows (via MinGW)
+      # Runs a set of commands using the runners shell
+      - name: Build Program
         run: |
-          sudo apt update
-          sudo apt install -y git
-          wget https://github.com/git-for-windows/git/releases/download/v2.40.0.windows.1/MinGit-2.40.0-64-bit.zip
-          unzip MinGit-2.40.0-64-bit.zip
-          sudo mv mingw64 /usr/local/git
-          sudo ln -s /usr/local/git/bin/git /usr/bin/git
 
-      # Install Qt 6 (Manually via apt for Ubuntu)
-      - name: Install Qt 6
-        run: |
-          sudo apt update
-          sudo apt install -y qt6-qmake qt6-base-dev qt6-tools-dev
 
-      # Install additional build dependencies
-      - name: Install additional build dependencies
-        run: |
-          sudo apt update
-          sudo apt install -y build-essential libxcb-xtest0-dev libx11-xcb-dev
-
-      # Configure Qt for Windows build (Release Mode)
-      - name: Configure Qt for Windows build (Release Mode)
-        run: |
-          mkdir build
-          cd build
-          # Configure Qt for MinGW in release mode
-          qmake ../ -config release
-
-      # Build the application for Windows (Release Mode)
-      - name: Build the application for Windows (Release Mode)
-        run: |
-          cd build
-          make -j$(nproc)  # Build using all available CPU cores
-
-      # Upload Windows executable artifact
-      - name: Upload Windows executable artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4.4.3
         with:
-          name: compiled-windows-executable
-          path: build/your-executable-name.exe  # Replace with your actual executable name
-
-      # Clean up
-      - name: Clean up
-        run: |
-          sudo apt-get clean
+          name: Placeholder
+          path: "dist"
