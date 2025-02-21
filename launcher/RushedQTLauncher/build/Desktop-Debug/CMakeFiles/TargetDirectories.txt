@@ -1,9 +1,0 @@
-/home/twig/gwshit/GWLauncher/build/Desktop-Debug/CMakeFiles/GWLauncher.dir
-/home/twig/gwshit/GWLauncher/build/Desktop-Debug/CMakeFiles/edit_cache.dir
-/home/twig/gwshit/GWLauncher/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
-/home/twig/gwshit/GWLauncher/build/Desktop-Debug/CMakeFiles/list_install_components.dir
-/home/twig/gwshit/GWLauncher/build/Desktop-Debug/CMakeFiles/install.dir
-/home/twig/gwshit/GWLauncher/build/Desktop-Debug/CMakeFiles/install/local.dir
-/home/twig/gwshit/GWLauncher/build/Desktop-Debug/CMakeFiles/install/strip.dir
-/home/twig/gwshit/GWLauncher/build/Desktop-Debug/CMakeFiles/GWLauncher_autogen_timestamp_deps.dir
-/home/twig/gwshit/GWLauncher/build/Desktop-Debug/CMakeFiles/GWLauncher_autogen.dir
