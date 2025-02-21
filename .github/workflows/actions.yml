@@ -1,31 +1,40 @@
-name: BuildCI
+name: Build Qt Project for Windows
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # This enables manual trigger through the GitHub UI button
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
-    name: "build"
     runs-on: ubuntu-latest
+
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Setup enviroment
-        run: |
-        git clone https://github.com/Twig6943/ProjectOutlawn.git
-        cd ProjectOutlawn
+    - name: Set up MinGW
+      run: |
+        sudo apt update
+        sudo apt install -y mingw-w64
 
-      # Runs a set of commands using the runners shell
-      - name: Build Program
-        run: |
+    - name: Set up Qt for Windows
+      run: |
+        sudo apt install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
 
+    - name: Configure and Build with CMake (Release Mode)
+      run: |
+        cd ProjectOutlawn/launcher/RushedQTLauncher/
+        mkdir build
+        cd build
+        cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
+        cmake --build . --config Release
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4.4.3
-        with:
-          name: Placeholder
-          path: "dist"
+    - name: Archive Windows Build
+      run: |
+        mkdir -p artifacts
+        cp -r ProjectOutlawn/launcher/RushedQTLauncher/build/artifacts/* artifacts/
+
+    - name: Upload Windows Build as Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: windows-build
+        path: artifacts
