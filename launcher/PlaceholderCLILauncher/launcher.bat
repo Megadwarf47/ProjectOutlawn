@@ -28,9 +28,11 @@ goto menu
 
 :host
 set /p servername=Enter Servername:
+set /p port=Enter port:
+set /p maxplayers=Enter maxplayers:
 set /p modpack=Enter Modpack (leave blank for none):
 echo Starting game as Host with username %servername% and modpack %modpack%...
-%GAME_EXECUTABLE% --host --servername %servername% --modpack %modpack%
+%GAME_EXECUTABLE% --host --servername --port %port% %servername% --maxplayers %maxplayers% --modpack %modpack%
 exit
 
 :join
