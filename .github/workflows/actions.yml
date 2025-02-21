@@ -1,0 +1,14 @@
+name: Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-manual-job:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup the environment
+        run: echo "placeholder"
