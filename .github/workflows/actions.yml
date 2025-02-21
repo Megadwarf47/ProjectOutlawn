@@ -1,14 +1,66 @@
-name: Build
+name: Build Qt C++ Application for Windows (Release Mode)
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  run-manual-job:
-    runs-on: windows-latest
+  build:
+    runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Setup the environment
-        run: echo "placeholder"
+    - name: Set up MinGW for Windows cross-compilation
+      uses: mxsddn/mingw-action@v1.0
+      with:
+        mingw-version: 'x86_64-w64-mingw32'  # Change this to 'i686-w64-mingw32' for 32-bit
+    
+    - name: Install Git for Windows
+      run: |
+        sudo apt update
+        sudo apt install -y wget
+        wget https://github.com/git-for-windows/git/releases/download/v2.41.0.windows.1/MinGit-2.41.0.1-64-bit.zip -O /tmp/git-for-windows.zip
+        unzip /tmp/git-for-windows.zip -d /tmp/
+        sudo mv /tmp/mingit-*/cmd/git.exe /usr/bin/git
+        git --version
+
+    - name: Install Qt 6
+      uses: wzieba/qt-action@v2
+      with:
+        qt-version: '6.4.1'  # Adjust to the Qt version you need
+        configure-options: '-opensource -confirm-license -platform linux-g++-64'
+
+    - name: Install additional build dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y build-essential libxcb-xtest0-dev libx11-xcb-dev
+
+    - name: Configure Qt for Windows build (Release mode)
+      run: |
+        mkdir build
+        cd build
+        # Configure Qt for MinGW in release mode
+        qmake ../
+        # Set the build mode to release
+        echo "CONFIG+=release" >> ../your_project.pro  # Add this line if it's not already set
+
+    - name: Build the application for Windows (Release Mode)
+      run: |
+        cd build
+        make -j$(nproc)  # Build using all available CPU cores
+
+    - name: Upload Windows executable artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: compiled-windows-executable
+        path: build/your-executable-name.exe  # Replace with your actual executable name
+
+    - name: Clean up
+      run: |
+        sudo apt-get clean
