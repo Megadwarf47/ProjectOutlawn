@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 :: Set the game executable
-set GAME_EXECUTABLE=game.exe
+set GAME_EXECUTABLE=PVZ.Main_Win64_Retail.exe
 
 :menu
 echo ========================
