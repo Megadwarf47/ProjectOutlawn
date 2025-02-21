@@ -1,6 +1,6 @@
 # Project Outlawn ✊
 
-<img src="https://raw.githubusercontent.com/Twig6943/ProjectOutlawn/refs/heads/main/Outlawn.jpg" width="800"/>
+<img src="https://github.com/Twig6943/ProjectOutlawn/blob/main/Outlawn.jpg" width="800"/>
 
 ### Private servers for plants vs zombies garden warfare.
 
