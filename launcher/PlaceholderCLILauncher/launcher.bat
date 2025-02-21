@@ -22,7 +22,9 @@ echo Invalid option. Please try again.
 goto menu
 
 :: Some sort of cli-dll injector might be required to make the launch args actually pass through the game.
-:: curl https://github.com/nefarius/Injector/releases/download/v1.4.0/Injector_x86_amd64_arm64.zip
+
+:: DLL Injector stuff (Was going to make it dl with curl but turns out its licensed under MIT so it all good if we include it
+:: 
 
 :host
 set /p servername=Enter Servername:
