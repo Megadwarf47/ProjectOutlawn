@@ -15,16 +15,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Automatically clones the repository
+      # Automatically clone the repository
       - uses: actions/checkout@v4
         with:
-          persist-credentials: false  # Optional, if you want to avoid GitHub credentials usage for this repo
+          persist-credentials: false
 
-      # Set up MinGW for Windows cross-compilation
-      - name: Set up MinGW for Windows cross-compilation
-        uses: mxsddn/mingw-action@v1.0
-        with:
-          mingw-version: 'x86_64-w64-mingw32'  # You can adjust this to 'i686-w64-mingw32' for 32-bit
+      # Install MinGW (for Windows cross-compilation)
+      - name: Install MinGW (cross-compilation)
+        run: |
+          sudo apt update
+          sudo apt install -y mingw-w64
 
       # Install Git for Windows (via MinGW)
       - name: Install Git for Windows (via MinGW)
@@ -36,12 +36,11 @@ jobs:
           sudo mv mingw64 /usr/local/git
           sudo ln -s /usr/local/git/bin/git /usr/bin/git
 
-      # Install Qt 6
+      # Install Qt 6 (Manually via apt for Ubuntu)
       - name: Install Qt 6
-        uses: wzieba/qt-action@v2
-        with:
-          qt-version: '6.4.1'  # Adjust this to the version you need
-          configure-options: '-opensource -confirm-license -platform linux-g++-64'
+        run: |
+          sudo apt update
+          sudo apt install -y qt6-qmake qt6-base-dev qt6-tools-dev
 
       # Install additional build dependencies
       - name: Install additional build dependencies
@@ -65,7 +64,7 @@ jobs:
 
       # Upload Windows executable artifact
       - name: Upload Windows executable artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: compiled-windows-executable
           path: build/your-executable-name.exe  # Replace with your actual executable name
