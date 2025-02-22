@@ -4,6 +4,10 @@
 
 ### Private servers for plants vs zombies garden warfare.
 
+# [Discord server 💬](https://discord.com/invite/CS5GzFTVWr)
+
+# [Faq 🙋](https://github.com/Twig6943/ProjectOutlawn/blob/main/docs/Faq.md)
+
 # [Todo 📋](https://github.com/Twig6943/PVZGWPrivateServers/blob/main/todo.md)
 
 # [Documentation 📄](https://github.com/Twig6943/PVZGWPrivateServers/tree/main/docs)
