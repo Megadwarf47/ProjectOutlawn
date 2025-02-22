@@ -1,7 +1,5 @@
 # Frequently Asked Questions (FAQ)
 
-## General
-
 ### What is this project about?
 The project is mainly about garden warfare 1 private servers.
 
