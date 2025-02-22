@@ -23,6 +23,5 @@ Assembly knowledge > Server
 
 ### What are the system requirements to run the server?
 - **OS:** Windows 10 or 11/Linux  
-- **Dependencies:**
-- For windows:
+- For Windows: placeholder
 - For GNU/Linux: Latest wine/proton  
