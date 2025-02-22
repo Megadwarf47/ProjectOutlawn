@@ -9,8 +9,6 @@ No, this is a private server project created for educational and experimental pu
 ### How can I try the server?
 It's not ready yet. We're trying to have the alpha release as soon as possible.
 
----
-
 ### How do I contribute?
 1. Fork the repository.
 2. Commit your changes.
@@ -20,9 +18,8 @@ It's not ready yet. We're trying to have the alpha release as soon as possible.
 
 ### What's needed to contribute?
 Assembly knowledge > Server
-? > Launcher
 
----
+? > Launcher
 
 ### What are the system requirements to run the server?
 - **OS:** Windows 10 or 11/Linux  
