@@ -37,15 +37,13 @@ body:
         - Server
     validations:
       required: true
-  - type: markdown
+  - type: dropdown
     attributes:
-      value: |
-        # Device information
-  - type: input
-    attributes:
-      label: Operating system
-      description: Please list the OS you are using.
-      placeholder: Windows/Linux (Wine).
+      label: OS
+      description: What's your OS?
+      options:
+        - Windows 10/11
+        - Linux (Wine)
     validations:
       required: true
   - type: textarea
