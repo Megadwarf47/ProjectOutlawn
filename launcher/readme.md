@@ -1,6 +1,6 @@
 # To-do
 
-[✅] Rushed but functional ui (ImGUI) 
+[✅] Rushed but functional ui (QT) (There's also a CLI) 
 
 [✅] Hosting
 
