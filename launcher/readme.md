@@ -1,15 +1,15 @@
 # To-do
 
-[✅] Decide UI toolkit (ImGUI) 
+[✅] Rushed but functional ui (ImGUI) 
 
-[❌] Hosting
+[✅] Hosting
 
-[❌] Joining
+[✅] Joining
 
 [❌] Change bg depending on the game
 
 [❌] Change args depending on the game
 
-[❌] Modpack support
+[✅] Modpack support
 
 [❌] Buttons for both manual/auto game install detection
