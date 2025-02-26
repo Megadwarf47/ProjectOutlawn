@@ -19,7 +19,7 @@ It's not ready yet. We're trying to have the alpha release as soon as possible.
 ### What's needed to contribute?
 Assembly knowledge > Server
 
-? > Launcher
+C++/Batch > Launcher
 
 ### What are the system requirements to run the server?
 - **OS:** Windows 10 or 11/Linux  
