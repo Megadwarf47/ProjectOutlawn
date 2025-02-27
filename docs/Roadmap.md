@@ -2,9 +2,7 @@
 
 # Alpha 0.1
 
-[❌] Launcher initial release
-
-[❌] Server initial release
+[❌] Client/Server initial release
 
 [❌] Absolute first alpha release (we're trying to get there)
 
@@ -12,7 +10,7 @@
 
 [❌] Server improvements
 
-[❌] A proper launcher with gui
+[❌] Modding support
 
 
 
