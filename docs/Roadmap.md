@@ -2,7 +2,7 @@
 
 # Alpha 0.1 (Absolute first alpha release)
 
-[❌] Client/Server initial release
+[❌] A Server that "runs"
 
 [❌] A launcher that can join/host + mods via frosty
 
