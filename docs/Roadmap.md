@@ -1,16 +1,11 @@
 # Roadmap
 
-# Alpha 0.1
+# Alpha 0.1 (Absolute first alpha release)
 
 [❌] Client/Server initial release
 
-[❌] Absolute first alpha release (we're trying to get there)
+[❌] A launcher that can join/host + mods via frosty
 
 # Alpha 0.2
 
-[❌] SDK Stuff
-
-[❌] Modding support
-
-
-
+[❌] RCON stuff
