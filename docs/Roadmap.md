@@ -8,7 +8,7 @@
 
 # Alpha 0.2
 
-[❌] Server improvements
+[❌] SDK Stuff
 
 [❌] Modding support
 
