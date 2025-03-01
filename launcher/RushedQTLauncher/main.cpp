@@ -13,6 +13,7 @@
 #include <QFileDialog>
 #include <QProcess>
 #include <QMessageBox>
+#include <QSettings>
 
 int main(int argc, char *argv[])
 {
@@ -70,12 +71,8 @@ int main(int argc, char *argv[])
     mainLayout->addLayout(buttonLayout); // Add button layout
     mainLayout->addWidget(stackedWidget);
 
-    // Ask the user for the path to the .exe file at startup
-    QString exePath = QFileDialog::getOpenFileName(&w, "Select Executable", QString(), "*.exe");
-    if (exePath.isEmpty()) {
-        QMessageBox::critical(&w, "Error", "No executable selected, the program will now exit.");
-        return -1; // Exit if no file is selected
-    }
+    QSettings gameRegistryItem("HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\PopCap\\Plants vs Zombies Garden Warfare", QSettings::NativeFormat);
+    QString exePath = gameRegistryItem.value("Install Dir").toString() + "PVZ.Main_Win64_Retail.exe";
 
     QObject::connect(hostButton, &QPushButton::clicked, [&](){
         // Launch the .exe file with command line args when "Host" button is clicked

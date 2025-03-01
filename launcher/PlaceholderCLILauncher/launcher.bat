@@ -4,6 +4,8 @@ setlocal enabledelayedexpansion
 :: Set the game executable
 set GAME_EXECUTABLE=PVZ.Main_Win64_Retail.exe
 
+@FOR /f "tokens=3*" %%i in ('Reg Query "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\PopCap\Plants vs Zombies Garden Warfare" /v "Install Dir" 2^>Nul') do Set "GAME_PATH=%%j"
+
 :menu
 echo ========================
 echo        Game Launcher
@@ -32,7 +34,7 @@ set /p port=Enter port:
 set /p maxplayers=Enter maxplayers:
 set /p modpack=Enter Modpack (leave blank for none):
 echo Starting game as Host with username %servername% and modpack %modpack%...
-%GAME_EXECUTABLE% --host --servername --port %port% %servername% --maxplayers %maxplayers% --modpack %modpack%
+"%GAME_PATH%%GAME_EXECUTABLE%" --host --servername --port %port% %servername% --maxplayers %maxplayers% --modpack %modpack%
 exit
 
 :join
@@ -41,5 +43,5 @@ set /p ip=Enter IP address:
 set /p port=Enter Port:
 set /p modpack=Enter Modpack (leave blank for none):
 echo Joining game at %ip%:%port% with username %username% and modpack %modpack%...
-%GAME_EXECUTABLE% --join %ip% --port %port% --username %username% --modpack %modpack%
+"%GAME_PATH%%GAME_EXECUTABLE%" --join %ip% --port %port% --username %username% --modpack %modpack%
 exit
