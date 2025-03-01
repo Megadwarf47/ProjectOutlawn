@@ -14,4 +14,4 @@
 
 # GW2
 
-[❌] Change args depending on the game
+[❌] Change args depending on the game (not sure if needed, haven't checked)
