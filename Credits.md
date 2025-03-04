@@ -1,4 +1,4 @@
-# Server stuff
+# Server
 
 `@FlashHit`
 
