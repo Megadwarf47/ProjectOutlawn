@@ -12,13 +12,7 @@
 
 # [Documentation 📄](https://github.com/Twig6943/PVZGWPrivateServers/tree/main/docs)
 
-# Credits 📜
-
-### Placeholder (Lead dev)
-
-### Twig6943 (Gathered the crew + resources)
-
-### shushman1 (Designed stuff)
+# [Credits 📜](https://github.com/Twig6943/ProjectOutlawn/blob/main/Credits.md)
 
 # Shoutouts
 
