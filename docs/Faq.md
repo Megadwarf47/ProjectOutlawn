@@ -17,11 +17,9 @@ It's not ready yet. We're trying to have the alpha release as soon as possible.
 
 
 ### What's needed to contribute?
-Assembly knowledge > Server
+Assembly/Reverse engineering knowledge > Server
 
 C++/Batch > Launcher
 
 ### What are the system requirements to run the server?
-- **OS:** Windows 10 or 11/Linux  
-- For Windows: placeholder
-- For GNU/Linux: Latest wine/proton  
+An ea account with the game.
