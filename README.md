@@ -8,7 +8,7 @@
 
 # [Faq 🙋](https://github.com/Twig6943/ProjectOutlawn/blob/main/docs/Faq.md)
 
-# [Todo 📋](https://github.com/Twig6943/PVZGWPrivateServers/blob/main/todo.md)
+# [Roadmap 📋](https://github.com/Twig6943/ProjectOutlawn/blob/main/docs/Roadmap.md)
 
 # [Documentation 📄](https://github.com/Twig6943/PVZGWPrivateServers/tree/main/docs)
 
