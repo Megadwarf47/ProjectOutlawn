@@ -166,50 +166,40 @@ namespace fb {
 
 	enum MessageType {
 		// Category: AI
-
 		AIDifficultyModifierMessage = 0xDF4C6D62,
 		AIPlayerEnableAsTargetMessage = 0x63C0F317,
 		AISpawnBotMessage = 0x94A37FC4,
 
 		// Category: AIClientBridge
-
 		AIClientBridgeDynamicModelEntityOnSpawnMessage = 0xE218121B,
 		AIClientBridgeDynamicModelEntityOnUnspawnMessage = 0x988D6EA0,
 
 		// Category: AIDirector
-
 		AIDirectorStateMessage = 0xE74AD5C1,
 
 		// Category: BlazeCommon
-
 		BlazeCommonBattlepackRequestMessageBase = 0xD35B9704,
 		BlazeCommonBattlepackResponseMessageBase = 0x5C42CB16,
 
 		// Category: BlueprintBundle
-
 		BlueprintBundleStreamedInMessage = 0x79C25CF,
 
 		// Category: BreakableModelToComponents
-
 		BreakableModelToComponentsCollapseMessage = 0x95EB44F8,
 		BreakableModelToComponentsSpawnPartObjectsOnCollapseMessage = 0x15D9CBF3,
 
 		// Category: BulletToCharacterComponents
-
 		BulletToCharacterComponentsHitMessage = 0xE923C4A3,
 
 		// Category: BundleManager
-
 		BundleManagerBundleUnloadMessage = 0x70FEF1E0,
 
 		// Category: CharacterToComponents
-
 		CharacterToComponentsOnKilledMessage = 0xF1440AD2,
 		CharacterToComponentsOnTeleportedMessage = 0xC6914C11,
 		CharacterToComponentsSpawnTemplateMessage = 0xB03C991B,
 
 		// Category: Client
-
 		ClientAbortCutsceneMessage = 0x327C7921,
 		ClientConnectedMessage = 0x9AA72C48,
 		ClientContinueSingleplayerMessage = 0x43777FDF,
@@ -238,26 +228,21 @@ namespace fb {
 		ClientWantFullscreenMessage = 0x64E4E684,
 
 		// Category: ClientAI
-
 		ClientAIAnimAimingMessage = 0x315687B1,
 		ClientAIAnimMovementStoppedMessage = 0x613EAFFE,
 
 		// Category: ClientCamera
-
 		ClientCameraShowKillerMessage = 0x5255A818,
 
 		// Category: ClientCameraToComponents
-
 		ClientCameraToComponentsInitMessage = 0x42C102D3,
 
 		// Category: ClientCharacter
-
 		ClientCharacterLocalPlayerDeletedMessage = 0xA580CA0D,
 		ClientCharacterLocalPlayerSetMessage = 0x953B8F2,
 		ClientCharacterSpawnDoneMessage = 0xDC18F1F5,
 
 		// Category: ClientCollision
-
 		ClientCollisionExplosionPackDetonatedMessage = 0xBB0A71A5,
 		ClientCollisionExplosionPackPlacedMessage = 0xCB47C67A,
 		ClientCollisionGrenadeCollisionMessage = 0x37FB0709,
@@ -265,32 +250,26 @@ namespace fb {
 		ClientCollisionSpawnExplosionMessage = 0x6D358927,
 
 		// Category: ClientCommander
-
 		ClientCommanderPlayerChangedMessage = 0xBCFBD5B6,
 
 		// Category: ClientConnection
-
 		ClientConnectionInitializedMessage = 0x8896ECAD,
 		ClientConnectionLinkLevelMessage = 0xD54F3F37,
 		ClientConnectionLoadLevelMessage = 0xC8835E11,
 		ClientConnectionUnloadLevelMessage = 0x6BF7F5AA,
 
 		// Category: ClientControllable
-
 		ClientControllableSpawnDoneMessage = 0x2C07630D,
 		ClientControllableUnspawnDoneMessage = 0x835ABC76,
 
 		// Category: ClientControllableToComponents
-
 		ClientControllableToComponentsPlayerEnteredMessage = 0x67BAF3AB,
 		ClientControllableToComponentsPlayerExitMessage = 0x6D391702,
 
 		// Category: ClientEntity
-
 		ClientEntityDummyToGetTheClientEntityMessageCategoryMessage = 0x3E2D2C69,
 
 		// Category: ClientGameplay
-
 		ClientGameplayControllableLowHealthMessage = 0x125FAED4,
 		ClientGameplayPlayerBaseDestroyedMessage = 0x31401D78,
 		ClientGameplayRoundEndedMessage = 0x8D7E1F11,
@@ -298,28 +277,23 @@ namespace fb {
 		ClientGameplaySoldierHitMessage = 0x1A1457C2,
 
 		// Category: ClientInput
-
 		ClientInputUnchangedInputMessage = 0xD63D52AE,
 
 		// Category: ClientInputSettings
-
 		ClientInputSettingsRefreshMessage = 0x7ECE4D59,
 
 		// Category: ClientLevel
-
 		ClientLevelFinalizedMessage = 0x6A31005F,
 		ClientLevelSpawnDebugEntitiesMessage = 0x291CC16,
 		ClientLevelSpawnEntitiesEndMessage = 0x17F9BDE8,
 
 		// Category: ClientMetrics
-
 		ClientMetricsPauseGameMessage = 0x3E6AB63C,
 		ClientMetricsPopUIScreenMessage = 0xE26BA0DF,
 		ClientMetricsPushUIScreenMessage = 0xEF0BEE2E,
 		ClientMetricsUIActionMessage = 0x11B4E622,
 
 		// Category: ClientOS
-
 		ClientOSFetchUserInputStateMessage = 0xCD12EEE7,
 		ClientOSFetchUserSignInStateMessage = 0x6AAA7045,
 		ClientOSHelpMessage = 0x591D13FA,
@@ -330,7 +304,6 @@ namespace fb {
 		ClientOSUserSignInStateMessage = 0xBEB162D9,
 
 		// Category: ClientPersistence
-
 		ClientPersistenceAwardActivatedMessage = 0x6A3A389C,
 		ClientPersistenceAwardChangedMessage = 0x7B29D903,
 		ClientPersistenceAwardDeactivatedMessage = 0x59296D1D,
@@ -339,14 +312,13 @@ namespace fb {
 		ClientPersistenceUnlockMessageBase = 0xF29D9FA5,
 
 		// Category: ClientPlayer
-
 		ClientPlayerAmmoPickupMessage = 0x55382A5E,
 		ClientPlayerChangedAllowedToSpawnOnMessage = 0xC893E91F,
 		ClientPlayerChangedMatchReadyStatusMessage = 0x6A883A0A,
 		ClientPlayerChangedPlayerViewMessage = 0x219D24F8,
 		ClientPlayerChangedSquadLeaderStatusMessage = 0xFBD9B77B,
 		ClientPlayerChangedVoiceChannelMessage = 0xEBD20E13,
-		//ClientPlayerConnectMessage = 0x69E0643A, 
+		ClientPlayerConnectMessage = 0x69E0643A,
 		ClientPlayerDeletedMessage = 0x608997B9,
 		ClientPlayerEnterEntryMessage = 0xA0804CB8,
 		ClientPlayerEnterExitVehicleMessage = 0x9F775494,
@@ -354,7 +326,7 @@ namespace fb {
 		ClientPlayerInteractionWithPlayerEndedMessage = 0xC209F7E1,
 		ClientPlayerInteractionWithPlayerStartedMessage = 0x773873CE,
 		ClientPlayerKilledMessage = 0xBA932D87,
-		//ClientPlayerLocalSetMessage = 0x1C3F2AEB,
+		ClientPlayerLocalSetMessage = 0x1C3F2AEB,
 		ClientPlayerManDownMessage = 0xDE4CA154,
 		ClientPlayerMeleeCounterWindowEndsMessage = 0x50200DE4,
 		ClientPlayerMeleeCounterWindowStartsMessage = 0xBB56CEEB,
@@ -369,7 +341,6 @@ namespace fb {
 		ClientPlayerWeaponPickupMessage = 0x5F669172,
 
 		// Category: ClientSoldier
-
 		ClientSoldierChangeCoverStateMessage = 0x92CB0D21,
 		ClientSoldierOnJumpMessage = 0x8104627E,
 		ClientSoldierOnLandMessage = 0x26E8543B,
@@ -377,32 +348,25 @@ namespace fb {
 		ClientSoldierWeaponOnSlotChangedMessage = 0x337D7258,
 
 		// Category: ClientSoldierToComponents
-
 		ClientSoldierToComponentsOnHandleDamageMessage = 0x554081FA,
 		ClientSoldierToComponentsOnImpulseMessage = 0xE55A1D80,
 
 		// Category: ClientSound
-
 		ClientSoundVoiceOverFinishedMessage = 0xA7BF2C3E,
 
 		// Category: ClientSpawn
-
 		ClientSpawnSpawnedOrUnSpawnedMessage = 0x6079154A,
 
 		// Category: ClientState
-
-		//ClientStateChangingStateMessage = 0xA50037B4,
+		ClientStateChangingStateMessage = 0xA50037B4,
 
 		// Category: ClientVehicle
-
-		//ClientVehicleCriticalDamageMessage = 0xBD3B3A0F,
+		ClientVehicleCriticalDamageMessage = 0xBD3B3A0F,
 
 		// Category: ClientVehicleToComponents
-
 		ClientVehicleToComponentsHealthChangedMessage = 0x42630776,
 
 		// Category: ClientWeapon
-
 		ClientWeaponDispersionUpdatedMessage = 0x2E978C2,
 		ClientWeaponPlayerPrimaryOutOfAmmoMessage = 0xA0325B03,
 		ClientWeaponPlayerPrimaryWeaponFireMessage = 0xDFCAD330,
@@ -411,7 +375,6 @@ namespace fb {
 		ClientWeaponPlayerWeaponReloadEndMessage = 0x2B9C1DDA,
 
 		// Category: Commander
-
 		CommanderActivateCameraMessageBase = 0xC6B43EAB,
 		CommanderAwardCommanderScoreMessage = 0x26A2D8E7,
 		CommanderAwardCommanderSquadScoreMessage = 0xB9E1C675,
@@ -419,11 +382,9 @@ namespace fb {
 		CommanderSquadChangedMessage = 0xACF8486E,
 
 		// Category: CommanderActions
-
 		CommanderActionsActionStateChangedMessage = 0x784A3658,
 
 		// Category: CommanderNetwork
-
 		CommanderNetworkAbortActionMessage = 0x5374DD74,
 		CommanderNetworkAddRequestFromSquadMessage = 0x8270DA94,
 		CommanderNetworkApplyForSeatMessage = 0xBA9159EC,
@@ -456,16 +417,13 @@ namespace fb {
 		CommanderNetworkUAVDroneDeployedMessage = 0x7473F37A,
 
 		// Category: ComponentMods
-
 		ComponentModsKnockBackModEventMessage = 0x4A2C9057,
 
 		// Category: ComponentModsToComponents
-
 		ComponentModsToComponentsEndStunMessage = 0x5E8AE160,
 		ComponentModsToComponentsStartStunMessage = 0x2163770F,
 
 		// Category: Coop
-
 		CoopSpawnWaveMessage = 0x482E3EE3,
 
 		// Category: Core
@@ -490,40 +448,31 @@ namespace fb {
 		CoreWriteSaveGameMessage = 0x98CDA887,
 
 		// Category: Debug
-
 		DebugSpawnGameEntityMessage = 0x90F484D1,
 
 		// Category: ESportsMatchManager
-
 		ESportsMatchManagerDelayedTerminationMessage = 0x3F0391D2,
 		ESportsMatchManagerTooFewPlayersMessage = 0x769E6E92,
 
 		// Category: Emblem
-
 		EmblemTextureFinishedMessage = 0xFF816B6D,
 
 		// Category: EntityToComponents
-
 		EntityToComponentsResetMessage = 0x52C126C7,
 
 		// Category: EntryComponent
-
 		EntryComponentStanceChangedMessage = 0xF99FC939,
 
 		// Category: EventSync
-
 		EventSyncReachedClientMessage = 0x458F8B20,
 
 		// Category: FieldUpgrades
-
 		FieldUpgradesLevelUpPlayerMessage = 0xAFEB7C2F,
 
 		// Category: GameControl
-
 		GameControlJoinServerMessageBase = 0x8E3242B5,
 
 		// Category: GlobalEventEntity
-
 		GlobalEventEntityLocalMessage = 0xED135C9F,
 		GlobalEventEntityLocalPlayerMessage = 0x95B53C4C,
 		GlobalEventEntityNetworkedClientPlayerMessage = 0x5C512927,
@@ -531,7 +480,6 @@ namespace fb {
 		GlobalEventEntityNetworkedServerPlayerMessage = 0x4CF319FB,
 
 		// Category: Input
-
 		InputAbortStateMessage = 0xF1977AE5,
 		InputAnyButtonPressedMessage = 0x71DB36DE,
 		InputAssignPlayerMessage = 0xB479922A,
@@ -545,26 +493,21 @@ namespace fb {
 		InputWaitForAnyButtonMessage = 0x90BC3A68,
 
 		// Category: InputMessages
-
 		InputMessagesSingleInputEventMessage = 0x2BFEACC0,
 
 		// Category: Juice
-
 		JuiceSoldierRagdollActivateMessage = 0xD01279D2,
 		JuiceSoldierRagdollDeactivateMessage = 0xB1BE2BB3,
 
 		// Category: LevelConsole
-
 		LevelConsoleSetActiveHealthStateMessage = 0x2776CBEA,
 
 		// Category: LoadGame
-
 		LoadGameBeginLoadMessage = 0xB2285CA7,
 
 		// Category: MemoryCard
-
 		MemoryCardBootCheckMessageBase = 0x1A451B7E,
-		//MemoryCardCreatedMessageBase = 0x12EC008E,
+		MemoryCardCreatedMessageBase = 0x12EC008E,
 		MemoryCardDestroyedMessageBase = 0xB2CF954D,
 		MemoryCardFindEntriesDoneMessageBase = 0x5E69EF79,
 		MemoryCardFindEntriesMessageBase = 0x6F831E99,
@@ -573,16 +516,14 @@ namespace fb {
 		MemoryCardLoadMessageBase = 0xC885A348,
 		MemoryCardPopupHideMessageBase = 0xEC2DDCE4,
 		MemoryCardPopupRequestMessageBase = 0xA128DD95,
-		//MemoryCardPopupResponseMessageBase = 0x1B86CA7,
+		MemoryCardPopupResponseMessageBase = 0x1B86CA7,
 		MemoryCardSaveDoneMessageBase = 0xEFD8908F,
 		MemoryCardSaveMessageBase = 0xD191BB6F,
 
 		// Category: Movie
-
 		MovieAsyncUnloadMessage = 0x718DBFAD,
 
 		// Category: Network
-
 		NetworkAddCurrencyMessage = 0xBA755CD6,
 		NetworkAddHealthMessage = 0xD0D1532D,
 		NetworkChangeGameSettingMessage = 0xC281B80E,
@@ -637,34 +578,28 @@ namespace fb {
 		NetworkUnSpawnCustomizationMessage = 0x9FAD902D,
 
 		// Category: NetworkAI
-
 		NetworkAIClientDispatchMessage = 0xB6932251,
 		NetworkAIServerDispatchMessage = 0x889E688D,
 		NetworkAIUpdateClientAIStateMessage = 0x1F5FFE0F,
 
 		// Category: NetworkCamera
-
 		NetworkCameraFreeCameraMessage = 0x587ACA24,
 		NetworkCameraReplayMessage = 0x7B62E15A,
 
 		// Category: NetworkGameAdministration
-
 		NetworkGameAdministrationAddGameBanRequestMessage = 0xDF81D5E3,
 		NetworkGameAdministrationAddGameBanResponseMessage = 0xFE588A71,
 		NetworkGameAdministrationPacketMessage = 0x94A56F58,
 
 		// Category: NetworkGameplay
-
 		NetworkGameplayContinueMessage = 0xE831041B,
 
 		// Category: NetworkLogic
-
 		NetworkLogicFireDoublePlayerEventMessageBase = 0x39A37179,
 		NetworkLogicFireEventMessageBase = 0x4D399B9F,
 		NetworkLogicFirePlayerEventMessageBase = 0x5E4A62AC,
 
 		// Category: Nui
-
 		NuiCheckSpeechRecognizingMessage = 0x1F6EFF13,
 		NuiSpeechGrammarActivationMessage = 0x23B53EE7,
 		NuiSpeechGrammarActivationSettingsMessage = 0xA0FD1742,
@@ -677,7 +612,6 @@ namespace fb {
 		NuiSpeechSoundEventMessage = 0xA68168BB,
 
 		// Category: Origin
-
 		OriginJoinableMessageBase = 0x83691CA7,
 		OriginNotLoadedMessage = 0x924C4028,
 		OriginOnlineMessage = 0x23D056F5,
@@ -685,19 +619,15 @@ namespace fb {
 		OriginResponseMessageBase = 0x7694B4AC,
 
 		// Category: PVZBattlepackSystem
-
 		PVZBattlepackSystemConsumablesUpdatedMessage = 0x1288BEC1,
 
 		// Category: PVZCommander
-
 		PVZCommanderCommanderChangedMessage = 0x268AE4B0,
 
 		// Category: PVZCommanderActions
-
 		PVZCommanderActionsActionStateChangedMessage = 0x78295564,
 
 		// Category: PVZCommanderNetwork
-
 		PVZCommanderNetworkAbilityDeployedMessage = 0x640D7594,
 		PVZCommanderNetworkAbortActionMessage = 0x3FD43B88,
 		PVZCommanderNetworkAcceptSeatMessage = 0x7D81737F,
@@ -713,7 +643,6 @@ namespace fb {
 		PVZCommanderNetworkTriggerRequestMessage = 0x3C77AD5,
 
 		// Category: PVZGameplay
-
 		PVZGameplayAddCurrencyMessage = 0x6E39191E,
 		PVZGameplayCancelManDownMessage = 0x8CF2D20E,
 		PVZGameplayEnterVehicleMessage = 0x7CBC2D48,
@@ -724,12 +653,10 @@ namespace fb {
 		PVZGameplayWaveCompleteMessage = 0x3DBDE014,
 
 		// Category: PVZHealthModuleToComponents
-
 		PVZHealthModuleToComponentsEndSpawnMessage = 0x3E7F74C7,
 		PVZHealthModuleToComponentsStartSpawnMessage = 0x6928CC48,
 
 		// Category: PVZNetwork
-
 		PVZNetworkLicenseAwardedMessage = 0x7A30A177,
 		PVZNetworkPVZBlazePlaylistCompletedMessage = 0x9293B60B,
 		PVZNetworkPVZPlaylistTypeMessage = 0x79FB74AE,
@@ -738,20 +665,16 @@ namespace fb {
 		PVZNetworkSpottingMessage = 0xB07E77A0,
 
 		// Category: PVZPeerServerBackend
-
 		PVZPeerServerBackendEventMessageBase = 0xD2736FE8,
 
 		// Category: PVZPresence
-
 		PVZPresenceRequestPeerGameMessageBase = 0xAEC0DA23,
 		PVZPresenceResponsePeerGameMessageBase = 0x6F289411,
 
 		// Category: PVZTelemetry
-
 		PVZTelemetryAbilityMessage = 0x27E0BC5F,
 
 		// Category: PVZUI
-
 		PVZUIActivateSpectatorMessage = 0x430C65EE,
 		PVZUIBytevaultNoRecordMessage = 0x5395BD72,
 		PVZUIImmortalChangedMessage = 0x5CDED701,
@@ -768,12 +691,10 @@ namespace fb {
 		PVZUITriggerPopupShowMessage = 0xDB42285F,
 
 		// Category: PeerServerBackend
-
 		PeerServerBackendRequestMessageBase = 0x94760F09,
 		PeerServerBackendResponseMessageBase = 0x49B434BB,
 
 		// Category: Performance
-
 		PerformanceClientMessage = 0xB74FAA4F,
 		PerformanceClientNetworkMessage = 0x5AACB251,
 		PerformanceLogMessage = 0xF8C35792,
@@ -782,22 +703,18 @@ namespace fb {
 		PerformanceShaderMessage = 0x1502E03F,
 
 		// Category: PhysicsComponent
-
-		//PhysicsComponentOnDamageMessage = 0xE030FB20,
+		PhysicsComponentOnDamageMessage = 0xE030FB20,
 		PhysicsComponentOnImpulseMessage = 0xB7B1D530,
 
 		// Category: PlayerFriendManager
-
 		PlayerFriendManagerAbortFriendJoinMessage = 0x49B7C5A6,
 		PlayerFriendManagerFriendJoinEventMessage = 0x792AB960,
 		PlayerFriendManagerSetAllowCreateFriendSquadMessage = 0x336AFD83,
 
 		// Category: PlaygroundServerBackend
-
 		PlaygroundServerBackendResponseMessageBase = 0x53A332F8,
 
 		// Category: Presence
-
 		PresenceAchievementRequestMessageBase = 0x1CE99654,
 		PresenceAuthenticationMessageBase = 0xEB453F82,
 		PresenceAuthenticationRequestMessageBase = 0x3665A893,
@@ -806,7 +723,7 @@ namespace fb {
 		PresenceBFCommerceRequestMessageBase = 0xB981B0CA,
 		PresenceBattlelogMessageBase = 0x28B4024C,
 		PresenceBattlelogRequestMessageBase = 0xA4E9739D,
-		//PresenceBattlepackMessageBase = 0x247EC611,
+		PresenceBattlepackMessageBase = 0x247EC611,
 		PresenceBattlepackRequestMessageBase = 0xC3576BA0,
 		PresenceBlobMessageBase = 0x7B1EF3C1,
 		PresenceBlobRequestMessageBase = 0x6E31AFF0,
@@ -835,7 +752,7 @@ namespace fb {
 		PresenceGameDataMessageBase = 0xEEAFCFBC,
 		PresenceGameDataRequestMessageBase = 0xFB63F4ED,
 		PresenceGameMessageBase = 0x11CD888C,
-		//PresenceGameQueueMessageBase = 0xF88682FD,
+		PresenceGameQueueMessageBase = 0xF88682FD,
 		PresenceGameRequestMessageBase = 0xC5F1645D,
 		PresenceHostMigrationClearMessage = 0x296E362,
 		PresenceHostMigrationGardenDefendedMessage = 0x302B1D49,
@@ -933,30 +850,25 @@ namespace fb {
 		PresenceXPromoRequestMessageBase = 0x7BBEAA04,
 
 		// Category: ProfileOptions
-
 		ProfileOptionsApplyMessage = 0xF72B7A1,
 		ProfileOptionsSettingsLoadedMessage = 0xF731FED7,
 		ProfileOptionsSettingsPreSaveMessage = 0xA4BF576,
 		ProfileOptionsSettingsSavedMessage = 0x1203C555,
 
 		// Category: PunkBuster
-
 		PunkBusterExecCmdMessage = 0x8C212AF8,
 		PunkBusterMessageMessage = 0x9AC7B22,
 
 		// Category: PushNotification
-
 		PushNotificationChallengeActiveDeltaMessage = 0x16F3AD2A,
 		PushNotificationPresencePlayingDeltaMessage = 0x9B606338,
 		PushNotificationPresentMessageBase = 0xB0783883,
 
 		// Category: SaveGame
-
 		SaveGameBeginSaveMessage = 0x65DD4A47,
 		SaveGameSaveMessage = 0xFB40F920,
 
 		// Category: Server
-
 		ServerApplyConfigurationMessage = 0x4262E46F,
 		ServerClientConnectionConnectedMessage = 0x87A03EBB,
 		ServerClientConnectionRemovedMessage = 0xC7809646,
@@ -978,7 +890,6 @@ namespace fb {
 		ServerUnloadLevelMessage = 0x6E1933E0,
 
 		// Category: ServerAI
-
 		ServerAIActorSpawnedMessage = 0x1A12C72,
 		ServerAIChangePauseSettingMessage = 0xDF1CB641,
 		ServerAICoopAllWavesCompleteMessage = 0xF4F8E1EE,
@@ -990,12 +901,10 @@ namespace fb {
 		ServerAISpawningManagedAIMessage = 0xAA4EABF5,
 
 		// Category: ServerAdmin
-
 		ServerAdminBanPlayerMessage = 0x1896A9FA,
 		ServerAdminSetServerNameMessage = 0x857C22E4,
 
 		// Category: ServerAdministration
-
 		ServerAdministrationEventsEnabledMessage = 0xB460B85F,
 		ServerAdministrationLoginMessage = 0xC817EA06,
 		ServerAdministrationPacketMessageBase = 0x76937D58,
@@ -1004,7 +913,6 @@ namespace fb {
 		ServerAdministrationRestartRequiredMessage = 0xFE01029B,
 
 		// Category: ServerBackend
-
 		ServerBackendBattlelogTransactionMessageBase = 0x3DB261B0,
 		ServerBackendBattlepackRequestMessageBase = 0xF975CF98,
 		ServerBackendBattlepackResponseMessageBase = 0x1DF2AE0A,
@@ -1018,26 +926,21 @@ namespace fb {
 		ServerBackendRoleResponseMessageBase = 0xE438E98D,
 
 		// Category: ServerBanList
-
 		ServerBanListEventMessageBase = 0xF779C4BD,
 
 		// Category: ServerBuff
-
 		ServerBuffAppliedMessage = 0xD2434FB9,
 		ServerBuffKilledMessage = 0x25FB561F,
 
 		// Category: ServerCharacter
-
 		ServerCharacterCharacterDamageMessage = 0x8D5DBFA0,
 		ServerCharacterKilledMessage = 0x6EE49CF1,
 
 		// Category: ServerClub
-
 		ServerClubMemberCreatedMessage = 0xC67F1FE3,
 		ServerClubMemberDeletedMessage = 0x173287FE,
 
 		// Category: ServerCollision
-
 		ServerCollisionExplosionDamageMessage = 0xDE0EA04B,
 		ServerCollisionExplosionPackDestroyedMessage = 0xF90DA03A,
 		ServerCollisionExplosionPackPlacedMessage = 0xD6E2E3A6,
@@ -1051,7 +954,6 @@ namespace fb {
 		ServerCollisionSmokeGrenadeMessage = 0xAFC48134,
 
 		// Category: ServerComponent
-
 		ServerComponentEntryComponentProcessedInputMessage = 0x3816C103,
 		ServerComponentEntryOnPlayerEntersMessage = 0x14956EB9,
 		ServerComponentEntryOnPlayerExitsMessage = 0x3697B451,
@@ -1060,33 +962,27 @@ namespace fb {
 		ServerComponentWeaponOnUnspawnMessage = 0x73114207,
 
 		// Category: ServerConnection
-
 		ServerConnectionExitMessage = 0x1708637D,
 		ServerConnectionInitMessage = 0xF5E71A27,
 
 		// Category: ServerControllable
-
-		//ServerControllableSpawnDoneMessage = 0x86424E51,
-		//ServerControllableUnspawnDoneMessage = 0x66EFA9AA,
+		ServerControllableSpawnDoneMessage = 0x86424E51,
+		ServerControllableUnspawnDoneMessage = 0x66EFA9AA,
 
 		// Category: ServerControllableToComponents
-
 		ServerControllableToComponentsPlayerEnteredMessage = 0x82E829F7,
 		ServerControllableToComponentsPlayerExitMessage = 0xCE96115E,
 
 		// Category: ServerEntity
-
 		ServerEntityBangerEntityOnSpawnMessage = 0xFA50808C,
 		ServerEntityBangerEntityOnUnspawnMessage = 0x4E9AD677,
 		ServerEntityPickupOnSpawnMessage = 0xDD0241FE,
 		ServerEntityPickupOnUnspawnMessage = 0x3C1EE145,
 
 		// Category: ServerExplosion
-
 		ServerExplosionOnShockwaveMessage = 0xCE1BC9E6,
 
 		// Category: ServerGameAdministration
-
 		ServerGameAdministrationEventMessageBase = 0xCA5C77D2,
 		ServerGameAdministrationGameSettingsUpdateMessage = 0x811735F1,
 		ServerGameAdministrationRefreshGameAttributesMessage = 0xBC2C7757,
@@ -1094,7 +990,6 @@ namespace fb {
 		ServerGameAdministrationUpdateGameServerListsMessage = 0x45DDFC40,
 
 		// Category: ServerGameManager
-
 		ServerGameManagerAddGameBanRequestMessage = 0x31951065,
 		ServerGameManagerAddGameBanResponseMessage = 0x8C22E737,
 		ServerGameManagerAddQueuedPlayerMessage = 0xC02BE11,
@@ -1116,11 +1011,9 @@ namespace fb {
 		ServerGameManagerValidateBannerResponseMessage = 0x1398FBE7,
 
 		// Category: ServerGameMode
-
 		ServerGameModeResetMessage = 0x2DB198D3,
 
 		// Category: ServerGameplay
-
 		ServerGameplayAIBlindedMessage = 0x5A0F545,
 		ServerGameplayCTFFlagCapturedMessage = 0x8056797C,
 		ServerGameplayCTFFlagDroppedMessage = 0x720BF924,
@@ -1152,28 +1045,23 @@ namespace fb {
 		ServerGameplayVoiceOverFinishedMessage = 0x9AFD1DCB,
 
 		// Category: ServerHitReactionToComponents
-
 		ServerHitReactionToComponentsHitMessage = 0x37F36145,
 
 		// Category: ServerInput
-
 		ServerInputDeactivateInputRestrictionMessage = 0x16FE9927,
 		ServerInputReactivateInputRestrictionMessage = 0xBB90F4B1,
 
 		// Category: ServerLevel
-
 		ServerLevelCompletedMessage = 0xF7EB3290,
 		ServerLevelDestroyedMessage = 0x95582CDE,
-		//ServerLevelSpawnEntitiesBeginMessage = 0x25241B3C,
+		ServerLevelSpawnEntitiesBeginMessage = 0x25241B3C,
 		ServerLevelSpawnEntitiesEndMessage = 0x9C293A34,
 		ServerLevelStartedMessage = 0xDCAF4FDC,
 
 		// Category: ServerLevolution
-
 		ServerLevolutionTriggeredMessage = 0xAD39BDC7,
 
 		// Category: ServerMapSequencer
-
 		ServerMapSequencerControlledInfoMessage = 0xA01DD0DE,
 		ServerMapSequencerEventMessageBase = 0x4BBAE2C3,
 		ServerMapSequencerLevelLoadedMessage = 0x3845EA0B,
@@ -1181,23 +1069,19 @@ namespace fb {
 		ServerMapSequencerSwitchingLevelsMessage = 0x2F39C42D,
 
 		// Category: ServerMetrics
-
 		ServerMetricsDetonateExplosionMessage = 0xE551594D,
 		ServerMetricsObjectiveSuccessMessage = 0x60291090,
 		ServerMetricsSaveGameLoadedMessage = 0xBCFB46B4,
 		ServerMetricsSaveGameSavedMessage = 0x70EEF316,
 
 		// Category: ServerMission
-
 		ServerMissionObjectiveCompletedMessage = 0x4F4EC4C5,
 
 		// Category: ServerPeer
-
 		ServerPeerInitializedMessage = 0x519E30E5,
 		ServerPeerLoadLevelMessage = 0xCC048F59,
 
 		// Category: ServerPlayer
-
 		ServerPlayerAboutToClearCharacterMessage = 0xA5D5A02E,
 		ServerPlayerAboutToCreateForConnectionMessage = 0x4963AB67,
 		ServerPlayerBoostUpdateMessage = 0x49B242C,
@@ -1214,7 +1098,7 @@ namespace fb {
 		ServerPlayerDebugFriendZoneSpawnMessage = 0xA43DC3E,
 		ServerPlayerDestroyMessage = 0xE0BFD57A,
 		ServerPlayerEnterEntryMessage = 0x4641DCE4,
-		//ServerPlayerEnteredCommanderMessage = 0x9A6C92E1,
+		ServerPlayerEnteredCommanderMessage = 0x9A6C92E1,
 		ServerPlayerEnteredLevelMessage = 0x9B7EA47,
 		ServerPlayerExitEntryMessage = 0x1613690C,
 		ServerPlayerFieldUpgradeUpdateMessage = 0x6743B21B,
@@ -1235,7 +1119,7 @@ namespace fb {
 		ServerPlayerReleasingLevelMessage = 0x840D85E2,
 		ServerPlayerRespawnMessage = 0xC935A574,
 		ServerPlayerReviveAcceptedMessage = 0x942685A2,
-		//ServerPlayerReviveMessage = 0x25B72903,
+		ServerPlayerReviveMessage = 0x25B72903,
 		ServerPlayerReviveRefusedMessage = 0xD6BF76B5,
 		ServerPlayerSpawnAtVehicleMessage = 0x690B5B2E,
 		ServerPlayerSpawnOnPlayerMessage = 0x56E23F11,
@@ -1249,30 +1133,25 @@ namespace fb {
 		ServerPlayerTickMessage = 0x742F39AD,
 
 		// Category: ServerProjectile
-
 		ServerProjectileMissileDestroyedMessage = 0x9EE87819,
 		ServerProjectileOnCollisionMessage = 0xC48281C1,
 		ServerProjectileOnPotentialHitMessage = 0x4DCDDC5A,
 		ServerProjectileOnSpawnMessage = 0xEA2436A4,
 
 		// Category: ServerReservedSlotsList
-
 		ServerReservedSlotsListEventMessageBase = 0x56F023,
 
 		// Category: ServerRound
-
 		ServerRoundInterruptedMessage = 0xC9FDC4AF,
 		ServerRoundOverMessage = 0x16BABB47,
 		ServerRoundPlayerDestroyedGameReportCompleteMessage = 0x442F41D0,
-		//ServerRoundResetMessage = 0x4BB8DE5C,
+		ServerRoundResetMessage = 0x4BB8DE5C,
 		ServerRoundStartMessage = 0x399DAAE9,
 
 		// Category: ServerScript
-
 		ServerScriptTickMessage = 0x32E46611,
 
 		// Category: ServerSimpleMelee
-
 		ServerSimpleMeleeOnAttackMessage = 0x45EDDA68,
 		ServerSimpleMeleeOnAttackerDiedMessage = 0x48E441B3,
 		ServerSimpleMeleeOnDefendMessage = 0xB0F1BFE8,
@@ -1281,7 +1160,6 @@ namespace fb {
 		ServerSimpleMeleeOnRecoveryStartedMessage = 0x19E90CE2,
 
 		// Category: ServerSoldier
-
 		ServerSoldierChangingWeaponMessage = 0x83F0F160,
 		ServerSoldierDamagedMessage = 0xBEF230E,
 		ServerSoldierFiringMessage = 0xDA243E5C,
@@ -1290,15 +1168,12 @@ namespace fb {
 		ServerSoldierSelfHealMessage = 0x745F73DD,
 
 		// Category: ServerSoldierSuppression
-
 		ServerSoldierSuppressionSuppressMessage = 0x2C51D169,
 
 		// Category: ServerSound
-
 		ServerSoundVoiceOverFinishedMessage = 0x49A82562,
 
 		// Category: ServerStaticModel
-
 		ServerStaticModelDamagedPartByPlayerMessage = 0x310DA64C,
 		ServerStaticModelDestroyedAllCollapsablePartsMessage = 0x2153F65E,
 		ServerStaticModelDestroyedPartMessage = 0x63713D48,
@@ -1306,20 +1181,16 @@ namespace fb {
 		ServerStaticModelSpawnMessage = 0xB707E6C7,
 
 		// Category: ServerSubLevel
-
 		ServerSubLevelOnStreamedInMessage = 0xF2AA6342,
 
 		// Category: ServerUnlockList
-
-		ServerUnlockListEventMessageBase =0xDA3FBB60,
+		ServerUnlockListEventMessageBase = 0xDA3FBB60,
 		ServerUnlockListRefreshMessage = 0x7D3C7484,
 
 		// Category: ServerUnlockSystem
-
 		ServerUnlockSystemSetupMessage = 0xD43CFE59,
 
 		// Category: ServerVehicle
-
 		ServerVehicleDamageMessage = 0x936D3098,
 		ServerVehicleDestroyedMessage = 0x234D2D0,
 		ServerVehicleDisabledMessage = 0x2BD320A3,
@@ -1333,16 +1204,15 @@ namespace fb {
 		ServerVehicleUnspawnMessage = 0x7AAB1773,
 
 		// Category: ServerWeapon
-
 		ServerWeaponArtilleryFiredMessage = 0x383307F5,
 		ServerWeaponLaserDesignatorMessage = 0x3405BDA,
 		ServerWeaponMortarStrikeMessage = 0x59534AEC,
 		ServerWeaponOnActivateMessage = 0xD203451,
-		//ServerWeaponOnDeactivateMessage = 0xCB8031F0,
+		ServerWeaponOnDeactivateMessage = 0xCB8031F0,
 		ServerWeaponPlayerEquippedWeaponMessage = 0xFD08F331,
 		ServerWeaponPlayerPrimaryFireShotSpawnedMessage = 0xD3A8C934,
 		ServerWeaponPlayerPrimaryOutOfAmmoMessage = 0x6065A85F,
-		//ServerWeaponPlayerPrimaryWeaponChargingBeginMessage = 0xD699874C,
+		ServerWeaponPlayerPrimaryWeaponChargingBeginMessage = 0xD699874C,
 		ServerWeaponPlayerPrimaryWeaponChargingEndMessage = 0xAE9F2944,
 		ServerWeaponPlayerPrimaryWeaponFireAutomaticBeginMessage = 0xE0E15456,
 		ServerWeaponPlayerPrimaryWeaponFireAutomaticEndMessage = 0xCCFA61DE,
@@ -1358,13 +1228,11 @@ namespace fb {
 		ServerWeaponWeaponComponentReloadMessage = 0xF6997EF5,
 
 		// Category: Session
-
 		SessionPlayerAuthenticatedMessage = 0x5CED24EA,
 		SessionPlayerJoinedMessage = 0xC665DD80,
 		SessionPlayerLeftMessage = 0xDA958418,
 
 		// Category: SoldierToComponents
-
 		SoldierToComponentsInitializedMessage = 0x98C61EAF,
 		SoldierToComponentsOnActionStateChangedMessage = 0xCEB9AD69,
 		SoldierToComponentsOnClearSpottingMessage = 0x7CE288B7,
@@ -1373,12 +1241,10 @@ namespace fb {
 		SoldierToComponentsReviveMessage = 0xF9AD99D8,
 
 		// Category: SpikeInternal
-
 		SpikeInternalMessagePartMessage = 0x6A62B011,
 		SpikeInternalMessageWrapperMessage = 0xF306C535,
 
 		// Category: Stat
-
 		StatClubRecordClosingMessage = 0xC6F3E3FA,
 		StatClubRecordCreatedMessage = 0x37C6B829,
 		StatDamageHelperMessage = 0x4C802DF1,
@@ -1390,17 +1256,15 @@ namespace fb {
 		StatFinalizeStatsMessageBase = 0xB0B661D2,
 		StatGainAwardMessage = 0x4D0125BC,
 		StatGainRankMessage = 0xFC35DA8B,
-		//StatPlayerRecordClosingMessage = 0x10D17F1,
+		StatPlayerRecordClosingMessage = 0x10D17F1,
 		StatPlayerRecordCreatedMessage = 0x2F4C53A2,
 		StatPointsMessageBase = 0x6182A896,
 		StatTriggerEntityMessage = 0x3307DF3F,
 
 		// Category: Statistics
-
-		//StatisticsEventMessageBase = 0x135BAE92,
+		StatisticsEventMessageBase = 0x135BAE92,
 
 		// Category: StreamInstall
-
 		StreamInstallChunkInstalledMessage = 0xEDB77E48,
 		StreamInstallGameInstalledMessage = 0x8DF056BD,
 		StreamInstallInstallDoneMessage = 0x85AC0972,
@@ -1410,7 +1274,6 @@ namespace fb {
 		StreamInstallRequestSuspendMessage = 0x897460A8,
 
 		// Category: SubLevel
-
 		SubLevelDestroyedMessage = 0x3C6D329F,
 		SubLevelEntitiesCreatedMessage = 0xA22D9B61,
 		SubLevelFromClientRequestBundleBaselineMessage = 0x374C6EAD,
@@ -1421,11 +1284,9 @@ namespace fb {
 		SubLevelToClientUnloadRequestsMessage = 0x273B11C1,
 
 		// Category: SyncedSequence
-
 		SyncedSequenceStateChangeMessageBase = 0xF8346953,
 
 		// Category: TabletCommander
-
 		TabletCommanderAbortActionMessage = 0xF7C32800,
 		TabletCommanderAcknowledgedActionMessage = 0xC9E6A39E,
 		TabletCommanderActionEnteredStateMessage = 0x94BC7D14,
@@ -1459,7 +1320,6 @@ namespace fb {
 		TabletCommanderTryConnectMessage = 0x7834C555,
 
 		// Category: UI
-
 		UIAssetChangedMessage = 0x13BC35C0,
 		UIControllerConnectedMessage = 0xFE6627F1,
 		UIControllerDisconnectedMessage = 0xFB2514F,
@@ -1479,7 +1339,7 @@ namespace fb {
 		UIHideObjectiveMessage = 0xB628267D,
 		UIHitIndicatorMessage = 0x5F444786,
 		UIHudChangeInventoryWeaponMessage = 0x9CC0B6E5,
-		//UIHudChatMessage = 0x99E39B35,
+		UIHudChatMessage = 0x99E39B35,
 		UIHudDebugPauseMessage = 0xA66F3308,
 		UIHudDistortHudMessage = 0x577A9231,
 		UIHudEnableMinimapMessage = 0x7F2EF175,
@@ -1557,12 +1417,10 @@ namespace fb {
 		UIVehicleHitUpdatedMessage = 0x4D16FCCA,
 
 		// Category: UIBundle
-
 		UIBundleLoadedMessage = 0xF9EFD901,
 		UIBundleUnloadedMessage = 0x504C0DA,
 
 		// Category: UIComponent
-
 		UIComponentChangeCameraViewPointMessage = 0xE3AAB0C3,
 		UIComponentDeferActionMessage = 0xFDF0ED73,
 		UIComponentLoadCompleteMessage = 0x917B6992,
@@ -1570,7 +1428,6 @@ namespace fb {
 		UIComponentSetSettingMessage = 0x3F7DF649,
 
 		// Category: UINetwork
-
 		UINetworkAdminYellMessage = 0x9D10817F,
 		UINetworkAllowSkipVideoMessage = 0x19B59E5,
 		UINetworkCheckLevelInstalledMessage = 0x4583CD7C,
@@ -1613,15 +1470,12 @@ namespace fb {
 		UINetworkVoiceOverSubtitleTextMessage = 0xB10F3B6D,
 
 		// Category: UnlockComponent
-
 		UnlockComponentEnabledMessage = 0x3A67C494,
 
 		// Category: VehicleToComponents
-
 		VehicleToComponentsStartDisabledDamagedMessage = 0xF40666EE,
 
 		// Category: VeniceClientMetrics
-
 		VeniceClientMetricsBootMessage = 0x631D32A4,
 		VeniceClientMetricsEnterCriticalHealthMessage = 0x3C8730AD,
 		VeniceClientMetricsLeaveCriticalHealthMessage = 0x951AF8DE,
@@ -1633,16 +1487,13 @@ namespace fb {
 		VeniceClientMetricsTimeMessage = 0xC93D4807,
 
 		// Category: VeniceClientMetricsListener
-
 		VeniceClientMetricsListenerCreatedMessage = 0x9E4BAE4C,
 		VeniceClientMetricsListenerDestroyedMessage = 0x82423A0F,
 
 		// Category: VeniceCommonMetrics
-
 		VeniceCommonMetricsTriggerMessage = 0xFE289BFE,
 
 		// Category: VeniceNetwork
-
 		VeniceNetworkAchievementProgressMessage = 0xE5526ED8,
 		VeniceNetworkAchievementUpdateMessage = 0xAE2DDDF4,
 		VeniceNetworkAllWeaponKillsMessage = 0x64880730,
@@ -1707,19 +1558,17 @@ namespace fb {
 		VeniceNetworkWeaponAimingMessage = 0xB617E4A5,
 
 		// Category: VeniceServerMetrics
-
 		VeniceServerMetricsCreateLogMessage = 0x4DCB6E4E,
 		VeniceServerMetricsFriendZoneSpawnMessage = 0x921E6BB9,
 		VeniceServerMetricsLifeCounterMessage = 0xFD138D3C,
 		VeniceServerMetricsManDownImmobilizedMessage = 0x419D30D,
 		VeniceServerMetricsManDownMessage = 0xB7D187BE,
 		VeniceServerMetricsRankupMessage = 0xCC7F3F5D,
-		//VeniceServerMetricsRestartRoundMessage = 0x3F58F57B,
-		//VeniceServerMetricsStartRoundMessage = 0xE0696F0C,
+		VeniceServerMetricsRestartRoundMessage = 0x3F58F57B,
+		VeniceServerMetricsStartRoundMessage = 0xE0696F0C,
 		VeniceServerMetricsTicketCounterMessage = 0x4EE8EBFE,
 
 		// Category: Voice
-
 		VoiceChannelMessageBase = 0x7E3EF8E,
 		VoiceChannelRequestMessageBase = 0xBB73A21F,
 		VoiceChangedMicEnabledMessage = 0x22555F58,
@@ -1734,7 +1583,6 @@ namespace fb {
 		VoiceVoipVolumeChangedMessage = 0xE184E9B2,
 
 		// Category: Voip
-
 		VoipInboundTalkersMessage = 0x2224A4AD,
 
 	};
