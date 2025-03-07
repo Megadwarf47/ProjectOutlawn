@@ -36,8 +36,6 @@
 
 ![image](https://github.com/user-attachments/assets/f76cd6a4-f5d5-439f-8c2c-cb592f2b2738)
 
---
-
 12.Right click the function on the decompiler and pick `Edit Function Signature`
 
 13.Pick `__thiscall` as the `Calling Convention`
