@@ -2,15 +2,15 @@
 
 1.Open up bf3 pdb in ghidra
 
-2.Press `G` and search for `Message`
+2.Press `G` and search for `Message` (This might change as time goes on)
 
-3.Pick `0052a4f0`
+3.Pick `0052a4f0` (This might change as time goes on)
 
 4.Click to `Edit Data Type`
 
 ![image](https://github.com/user-attachments/assets/d35d281c-6bcc-4d9c-84af-20d5782eb59c)
 
-5.Open up PVZ executable in anothehr ghidra instance and Open up `Data Type Manager` on that instance
+5.Open up PVZ executable in another ghidra instance and Open up `Data Type Manager` on that instance
 
 6.Create a new category called `fb` (This might change as time goes on)
 
@@ -24,10 +24,10 @@
 
 9.Just  in stuff inside make it look like its counterparts in the bf3 pdb
 
-![image](https://github.com/user-attachments/assets/e9d3936b-d3b4-4137-8325-31e9dabab672)
+![Untitled2](https://github.com/user-attachments/assets/708faa81-0b61-45a5-9c84-2f1c98ab4407)
 
-![image](https://github.com/user-attachments/assets/f2f06efd-17dd-4028-b3ab-d0ea2c4ddf77)
+![Untitled](https://github.com/user-attachments/assets/f7024224-f8af-4053-8b83-7ed5c7c83b30)
 
-10.Enable pack?
+10.Enable pack
 
 ![image](https://github.com/user-attachments/assets/8f6e6175-4224-4c3b-8d72-5af38553ab76)
