@@ -22,7 +22,7 @@
 
 ![image](https://github.com/user-attachments/assets/fbcb91da-30f5-4748-9d92-07e2387f0511)
 
-9.Just copy stuff from pdb and to their respective counterparts inside the pvz
+9.Just copy stuff from pdb and to their respective counterparts inside pvz
 
 ![Untitled2](https://github.com/user-attachments/assets/708faa81-0b61-45a5-9c84-2f1c98ab4407)
 
