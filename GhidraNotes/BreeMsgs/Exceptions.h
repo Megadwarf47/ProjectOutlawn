@@ -1,5 +1,5 @@
 		// Category: Uncategorized
-                // Exceptions (The ones messagebase ones & ones without default instances)
+                // Exceptions (The messagebase ones & ones without default instances)
 		BlazeCommonBattlepackRequestMessageBase = 0xD35B9704,
 		BlazeCommonBattlepackResponseMessageBase = 0x5C42CB16,
 		ClientJoinMultiplayerMessageBase = 0x4551EDBA,
