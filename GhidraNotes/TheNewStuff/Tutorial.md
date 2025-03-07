@@ -35,3 +35,19 @@
 11.Save
 
 ![image](https://github.com/user-attachments/assets/f76cd6a4-f5d5-439f-8c2c-cb592f2b2738)
+
+--
+
+12.Right click the function on the decompiler and pick `Edit Function Signature`
+
+13.Pick `__thiscall` as the `Calling Convention`
+
+![image](https://github.com/user-attachments/assets/24cbab30-6774-4014-8ec2-e136f5acfa4c)
+
+14.Pick the first `Index` and Enable `Use Custom Storage`
+
+![image](https://github.com/user-attachments/assets/036f7556-7131-40e0-addb-9ec7d0b70eed)
+
+15.Rename the `Datatype` of the first `Index` to its `Name + *` (Ends up as `Message*` in this case)
+
+![image](https://github.com/user-attachments/assets/5009098c-df94-407a-8874-14fa7ea1c33a)
