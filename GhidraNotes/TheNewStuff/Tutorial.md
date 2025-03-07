@@ -10,3 +10,10 @@
 
 ![image](https://github.com/user-attachments/assets/d35d281c-6bcc-4d9c-84af-20d5782eb59c)
 
+5.Open up PVZ executable in anothehr ghidra instance and Open up `Data Type Manager` on that instance
+
+6.Create a new category called `fb`
+
+7.Create a new category called `Messages` inside of the `fb` category
+
+8.
