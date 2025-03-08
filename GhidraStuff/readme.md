@@ -1,4 +1,4 @@
-# [Tutorial for messages](https://github.com/Twig6943/ProjectOutlawn/blob/main/GhidraNotes/TheNewStuff/TutorialNew.md)
+# [Tutorial for messages](/GhidraStuff/TheNewStuff/TutorialNew.md)
 
 # Files
 
