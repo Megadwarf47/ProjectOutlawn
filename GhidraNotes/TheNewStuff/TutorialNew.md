@@ -31,6 +31,8 @@ namespace fb {
 }
 ```
 
+(Don't open the namespace like 1000 times just open it once on the beginning of the header file and then close it at the end.)
+
 # The parts that change
 
 ### The class name on the 2nd line changes.
