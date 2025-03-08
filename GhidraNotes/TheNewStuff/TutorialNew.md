@@ -34,7 +34,7 @@ class ServerPlayerDestroyMessage : public fb::Message {
 
 ### The category (`fb::ServerPlayer*`) and the structure name (`m_player`) also changes depending on the class
 
-<img src="/GhidraNotes/Images/Category.png" width="400"/>
+<img src="/GhidraNotes/Images/Categoryy.png" width="400"/>
 
 # Here's a valid format that has stuff changed to give you an idea
 
