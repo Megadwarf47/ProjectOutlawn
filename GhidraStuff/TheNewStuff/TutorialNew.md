@@ -4,9 +4,9 @@
 
 2.Search for the message you want to do inside `Data Type Manager` (It'll always be inside `fb`)
 
-<img src="/GhidraStuff/Images/DataTypeManager.png">
+<img src="/GhidraStuff/TheNewStuff/Images/DataTypeManager.png">
 
-<img src="/GhidraStuff/Images/Structure2.png">
+<img src="/GhidraStuff/TheNewStuff/Images/Structure2.png">
 
 (Remove the spaces ghidra makes on DataTypes on the header file but keep them on ghidra)
 
@@ -37,11 +37,11 @@ namespace fb {
 
 ### The class name on the 2nd line changes.
 
-<img src="/GhidraStuff/Images/Classes1.png" width="600"/>
+<img src="/GhidraStuff/TheNewStuff/Images/Classes1.png" width="600"/>
 
 ### The category (`fb::ServerPlayer*`) and the structure name (`m_player`) also changes depending on the class
 
-<img src="/GhidraStuff/Images/Category1.png" width="400"/>
+<img src="/GhidraStuff/TheNewStuff/Images/Category1.png" width="400"/>
 
 # Here's a valid format that has stuff changed to give you an idea
 
