@@ -6,17 +6,14 @@
 
 <img src="/GhidraNotes/Images/DataTypeManager.png">
 
-(Side note always start at the bottom when creating stuff for a new category)
-
 <img src="/GhidraNotes/Images/Structure2.png">
+
+(Ghidra sometimes makes up DataTypes such as `uint64` )
 
 # Data generation example
 
 ```
 class ServerPlayerDestroyMessage : public fb::Message {
-    public:
-        typedef void* (__thiscall* newInstance_t)(fb:: ServerPlayerDestroyMessage* th);
-        static newInstance_t newInstance;
     public:
         fb::ServerPlayer* m_player;
     };
@@ -37,10 +34,7 @@ class ServerPlayerDestroyMessage : public fb::Message {
 (Side note: There might be more than 1 DataType/Name if that's the case just add put a space and keep adding stuff)
 
 ```
-class ServerPlayerCreateMessage : public fb::Message {
-    public:
-        typedef void* (__thiscall* newInstance_t)(fb:: ServerPlayerCreateMessage* th);
-        static newInstance_t newInstance;
+class ServerPlayerDestroyMessage : public fb::Message {
     public:
         fb::ServerPlayer* m_player;
     };
