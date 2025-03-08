@@ -12,7 +12,7 @@
 
 [✅] A launcher that can join/host + mods via frosty (Might need to use cli dll injector)
 
-[🟨] [Tutorial](/GhidraStuff/TheNewStuff/TutorialNew.md) on `categories` that `Bree` is okay with
+[🟨] [Tutorial](/GhidraStuff/TheNewStuff/TutorialNew.md) on [categories](/GhidraStuff/BreeMsgs/Categories.h) that `Bree` is okay with
 
 [❌] Get [messages](/GhidraStuff/BreeMsgs/Categories.h) done (Shouldn't be that much for the alpha release)
 
