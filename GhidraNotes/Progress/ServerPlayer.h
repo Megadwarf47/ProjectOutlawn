@@ -94,8 +94,68 @@ namespace fb {
     };
 }
 
+namespace fb {
+    class ServerPlayerKitReplacedMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+        ServerSoldierEntity* m_oldSoldier;
+        ServerSoldierEntity* m_newSoldier;
+    };
+}
 
+namespace fb {
+    class ServerPlayerLeftLevelMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+    };
+}
 
+namespace fb {
+    class ServerPlayerLevelLoadedMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+    };
+}
+
+namespace fb {
+    class ServerPlayerManDownRevivedMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+        bool m_isAdrenalineRevive;
+        ServerPlayer* m_reviver;
+    };
+}
+
+namespace fb {
+    class ServerPlayerManuallySelectedSpawnPointMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+    };
+}
+
+namespace fb {
+    class ServerPlayerMeleeInteruptedMessage : public Message {
+    public:
+        ServerPlayer* m_killer;
+        bool m_killedAttacker;
+        ServerPlayer* m_meleeAttacker;
+        ServerPlayer* m_meleeAttacker;
+    };
+}
+
+namespace fb {
+    class ServerPlayerNoInteractivityKickMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+    };
+}
+
+namespace fb {
+    class ServerPlayerNoInteractivityKickMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+    };
+}
 
 
 
