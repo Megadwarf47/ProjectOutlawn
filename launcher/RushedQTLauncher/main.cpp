@@ -52,11 +52,9 @@ int main(int argc, char *argv[])
     QVBoxLayout *joinLayout = new QVBoxLayout;
     QFormLayout *formLayout = new QFormLayout;
     QLineEdit *ipInput = new QLineEdit;
-    QLineEdit *portInput = new QLineEdit;
     QLineEdit *usernameInput = new QLineEdit;
     QLineEdit *modpackInput = new QLineEdit;
     formLayout->addRow("IP:", ipInput);
-    formLayout->addRow("Port:", portInput);
     formLayout->addRow("Username:", usernameInput);
     formLayout->addRow("Modpack:", modpackInput);
     joinLayout->addLayout(formLayout);
@@ -84,11 +82,10 @@ int main(int argc, char *argv[])
         // Retrieve the user inputs
         QString username = usernameInput->text();
         QString ip = ipInput->text();
-        QString port = portInput->text();
         QString modpack = modpackInput->text();
 
         // Launch the .exe file with command line args when "Join" button is clicked
-        QProcess::startDetached(exePath, QStringList() << "-username" << username << "-ip" << ip << "-port" << port << "-modpack" << modpack);
+        QProcess::startDetached(exePath, QStringList() << "--playerName" << username << "--Client.ServerIp" << ip << "-dataPath" << modpack);
         stackedWidget->setCurrentWidget(joinPage);
     });
 
