@@ -6,7 +6,7 @@
 
 3.Just put everything in the same spot (Create a new thing inside pvz's `fb` section)
 
-<img src="/GhidraNotes/Images/Structure.png" width="200"/>
+<img src="/GhidraNotes/Images/Structure.png">
 
 # An Example
 ```
