@@ -8,6 +8,8 @@
 
 <img src="/GhidraNotes/Images/Structure2.png">
 
+(Remove the spaces ghidra makes on the header file but keep them on ghidra)
+
 (Ghidra sometimes uses its own custom DataTypes such as `ulong64` just type in the thing you need to type from the bottom to the category file)
 
 `ulong64` > `uint64_t` or `long long`
