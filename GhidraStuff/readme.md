@@ -2,7 +2,7 @@
 
 # Files
 
-[The right format](/GhidraNotes/BreeMsgs/RightFormatExample.h)
+[The right format](/GhidraStuff/BreeMsgs/RightFormatExample.h)
 
-[Categories](/GhidraNotes/BreeMsgs/Categories.h) > [Progress](/GhidraNotes/Progress)
+[Categories](/GhidraStuff/BreeMsgs/Categories.h) > [Progress](/GhidraStuff/Progress)
 
