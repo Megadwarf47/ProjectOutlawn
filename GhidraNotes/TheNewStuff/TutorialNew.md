@@ -47,9 +47,10 @@ namespace fb {
 
 ```
 namespace fb {
-    class ServerPlayerCreateMessage : public Message {
+    class ServerPlayerChangeChatChannelMessage : public Message {
     public:
         ServerPlayer* m_player;
+        uint64_t m_newMask;
     };
 }
 ```
