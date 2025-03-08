@@ -6,10 +6,10 @@
 
 # [Discord server 💬](https://discord.com/invite/CS5GzFTVWr)
 
-# [Faq 🙋](https://github.com/Twig6943/ProjectOutlawn/blob/main/docs/Faq.md)
+# [Faq 🙋](/docs/Faq.md)
 
-# [Roadmap 📋](https://github.com/Twig6943/ProjectOutlawn/blob/main/docs/Roadmap.md)
+# [Roadmap 📋](/docs/Roadmap.md)
 
-# [Documentation 📄](https://github.com/Twig6943/PVZGWPrivateServers/tree/main/docs)
+# [Documentation 📄](/docs)
 
-# [Credits 📜](https://github.com/Twig6943/ProjectOutlawn/blob/main/Credits.md)
+# [Credits 📜](/Credits.md)
