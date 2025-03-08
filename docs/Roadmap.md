@@ -10,7 +10,7 @@
 
 # Alpha 0.1 (Absolute first alpha release)
 
-[✅] A launcher that can join/host + mods via frosty (Might need to use cli dll injector)
+[✅] A CLI/GUI launcher that can join/host + mods via frosty (Might need to use cli dll injector)
 
 [🟨] [Tutorial](/GhidraStuff/TheNewStuff/TutorialNew.md) on [categories](/GhidraStuff/BreeMsgs/Categories.h) that `Bree` is okay with
 
