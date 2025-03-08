@@ -4,7 +4,7 @@
 
 2.Search for the message you want to do inside `Data Type Manager` (It'll always be inside `fb`)
 
-3.Just put everything in the same spot
+3.Just put everything in the same spot (Create a new thing inside pvz's `fb` section)
 
 ![image](https://github.com/user-attachments/assets/c56cfd5e-0d5b-4a69-84cf-071461ef13f8)
 
