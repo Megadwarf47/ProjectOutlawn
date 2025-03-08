@@ -14,7 +14,7 @@
 
 [🟨] [Tutorial](/GhidraStuff/TheNewStuff/TutorialNew.md) on [categories](/GhidraStuff/BreeMsgs/Categories.h) that `Bree` is okay with
 
-[❌] Get [messages](/GhidraStuff/BreeMsgs/Categories.h) done (Shouldn't be that much for the alpha release)
+[❌] Get [`ServerPlayer`](/GhidraStuff/BreeMsgs/Categories.h#L1084) done
 
 [❌] A Server that gets in-game
 
