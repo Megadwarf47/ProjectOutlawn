@@ -1,4 +1,4 @@
-# GWGhidraNotes
+# GhidraStuff
 
 # XRefs
 
