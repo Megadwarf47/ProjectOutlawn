@@ -8,11 +8,14 @@
 
 (Side note always start at the bottom when creating stuff for a new category)
 
-3.Just put everything in the same spot (Create a new thing inside pvz's `fb` section)
-
 <img src="/GhidraNotes/Images/Structure.png">
 
-# An Example
+
+
+
+
+
+# Data generation example
 ```
 class ServerPlayerDestroyMessage : public fb::Message {
     public:
@@ -36,9 +39,9 @@ class ServerPlayerDestroyMessage : public fb::Message {
 # Here's a valid format that has stuff changed to give you an idea
 
 ```
-class ServerPlayerDestroyMessage : public fb::Message { 
+class ServerPlayerCreateMessage : public fb::Message {
     public:
-        typedef void* (__thiscall* newInstance_t)(fb:: ServerPlayerDestroyMessage* th);
+        typedef void* (__thiscall* newInstance_t)(fb:: ServerPlayerCreateMessage* th);
         static newInstance_t newInstance;
     public:
         fb::ServerPlayer* m_player;
