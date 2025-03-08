@@ -8,15 +8,17 @@
 
 <img src="/GhidraNotes/Images/Structure2.png">
 
-(Ghidra sometimes makes up DataTypes such as `ulong64` just type in `long long` to the category file)
+(Ghidra sometimes uses its own custom DataTypes such as `ulong64` just type in `long long` to the category file)
 
 # Data generation example
 
 ```
-class ServerPlayerDestroyMessage : public fb::Message {
+namespace fb {
+    class ServerPlayerCreateMessage : public Message {
     public:
-        fb::ServerPlayer* m_player;
+        ServerPlayer* m_player;
     };
+}
 ```
 
 # The parts that change
@@ -34,8 +36,10 @@ class ServerPlayerDestroyMessage : public fb::Message {
 (Side note: There might be more than 1 DataType/Name if that's the case just add put a space and keep adding stuff)
 
 ```
-class ServerPlayerDestroyMessage : public fb::Message {
+namespace fb {
+    class ServerPlayerCreateMessage : public Message {
     public:
-        fb::ServerPlayer* m_player;
+        ServerPlayer* m_player;
     };
+}
 ```
