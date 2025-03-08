@@ -16,7 +16,7 @@
 
 [❌] Get [messages](/GhidraStuff/BreeMsgs/Categories.h) done (Shouldn't be that much for the alpha release)
 
-[❌] A Server that gets in-game.
+[❌] A Server that gets in-game
 
 # Alpha 0.2
 
