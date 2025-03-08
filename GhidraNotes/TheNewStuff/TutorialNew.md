@@ -6,7 +6,7 @@
 
 3.Just put everything in the same spot (Create a new thing inside pvz's `fb` section)
 
-![image](https://github.com/user-attachments/assets/c56cfd5e-0d5b-4a69-84cf-071461ef13f8)
+<img src="/GhidraNotes/Images/Structure.png" width="200"/>
 
 # An Example
 ```
@@ -23,11 +23,11 @@ class ServerPlayerDestroyMessage : public fb::Message {
 
 ### The class names on the 1st and the 3rd line changes depending on the class.
 
-![image](https://github.com/user-attachments/assets/79c2d12a-0f90-4aec-a8cb-31577345111e)
+<img src="/GhidraNotes/Images/Classes.png" width="200"/>
 
 ### The category (`fb::ServerPlayer*`) and the structure name (`m_player`) also changes depending on the class
 
-![image](https://github.com/user-attachments/assets/f0ac8314-21f2-41d7-bc90-7f3f0af66c4f)
+<img src="/GhidraNotes/Images/Classes.png" width="200"/>
 
 # Here's a valid format that has stuff changed to give you an idea
 
