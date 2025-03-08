@@ -23,11 +23,11 @@ class ServerPlayerDestroyMessage : public fb::Message {
 
 ### The class names on the 1st and the 3rd line changes depending on the class.
 
-<img src="/GhidraNotes/Images/Classes.png" width="400"/>
+<img src="/GhidraNotes/Images/Classes.png" width="600"/>
 
 ### The category (`fb::ServerPlayer*`) and the structure name (`m_player`) also changes depending on the class
 
-<img src="/GhidraNotes/Images/Classes.png" width="400"/>
+<img src="/GhidraNotes/Images/Classes.png" width="600"/>
 
 # Here's a valid format that has stuff changed to give you an idea
 
