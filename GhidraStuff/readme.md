@@ -1,4 +1,4 @@
-# [Tutorial for messages](/GhidraStuff/TheNewStuff/TutorialNew.md) (Status: ❌ )
+# [Tutorial for messages](/GhidraStuff/TheNewStuff/TutorialNew.md)
 
 # Files
 
