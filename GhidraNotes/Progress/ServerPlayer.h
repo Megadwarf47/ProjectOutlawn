@@ -1,7 +1,15 @@
-class ServerPlayerCreateMessage : public fb::Message {
+namespace fb {
+    class ServerPlayerChangeChatChannelMessage : public Message {
     public:
-        typedef void* (__thiscall* newInstance_t)(fb:: ServerPlayerCreateMessage* th);
-        static newInstance_t newInstance;
-    public:
-        fb::ServerPlayer* m_player;
+        ServerPlayer* m_player;
+        long long m_newMask;
     };
+}
+
+namespace fb {
+    class ServerPlayerChangedSquadSpawnerStatusMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+    };
+}
+
