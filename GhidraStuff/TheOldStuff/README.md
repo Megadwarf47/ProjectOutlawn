@@ -14,7 +14,7 @@ Follow this rule when looking for new `XRefs` is to check the first contructor
 
 `FB::Message:Message(param_1,0x9c775c5c,0x628e72e7,0xff);` //First paramiter is named param_1 and is inside paranthesis
 
-![XREFS](https://github.com/user-attachments/assets/138e8950-e427-4598-b810-5a991039bf1b)
+![XREFS](/GhidraStuff/TheOldStuff/Images/README/1.png)
 
 # [String](https://github.com/Twig6943/CrzyecksGhidraNotes/blob/main/String.md)
 
@@ -26,11 +26,11 @@ getType is always the first member of the vftable
 
 Double click to  `LAB_1413f2920`  into a function by pressing `F` and then rename that function to `fb::string::getType`
 
-![gettype](https://github.com/user-attachments/assets/1b9fa526-92d6-4a84-9580-863ecb079988)
+![gettype](/GhidraStuff/TheOldStuff/Images/README/2.png)
 
 Should end up looking like this
 
-![image](https://github.com/user-attachments/assets/462beaf5-a06a-4fdc-817e-49709e5418bc)
+![image](/GhidraStuff/TheOldStuff/Images/README/3.png)
 
 
 # Vftable
@@ -39,11 +39,11 @@ Should end up looking like this
 
 the vftable is this address in the constructor, name it to `fb::string::vftable`
 
-![image](https://github.com/user-attachments/assets/68cfa060-cf7d-4b2f-8350-45639dda3434)
+![image](/GhidraStuff/TheOldStuff/Images/README/4.png)
 
 Should end up looking like this
 
-![image](https://github.com/user-attachments/assets/23cf816c-101f-40a9-9573-2868dd403c87)
+![image](/GhidraStuff/TheOldStuff/Images/README/5.png)
 
 
 # Constructor
@@ -52,5 +52,5 @@ Should end up looking like this
 
 Name it to `fb::string::string`
 
-![image](https://github.com/user-attachments/assets/568e7aba-453f-4259-b058-02b7b9ab6a42)
+![image](/GhidraStuff/TheOldStuff/Images/README/6.png)
 
