@@ -9,7 +9,7 @@
 (Side note always start at the bottom when creating stuff for a new category)
 
 
-<img src="/GhidraNotes/Images/Structure.png">
+<img src="/GhidraNotes/Images/Structuree.png">
 
 
 
