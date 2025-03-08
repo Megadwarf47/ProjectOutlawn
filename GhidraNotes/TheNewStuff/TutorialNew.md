@@ -23,11 +23,11 @@ class ServerPlayerDestroyMessage : public fb::Message {
 
 ### The class names on the 1st and the 3rd line changes depending on the class.
 
-![image](https://github.com/user-attachments/assets/b09778c5-6593-4d28-a44c-56d0ce772d6a)
+![image](https://github.com/user-attachments/assets/79c2d12a-0f90-4aec-a8cb-31577345111e)
 
 ### The category (`fb::ServerPlayer*`) and the structure name (`m_player`) also changes depending on the class
 
-![image](https://github.com/user-attachments/assets/86919b8d-4ec9-4a4a-b9d8-ae04a25ff917)
+![image](https://github.com/user-attachments/assets/f0ac8314-21f2-41d7-bc90-7f3f0af66c4f)
 
 # Here's a valid format that has stuff changed to give you an idea
 
