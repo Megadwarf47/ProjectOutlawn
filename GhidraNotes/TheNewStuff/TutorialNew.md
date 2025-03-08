@@ -23,9 +23,9 @@ namespace fb {
 
 # The parts that change
 
-### The class names on the 1st and the 3rd line changes depending on the class.
+### The class name on the 2nd line changes.
 
-<img src="/GhidraNotes/Images/Classes.png" width="600"/>
+<img src="/GhidraNotes/Images/Classes1.png" width="600"/>
 
 ### The category (`fb::ServerPlayer*`) and the structure name (`m_player`) also changes depending on the class
 
