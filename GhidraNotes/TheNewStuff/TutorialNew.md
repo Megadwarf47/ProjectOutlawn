@@ -11,8 +11,11 @@
 (Ghidra sometimes uses its own custom DataTypes such as `ulong64` just type in the thing you need to type from the bottom to the category file)
 
 `ulong64` > `uint64_t` or `long long`
+
 `undefined1` > `byte`
+
 `undefined4` > `int`
+
 `undefined8` > `uint64_t`
 
 # Data generation example
