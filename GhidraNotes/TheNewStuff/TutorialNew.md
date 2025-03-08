@@ -4,6 +4,8 @@
 
 2.Search for the message you want to do inside `Data Type Manager` (It'll always be inside `fb`)
 
+(Side note always start at the bottom when creating stuff for a new category)
+
 3.Just put everything in the same spot (Create a new thing inside pvz's `fb` section)
 
 <img src="/GhidraNotes/Images/Structure.png">
