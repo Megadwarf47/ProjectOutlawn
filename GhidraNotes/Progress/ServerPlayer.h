@@ -1,48 +1,37 @@
 namespace fb {
+
     class ServerPlayerChangeChatChannelMessage : public Message {
     public:
         ServerPlayer* m_player;
         uint64_t m_newMask;
     };
-}
 
-namespace fb {
     class ServerPlayerChangedSquadSpawnerStatusMessage : public Message {
     public:
         ServerPlayer* m_player;
     };
-}
 
-namespace fb {
     class ServerPlayerChangedVoiceChannelMessage : public Message {
     public:
         ServerPlayer* m_player;
     };
-}
 
-namespace fb {
     class ServerPlayerCreateMessage : public Message {
     public:
         ServerPlayer* m_player;
     };
-}
 
-namespace fb {
     class ServerPlayerCreatedForConnectionMessage : public Message {
     public:
         ServerConnection * m_connection;
         ServerPlayer* m_player;
     };
-}
 
-namespace fb {
     class ServerPlayerDestroyMessage : public Message {
     public:
         ServerPlayer* m_player;
     };
-}
 
-namespace fb {
     class ServerPlayerEnterEntryMessage : public Message {
     public:
         ServerPlayer* m_player;
@@ -52,34 +41,26 @@ namespace fb {
         int m_playerId;
         bool m_hiddenObject;
     };
-}
 
-namespace fb {
     class ServerPlayerEnteredLevelMessage : public Message {
     public:
         ServerPlayer* m_player;
         bool* m_isLoadingSave;
     };
-}
 
-namespace fb {
     class ServerPlayerExitEntryMessage : public Message {
     public:
         ServerPlayer* m_player;
         ServerControllableEntity* m_controllable;
         ServerEntryComponent* m_entry;
     };
-}
 
-namespace fb {
     class ServerPlayerInstantSuicideMessage : public Message {
     public:
         ServerPlayer* m_player;
         ServerDamageGiverInfo* m_damageGiverInfo;
     };
-}
 
-namespace fb {
     class ServerPlayerKilledMessage : public Message {
     public:
         ServerPlayer* m_victim;
@@ -92,48 +73,36 @@ namespace fb {
         bool m_headShot;
         bool m_victimInReviveState;
     };
-}
 
-namespace fb {
     class ServerPlayerKitReplacedMessage : public Message {
     public:
         ServerPlayer* m_player;
         ServerSoldierEntity* m_oldSoldier;
         ServerSoldierEntity* m_newSoldier;
     };
-}
 
-namespace fb {
     class ServerPlayerLeftLevelMessage : public Message {
     public:
         ServerPlayer* m_player;
     };
-}
 
-namespace fb {
     class ServerPlayerLevelLoadedMessage : public Message {
     public:
         ServerPlayer* m_player;
     };
-}
 
-namespace fb {
     class ServerPlayerManDownRevivedMessage : public Message {
     public:
         ServerPlayer* m_player;
         bool m_isAdrenalineRevive;
         ServerPlayer* m_reviver;
     };
-}
 
-namespace fb {
     class ServerPlayerManuallySelectedSpawnPointMessage : public Message {
     public:
         ServerPlayer* m_player;
     };
-}
 
-namespace fb {
     class ServerPlayerMeleeInteruptedMessage : public Message {
     public:
         ServerPlayer* m_killer;
@@ -141,24 +110,91 @@ namespace fb {
         ServerPlayer* m_meleeAttacker;
         ServerPlayer* m_meleeAttacker;
     };
-}
 
-namespace fb {
     class ServerPlayerNoInteractivityKickMessage : public Message {
     public:
         ServerPlayer* m_player;
     };
-}
 
-namespace fb {
-    class ServerPlayerNoInteractivityKickMessage : public Message {
+    class ServerPlayerReleasingLevelMessage : public Message {
     public:
         ServerPlayer* m_player;
     };
+
+    class ServerPlayerRespawnMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+    };
+
+    class ServerPlayerReviveAcceptedMessage : public Message {
+    public:
+        bool m_reviverPlayerIdValid;
+        uint m_reviverPlayerId;
+        uint m_reviveePlayerId;
+    };
+
+    class ServerPlayerReviveMessage : public Message {
+    public:
+        bool m_reviverPlayerIdValid;
+        uint m_reviverPlayerId;
+        uint m_reviveePlayerId;
+    };
+
+    class ServerPlayerReviveRefusedMessage : public Message {
+    public:
+        uint m_reviveePlayerId;
+    };
+
+    class ServerPlayerSpawnAtVehicleMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+        ServerVehicleEntity* m_vehicleToSpawnAt;
+    };
+
+    class ServerPlayerSpawnOnPlayerMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+        ServerPlayer* m_playerToSpawnOn;
+        char* m_controllableType;
+    };
+
+   class ServerPlayerSpawnOnSelectedSpawnPointMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+    };
+
+   class ServerPlayerSquadLeaderStatusChangedMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+    };
+
+   class ServerPlayerSwitchSquadMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+        int m_oldSquad;
+    };
+
+   class ServerPlayerSwitchTeamMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+        int m_oldTeam;
+    };
+
+   class ServerPlayerSwitchTeamMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+        int m_oldTeam;
+    };
+
+   class ServerPlayerTeamKillKickMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+    };
+
+   class ServerPlayerTickMessage : public Message {
+    public:
+        ServerPlayer* m_player;
+        float m_timeInState;
+    };
+
 }
-
-
-
-
-
-
