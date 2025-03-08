@@ -8,14 +8,10 @@
 
 (Side note always start at the bottom when creating stuff for a new category)
 
-
-<img src="/GhidraNotes/Images/Structuree.png">
-
-
-
-
+<img src="/GhidraNotes/Images/Structure2.png">
 
 # Data generation example
+
 ```
 class ServerPlayerDestroyMessage : public fb::Message {
     public:
