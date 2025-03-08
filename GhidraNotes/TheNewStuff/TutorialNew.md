@@ -8,7 +8,7 @@
 
 <img src="/GhidraNotes/Images/Structure2.png">
 
-(Ghidra sometimes makes up DataTypes such as `uint64` )
+(Ghidra sometimes makes up DataTypes such as `ulong64` just type in `long long` to the category file)
 
 # Data generation example
 
