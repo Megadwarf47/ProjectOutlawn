@@ -34,6 +34,8 @@ class ServerPlayerDestroyMessage : public fb::Message {
 
 # Here's a valid format that has stuff changed to give you an idea
 
+(Side note: There might be more than 1 DataType/Name if that's the case just add put a space and keep adding stuff)
+
 ```
 class ServerPlayerCreateMessage : public fb::Message {
     public:
