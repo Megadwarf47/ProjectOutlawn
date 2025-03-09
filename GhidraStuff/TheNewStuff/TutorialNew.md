@@ -61,7 +61,7 @@ namespace fb {
 
 Example constructor
 
-![image](https://github.com/user-attachments/assets/8c4aeffa-9b2b-4b56-9760-e7878cd2279c)
+<img src="/GhidraStuff/TheNewStuff/Images/examplecontructor.png" width="400"/>
 
 You gotta compare the constructors's messages
 
