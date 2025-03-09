@@ -57,4 +57,17 @@ namespace fb {
 }
 ```
 
-(Make sure to compare categories with pvz's one on ghidra)
+# Verifying the structure
+
+Checking the usage of the messages in ghidra is enough
+
+On bf3 pdb just do `G` to search 
+
+<img src="/GhidraStuff/TheNewStuff/Images/bf3search.png" width="400"/>
+
+On pvz go to `Window` > `Defined Strings`
+
+<img src="/GhidraStuff/TheNewStuff/Images/pvzsearch.png" width="400"/>
+
+
+
