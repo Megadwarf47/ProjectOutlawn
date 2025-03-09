@@ -81,6 +81,15 @@ Now you gotta `Edit function signature`
 
 <img src="/GhidraStuff/TheNewStuff/Images/edit_function_signature.jpg" width="400"/>
 
+Change the calling convention to `__thiscall`
+
+<img src="/GhidraStuff/TheNewStuff/Images/__thiscall.png" width="400"/>
+
+Then remove the param_1
+
+<img src="/GhidraStuff/TheNewStuff/
+
+
 # Verifying the structure
 
 You gotta compare the constructors's messages
