@@ -1,4 +1,4 @@
-# How to do messages for [categories](https://github.com/Twig6943/ProjectOutlawn/blob/main/GhidraStuff/BreeMsgs/Categories.h)
+![image](https://github.com/user-attachments/assets/4a03561b-34a5-45a6-9e4c-f26c304da143)# How to do messages for [categories](https://github.com/Twig6943/ProjectOutlawn/blob/main/GhidraStuff/BreeMsgs/Categories.h)
 
 1.Open up bf3 pdb in ghidra
 
@@ -59,10 +59,6 @@ namespace fb {
 
 # Getting to the constructure
 
-Example constructor
-
-<img src="/GhidraStuff/TheNewStuff/Images/examplecontructor.png" width="400"/>
-
 On bf3 pdb just do `G` to search 
 
 <img src="/GhidraStuff/TheNewStuff/Images/bf3search.png" width="400"/>
@@ -70,6 +66,20 @@ On bf3 pdb just do `G` to search
 On pvz go to `Window` > `Defined Strings`
 
 <img src="/GhidraStuff/TheNewStuff/Images/pvzsearch.png" width="400"/>
+
+On pvz somehow find the constructor
+
+Example constructor
+
+<img src="/GhidraStuff/TheNewStuff/Images/examplecontructor.png" width="400"/>
+
+Rename it to `fb::string::string` like so
+
+<img src="/GhidraStuff/TheNewStuff/Images/fb::string::string.png" width="400"/>
+
+Now you gotta `Edit function signature`
+
+<img src="/GhidraStuff/TheNewStuff/Images/edit_function_signature.jpg" width="400"/>
 
 # Verifying the structure
 
