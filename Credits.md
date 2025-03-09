@@ -1,4 +1,8 @@
-# Server
+# Project Outlawn
+
+<img src="Outlawn1.png" width="800"/>
+
+### Server
 
 `@FlashHit`
 
@@ -8,21 +12,21 @@
 
 `@KimAndy`
 
-# Launcher
+### Launcher
 
 `@zefanjajobse`
 
-# Design
+### Design
 
 `@MixaDoDs`
 
 `@Nerosus`
 
-# Miscellaneous
+### Miscellaneous
 
 `@Twig6943`
 
-# Shoutouts
+### Shoutouts
 
 Marne team ❤️
 
@@ -31,4 +35,3 @@ Ardishko 😎
 Jediclank134 🇬🇧
 
 misyltoad 🐸
-
