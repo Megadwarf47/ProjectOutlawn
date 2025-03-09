@@ -87,7 +87,7 @@ Change the calling convention to `__thiscall`
 
 Then remove the param_1
 
-<img src="/GhidraStuff/TheNewStuff/
+<img src="/GhidraStuff/TheNewStuff/Images/param1.png" width="400"/>
 
 
 # Verifying the structure
