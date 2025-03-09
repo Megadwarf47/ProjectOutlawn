@@ -59,7 +59,11 @@ namespace fb {
 
 # Verifying the structure
 
-Checking the usage of the messages in ghidra is enough
+Example constructor
+
+![image](https://github.com/user-attachments/assets/8c4aeffa-9b2b-4b56-9760-e7878cd2279c)
+
+You gotta compare the constructors's messages
 
 On bf3 pdb just do `G` to search 
 
