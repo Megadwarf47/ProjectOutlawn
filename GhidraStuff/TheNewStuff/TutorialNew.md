@@ -57,4 +57,4 @@ namespace fb {
 }
 ```
 
-(Make sure to compare with pvz on ghidra)
+(Make sure to compare categories with pvz's one on ghidra)
