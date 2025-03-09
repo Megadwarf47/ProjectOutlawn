@@ -57,13 +57,11 @@ namespace fb {
 }
 ```
 
-# Verifying the structure
+# Getting to the constructure
 
 Example constructor
 
 <img src="/GhidraStuff/TheNewStuff/Images/examplecontructor.png" width="400"/>
-
-You gotta compare the constructors's messages
 
 On bf3 pdb just do `G` to search 
 
@@ -72,6 +70,12 @@ On bf3 pdb just do `G` to search
 On pvz go to `Window` > `Defined Strings`
 
 <img src="/GhidraStuff/TheNewStuff/Images/pvzsearch.png" width="400"/>
+
+# Verifying the structure
+
+You gotta compare the constructors's messages
+
+
 
 
 
