@@ -71,7 +71,7 @@ On pvz go to `Window` > `Defined Strings`
 
 <img src="/GhidraStuff/TheNewStuff/Images/pvzsearch.png" width="400"/>
 
-On pvz somehow find the constructor
+On pvz somehow find the constructor (The path might be Only>bottom>middle right)
 
 Example constructor
 
