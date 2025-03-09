@@ -136,7 +136,7 @@ namespace fb {
     class ServerPlayerReviveMessage : public Message {
     public:
         bool m_reviverPlayerIdValid;
-        uint m_reviverPlayerId;
+        unsigned long long m_reviverPlayerId;
         uint m_reviveePlayerId;
     };
 
