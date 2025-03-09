@@ -1,0 +1,16 @@
+///////////////////////////////////////////////////////////////
+//                                                           //
+// This is an automatically generated file.                  //
+// Do *NOT* modify unless you really know what you're doing. //
+//                                                           //
+///////////////////////////////////////////////////////////////
+
+#pragma once
+
+namespace fb {
+	enum VoiceOverContainerConditionMode {
+		VoiceOverContainerConditionMode_All = 0,
+		VoiceOverContainerConditionMode_Any = 1
+	};
+}
+

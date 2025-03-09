@@ -1,0 +1,30 @@
+///////////////////////////////////////////////////////////////
+//                                                           //
+// This is an automatically generated file.                  //
+// Do *NOT* modify unless you really know what you're doing. //
+//                                                           //
+///////////////////////////////////////////////////////////////
+
+#pragma once
+
+#include <fb/AudioGraphNodeData.h>
+#include <fb/AudioGraphNodePort.h>
+#include <fb/RefArray.h>
+
+namespace fb {
+	class MixerPreset;
+}
+
+namespace fb {
+	class MixerSimplePresetNodeData : public AudioGraphNodeData {
+	public:
+		virtual ClassInfo* getType() const override { return TypeManager::findClass("MixerSimplePresetNodeData"); }
+		virtual ~MixerSimplePresetNodeData() override {}
+		MixerSimplePresetNodeData() {
+		};
+
+		AudioGraphNodePort m_index; // 0x10 (16)
+		RefArray<MixerPreset> m_presets; // 0x18 (24)
+	}; // 0x20 (32)
+}
+

@@ -1,0 +1,32 @@
+///////////////////////////////////////////////////////////////
+//                                                           //
+// This is an automatically generated file.                  //
+// Do *NOT* modify unless you really know what you're doing. //
+//                                                           //
+///////////////////////////////////////////////////////////////
+
+#pragma once
+
+#include <fb/BuffEffectData.h>
+
+namespace fb {
+	class MovementSpeedBuffEffectData : public BuffEffectData {
+	public:
+		virtual ClassInfo* getType() const override { return TypeManager::findClass("MovementSpeedBuffEffectData"); }
+		virtual ~MovementSpeedBuffEffectData() override {}
+		MovementSpeedBuffEffectData() {
+			m_minPowerMultiplier = 1.f;
+			m_maxPowerMultiplier = 1.f;
+			m_minPowerThreshold = 0.f;
+			m_maxPowerThreshold = 1.f;
+			m_ignoreWeaponUpgrades = false;
+		};
+
+		float m_minPowerMultiplier; // 0x10 (16)
+		float m_maxPowerMultiplier; // 0x14 (20)
+		float m_minPowerThreshold; // 0x18 (24)
+		float m_maxPowerThreshold; // 0x1C (28)
+		bool m_ignoreWeaponUpgrades; // 0x20 (32)
+	}; // 0x28 (40)
+}
+
