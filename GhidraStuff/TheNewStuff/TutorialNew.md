@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/4a03561b-34a5-45a6-9e4c-f26c304da143)# How to do messages for [categories](https://github.com/Twig6943/ProjectOutlawn/blob/main/GhidraStuff/BreeMsgs/Categories.h)
+# How to do messages for [categories](https://github.com/Twig6943/ProjectOutlawn/blob/main/GhidraStuff/BreeMsgs/Categories.h)
 
 1.Open up bf3 pdb in ghidra
 
@@ -57,6 +57,10 @@ namespace fb {
 }
 ```
 
+# Verifying the structure
+
+You gotta compare the constructors's messages
+
 # Getting to the constructure
 
 On bf3 pdb just do `G` to search 
@@ -88,11 +92,6 @@ Change the calling convention to `__thiscall`
 Then remove the param_1
 
 <img src="/GhidraStuff/TheNewStuff/Images/param1.png" width="400"/>
-
-
-# Verifying the structure
-
-You gotta compare the constructors's messages
 
 
 
