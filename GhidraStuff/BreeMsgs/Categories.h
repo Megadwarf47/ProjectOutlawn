@@ -5,6 +5,9 @@
 //                                                           //
 ///////////////////////////////////////////////////////////////
 
+// "//" Means checked
+// "//@" Means verified?
+
 #pragma once
 
 namespace fb {
@@ -1119,7 +1122,7 @@ namespace fb {
 		//ServerPlayerReleasingLevelMessage = 0x840D85E2,
 		//ServerPlayerRespawnMessage = 0xC935A574,
 		//ServerPlayerReviveAcceptedMessage = 0x942685A2,
-		//ServerPlayerReviveMessage = 0x25B72903,
+		//@ServerPlayerReviveMessage = 0x25B72903,
 		//ServerPlayerReviveRefusedMessage = 0xD6BF76B5,
 		//ServerPlayerSpawnAtVehicleMessage = 0x690B5B2E,
 		//ServerPlayerSpawnOnPlayerMessage = 0x56E23F11,
