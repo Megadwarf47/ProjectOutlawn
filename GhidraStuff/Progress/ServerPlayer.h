@@ -1,51 +1,72 @@
+//assuming if its undefined8 its a ptr.
+
 namespace fb {
 
-    class ServerPlayerChangeChatChannelMessage : public Message {
+    class ServerPlayerChangeChatChannelMessage : public Message { 
     public:
-        ServerPlayer* m_player;
-        uint64_t m_newMask;
+		
+		unsigned long long* unknown1;
+		unsigned long long* unknown2;
+		
+		//BF3 PDB:
+        //ServerPlayer* m_player; 
+        //unsigned long long m_newMask;
     };
 
-    class ServerPlayerChangedSquadSpawnerStatusMessage : public Message {
+    class ServerPlayerChangedSquadSpawnerStatusMessage : public Message { //weird
     public:
-        ServerPlayer* m_player;
+        ServerPlayer* m_player; 
     };
 
     class ServerPlayerChangedVoiceChannelMessage : public Message {
     public:
-        ServerPlayer* m_player;
+        ServerPlayer* m_player; 
     };
 
     class ServerPlayerCreateMessage : public Message {
     public:
-        ServerPlayer* m_player;
+        ServerPlayer* m_player; 
     };
 
     class ServerPlayerCreatedForConnectionMessage : public Message {
     public:
-        ServerConnection * m_connection;
-        ServerPlayer* m_player;
+        ServerConnection* m_connection; 
+        ServerPlayer* m_player; 
     };
 
     class ServerPlayerDestroyMessage : public Message {
     public:
-        ServerPlayer* m_player;
+        ServerPlayer* m_player; 
     };
 
     class ServerPlayerEnterEntryMessage : public Message {
     public:
-        ServerPlayer* m_player;
-        ServerEntryComponent* m_newEntry;
-        ServerEntryComponent* m_oldEntry;
-        int m_playerSide;
-        int m_playerId;
-        bool m_hiddenObject;
+	
+		
+		ServerPlayer* m_player;
+		unsigned long long* unknown1;
+		unsigned long long* unknown2;
+		unsigned long long* unknown3;
+		bool m_hiddenObject;
+	
+	
+		//BF3 PDB:
+        //ServerPlayer* m_player;
+        //ServerEntryComponent* m_newEntry;
+        //ServerEntryComponent* m_oldEntry;
+        //int m_playerSide;
+        //int m_playerId;
+        //bool m_hiddenObject;
     };
 
     class ServerPlayerEnteredLevelMessage : public Message {
     public:
-        ServerPlayer* m_player;
-        bool* m_isLoadingSave;
+		
+		ServerPlayer* m_player; 
+	
+		//BF3 PDB:
+        //ServerPlayer* m_player; 
+        //bool m_isLoadingSave;
     };
 
     class ServerPlayerExitEntryMessage : public Message {
@@ -57,24 +78,44 @@ namespace fb {
 
     class ServerPlayerInstantSuicideMessage : public Message {
     public:
-        ServerPlayer* m_player;
-        ServerDamageGiverInfo* m_damageGiverInfo;
+	
+		ServerPlayer* m_player;
+		unsigned long long* unknown1;
+		unsigned int unknown2;
+	
+		//BF3 PDB:
+        //ServerPlayer* m_player;
+        //ServerDamageGiverInfo* m_damageGiverInfo;
     };
 
     class ServerPlayerKilledMessage : public Message {
     public:
-        ServerPlayer* m_victim;
-        ServerDamageGiverInfo* m_damageGiverInfo;
-        ServerPlayer* m_inflictor;
-        char* m_weaponName;
-        Vec3 m_position;
-        ServerEntryComponent* m_oldEntry;
-        bool m_roadKill;
-        bool m_headShot;
-        bool m_victimInReviveState;
+	
+		unsigned long long* unknown1;
+		unsigned long long* unknown2;
+		unsigned long long* unknown3;
+		char* m_weaponName;
+		unsigned long long* unknown4;
+		Vec3 m_position;
+		unsigned long long* unknown5;
+		unsigned short unknown6;
+		bool unknown7;
+		unsigned int unknown8;
+		bool unknown9;
+	
+		//BF3 PDB
+        //ServerPlayer* m_victim;
+        //ServerDamageGiverInfo* m_damageGiverInfo;
+        //ServerPlayer* m_inflictor;
+        //char* m_weaponName;
+        //Vec3 m_position;
+        //ServerEntryComponent* m_oldEntry;
+        //bool m_roadKill;
+        //bool m_headShot;
+        //bool m_victimInReviveState;
     };
 
-    class ServerPlayerKitReplacedMessage : public Message {
+    class ServerPlayerKitReplacedMessage : public Message { //weird
     public:
         ServerPlayer* m_player;
         ServerSoldierEntity* m_oldSoldier;
@@ -91,7 +132,7 @@ namespace fb {
         ServerPlayer* m_player;
     };
 
-    class ServerPlayerManDownRevivedMessage : public Message {
+    class ServerPlayerManDownRevivedMessage : public Message { //weird
     public:
         ServerPlayer* m_player;
         bool m_isAdrenalineRevive;
@@ -103,11 +144,10 @@ namespace fb {
         ServerPlayer* m_player;
     };
 
-    class ServerPlayerMeleeInteruptedMessage : public Message {
+    class ServerPlayerMeleeInteruptedMessage : public Message { //weird
     public:
         ServerPlayer* m_killer;
         bool m_killedAttacker;
-        ServerPlayer* m_meleeAttacker;
         ServerPlayer* m_meleeAttacker;
     };
 
@@ -128,21 +168,32 @@ namespace fb {
 
     class ServerPlayerReviveAcceptedMessage : public Message {
     public:
-        bool m_reviverPlayerIdValid;
-        uint m_reviverPlayerId;
-        uint m_reviveePlayerId;
+	
+		bool m_reviverPlayerIdValid;
+		unsigned long long* unknown1; 
+	
+		//BF3 PDB:
+        //bool m_reviverPlayerIdValid;
+        //unsigned int m_reviverPlayerId;
+        //unsigned int m_reviveePlayerId;
     };
 
     class ServerPlayerReviveMessage : public Message {
     public:
         bool m_reviverPlayerIdValid;
-        unsigned long long m_reviverPlayerId;
-        uint m_reviveePlayerId;
+        unsigned long long* unknown1; 
+        unsigned int unknown2;
+		
+		
+		//BF3 PDB:
+		//bool m_reviverPlayerIdValid;
+        //unsigned int m_reviverPlayerId;
+        //unsigned int m_reviveePlayerId;
     };
 
-    class ServerPlayerReviveRefusedMessage : public Message {
+    class ServerPlayerReviveRefusedMessage : public Message { //weird
     public:
-        uint m_reviveePlayerId;
+        unsigned int m_reviveePlayerId;
     };
 
     class ServerPlayerSpawnAtVehicleMessage : public Message {
@@ -163,7 +214,7 @@ namespace fb {
         ServerPlayer* m_player;
     };
 
-   class ServerPlayerSquadLeaderStatusChangedMessage : public Message {
+   class ServerPlayerSquadLeaderStatusChangedMessage : public Message { //weird
     public:
         ServerPlayer* m_player;
     };
@@ -180,12 +231,6 @@ namespace fb {
         int m_oldTeam;
     };
 
-   class ServerPlayerSwitchTeamMessage : public Message {
-    public:
-        ServerPlayer* m_player;
-        int m_oldTeam;
-    };
-
    class ServerPlayerTeamKillKickMessage : public Message {
     public:
         ServerPlayer* m_player;
@@ -193,8 +238,15 @@ namespace fb {
 
    class ServerPlayerTickMessage : public Message {
     public:
-        ServerPlayer* m_player;
-        float m_timeInState;
+	
+		ServerPlayer* m_player; 
+		float m_timeInState; //undefined4
+		bool unknown1; //undefined
+		unsigned long long* unknown2;
+	
+		//BF3 PDB:
+        //ServerPlayer* m_player;
+        //float m_timeInState;
     };
 
 }
