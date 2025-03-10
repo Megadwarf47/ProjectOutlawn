@@ -4,13 +4,9 @@ namespace fb {
 
     class ServerPlayerChangeChatChannelMessage : public Message { 
     public:
-		
-		unsigned long long* unknown1;
-		unsigned long long* unknown2;
-		
-		//BF3 PDB:
-        //ServerPlayer* m_player; 
-        //unsigned long long m_newMask;
+        
+        ServerPlayer* m_player;
+        unsigned long long newMask;
     };
 
     class ServerPlayerChangedSquadSpawnerStatusMessage : public Message { //weird
