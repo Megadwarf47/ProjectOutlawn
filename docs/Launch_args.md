@@ -6,10 +6,10 @@ Launch with:
 
 You can test variations.
 
-Dedicated Server args:
+# Dedicated Server args:
 
 ```
--Network.ServerPort Port
+-Network.ServerPort Number
 -Network.MaxClientCount Number
 -Game.Level string
 ```
