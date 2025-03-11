@@ -12,4 +12,4 @@
 
 # [Documentation 📄](/docs)
 
-# [Credits 📜](/Credits.md)
+# [Credits 📜](/docs/Credits.md)
