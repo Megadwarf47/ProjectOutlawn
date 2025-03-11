@@ -5,8 +5,7 @@
 //                                                           //
 ///////////////////////////////////////////////////////////////
 
-// "//" Means checked
-// "//@" Means verified?
+// "//" Means done (checked & verified)
 
 #pragma once
 
@@ -1117,7 +1116,7 @@ namespace fb {
 		//ServerPlayerManuallySelectedSpawnPointMessage = 0x4370E929,
 		//ServerPlayerMeleeInteruptedMessage = 0x55C10988,
 		ServerPlayerNewCommanderOrderMessage = 0x3C503F9A,
-		ServerPlayerNoInteractivityKickMessage = 0x6B2AEA5A,
+		//ServerPlayerNoInteractivityKickMessage = 0x6B2AEA5A,
 		ServerPlayerOnPickupMessage = 0x8EC8768D,
 		//ServerPlayerReleasingLevelMessage = 0x840D85E2,
 		//ServerPlayerRespawnMessage = 0xC935A574,
@@ -1133,7 +1132,7 @@ namespace fb {
 		//ServerPlayerSwitchSquadMessage = 0xE21CBBB8,
 		//ServerPlayerSwitchTeamMessage = 0xDAC6CEB7,
 		//ServerPlayerTeamKillKickMessage = 0x1BB0318D,
-		ServerPlayerTickMessage = 0x742F39AD,
+		//ServerPlayerTickMessage = 0x742F39AD,
 
 		// Category: ServerProjectile
 		ServerProjectileMissileDestroyedMessage = 0x9EE87819,
