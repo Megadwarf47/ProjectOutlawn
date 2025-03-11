@@ -238,7 +238,7 @@ class MainWindow(QMainWindow):
         else:
             folder = QFileDialog.getExistingDirectory(self, "Find Game Folder")
             if folder:
-                self.exePath = folder + "\\PVZ.Main_Win64_Retail.exe"
+                self.exePath = folder + "PVZ.Main_Win64_Retail.exe"
                 if os.path.isfile(self.exePath):
                     QMessageBox.information(self, "Success", "The installation directory for the game was set successfully.")
                 else:
