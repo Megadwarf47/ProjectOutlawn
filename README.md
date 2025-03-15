@@ -4,6 +4,8 @@
 
 ### Private servers for plants vs zombies garden warfare.
 
+# This project is highly work in progress and the only reason its public is that in case it gets cancelled people can pick up development where it was left off. Currently it can't even run a functioning server. Don't get your hopes up ❗
+
 # [Discord server 💬](https://discord.com/invite/CS5GzFTVWr)
 
 # [Faq 🙋](/docs/Faq.md)
