@@ -1,4 +1,4 @@
-name: Build Windows Executable on Linux
+name: Build Launcher for Windows
 
 on:
   push:
@@ -8,29 +8,32 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
-      - name: Install MinGW-w64 and dependencies
-        run: |
-          sudo apt update
-          sudo apt install -y mingw-w64 python3 python3-pip
-
-      - name: Checkout Repository
+      - name: Checkout Repository with Sparse Checkout
         uses: actions/checkout@v4
+        with:
+          repository: Twig6943/ProjectOutlawn
+          sparse-checkout: |
+            launcher/QTLauncher
+          sparse-checkout-cone-mode: false
 
-      - name: Install Python Dependencies (Windows Target)
-        run: |
-          pip3 install --upgrade pip
-          pip3 install PyQt5 pyinstaller
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.7'
 
-      - name: Cross-Compile with PyInstaller (MinGW-w64)
+      - name: Install Dependencies
+        run: pip install PyQt5 pyinstaller
+
+      - name: Compile with PyInstaller
         run: |
-          cd ProjectOutlawn/launcher/QTLauncher
-          pyinstaller --onefile --windowed --name launcher.exe launcher.py
+          cd launcher/QTLauncher
+          pyinstaller --onefile --windowed launcher.py
 
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
           name: Launcher-Windows
-          path: ProjectOutlawn/launcher/QTLauncher/dist/launcher.exe
+          path: launcher/QTLauncher/dist/launcher.exe
