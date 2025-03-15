@@ -79,7 +79,7 @@ Example constructor
 
 Rename it to `fb::string::string` like so
 
-<img src="/GhidraStuff/TheNewStuff/Images/fb::string::string.png" width="400"/>
+<img src="/GhidraStuff/TheNewStuff/Images/fb_string_string.png" width="400"/>
 
 Now you gotta `Edit function signature`
 
