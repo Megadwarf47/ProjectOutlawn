@@ -11,13 +11,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout Repository with Sparse Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          repository: Twig6943/ProjectOutlawn
-          sparse-checkout: |
-            launcher/QTLauncher
-          sparse-checkout-cone-mode: false
+
+      - name: Clone ProjectOutlawn
+        run: git clone https://github.com/Twig6943/ProjectOutlawn.git
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -29,11 +27,11 @@ jobs:
 
       - name: Compile with PyInstaller
         run: |
-          cd launcher/QTLauncher
-          pyinstaller --onefile --windowed Launcher.py
+          cd ProjectOutlawn/launcher/QTLauncher
+          pyinstaller --onefile --windowed launcher.py
 
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
           name: Launcher-Windows
-          path: launcher/QTLauncher/dist/launcher.exe
+          path: ProjectOutlawn/launcher/QTLauncher/dist/launcher.exe
