@@ -182,11 +182,15 @@ class JoinDialog(QDialog):
         ip = self.ipInput.text()
         username = self.usernameInput.text()
         modpack = self.modpackInput.text()
-        if self.exePath and ip and username and modpack:
-            QProcess.startDetached(self.exePath, ["--playerName", username, "--Client.ServerIp", ip, "-dataPath", modpack])
+        if self.exePath and ip and username:
+            join_args = ["--playerName", username, "--Client.ServerIp", ip]
+            if modpack:
+                join_args.extend(["-dataPath", modpack])
+            QProcess.startDetached(self.exePath, join_args)
             self.accept()
         else:
             QMessageBox.critical(self, "Error", "Please enter all fields and ensure the executable path is set.")
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
