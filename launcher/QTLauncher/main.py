@@ -37,14 +37,17 @@ class HostDialog(QDialog):
         self.port_input = QLineEdit(self)
         self.game_mode_input = QComboBox(self)
         self.map_input = QComboBox(self)
+        self.time_of_day_input = QComboBox(self)
 
         self.game_mode_input.addItems(["Garden Ops", "Welcome Mat", "Gardens & Graveyards", "Team Vanquish", "Gnome Bomb", "Mixed", "Taco Bandit Crazy", "Gnome Bomb", "Suburbination",])
         self.map_input.addItems(["Wall-nut Hills", "Cactus Canyon", "Main Street", "Driftwood Shores", "Zomboss Estate", "Jewel Junction", "Garden Center", "Suburban Flats",])
+        self.time_of_day_input.addItems(["Day", "Night",])
 
         layout.addRow("Server Name:", self.server_name_input)
         layout.addRow("Port:", self.port_input)
         layout.addRow("Game Mode:", self.game_mode_input)
         layout.addRow("Map:", self.map_input)
+        layout.addRow("Time of Day:", self.time_of_day_input)
 
         button_box = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel)
         button_box.accepted.connect(self.accept)
@@ -54,7 +57,7 @@ class HostDialog(QDialog):
         self.setLayout(layout)
 
     def get_inputs(self):
-        return self.server_name_input.text(), self.port_input.text(), self.game_mode_input.currentText(), self.map_input.currentText()
+        return self.server_name_input.text(), self.port_input.text(), self.game_mode_input.currentText(), self.map_input.currentText(), self.time_of_day_input.currentText()
 
 class JoinDialog(QDialog):
     def __init__(self):
@@ -170,8 +173,8 @@ class MainWindow(QMainWindow):
     def openHostDialog(self):
         dialog = HostDialog()
         if dialog.exec() == QDialog.DialogCode.Accepted:
-            server_name, port, game_mode, map_name = dialog.get_inputs()
-            print(f"Host Details - Server Name: {server_name}, Port: {port}, Game Mode: {game_mode}, Map: {map_name}")
+            server_name, port, game_mode, map_name, time_of_day = dialog.get_inputs()
+            print(f"Host Details - Server Name: {server_name}, Port: {port}, Game Mode: {game_mode}, Map: {map_name}, ToD: {time_of_day}")
 
     def openJoinDialog(self):
         dialog = JoinDialog()
