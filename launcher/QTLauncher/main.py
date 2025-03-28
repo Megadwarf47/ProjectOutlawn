@@ -39,6 +39,11 @@ class HostDialog(QDialog):
         self.map_input = QComboBox(self)
         self.time_of_day_input = QComboBox(self)
 
+        # Host Defaults
+        self.server_name_input.setText("Outlawn Test")
+        self.port_input.setText("25200")
+        self.setLayout(layout)
+
         self.game_mode_input.addItems(["Garden Ops", "Welcome Mat", "Gardens & Graveyards", "Team Vanquish", "Gnome Bomb", "Mixed", "Taco Bandit Crazy", "Gnome Bomb", "Suburbination",])
         self.map_input.addItems(["Wall-nut Hills", "Cactus Canyon", "Main Street", "Driftwood Shores", "Zomboss Estate", "Jewel Junction", "Garden Center", "Suburban Flats",])
         self.time_of_day_input.addItems(["Day", "Night",])
@@ -70,6 +75,11 @@ class JoinDialog(QDialog):
         self.ip_input = QLineEdit(self)
         self.password_input = QLineEdit(self)
         self.modpack_input = QLineEdit(self)
+
+        # Join Defaults
+        self.ip_input.setText("127.0.0.1:25100")
+        self.modpack_input.setText("Default")
+        self.setLayout(layout)
 
         layout.addRow("Username:", self.username_input)
         layout.addRow("IP Address:", self.ip_input)
