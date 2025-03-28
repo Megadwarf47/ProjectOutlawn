@@ -1,37 +1,39 @@
 name: Build
 
 on:
-  workflow_dispatch:  # This allows you to trigger the build manually from the Actions tab
+  workflow_dispatch:  # Allows manual trigger of the workflow
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-latest  # Use Windows for building
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
-      - name: Clone ProjectOutlawn
-        run: git clone https://github.com/Twig6943/ProjectOutlawn.git
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.7'
 
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+
       - name: Install Dependencies
-        run: pip install PyQt6 pyinstaller
+        run: |
+          poetry install
 
       - name: Install Qt (to ensure qmake is available)
         run: choco install qt --confirm
 
       - name: Compile with PyInstaller
         run: |
-          cd ProjectOutlawn/launcher/QTLauncher
-          pyinstaller --onefile --windowed main.py
+          poetry run pyinstaller --onefile --windowed main.py  # Build using PyInstaller
 
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
           name: Launcher-Windows
-          path: ProjectOutlawn/launcher/QTLauncher/dist/launcher.exe
+          path: dist/launcher.exe  # Path to the generated executable
+
