@@ -20,12 +20,12 @@ jobs:
           python-version: '3.7'
 
       - name: Install Dependencies
-        run: pip install PyQt5 pyinstaller
+        run: pip install PyQt6 pyinstaller
 
       - name: Compile with PyInstaller
         run: |
           cd ProjectOutlawn/launcher/QTLauncher
-          pyinstaller --onefile --windowed Launcher.py
+          pyinstaller --onefile --windowed main.py
 
       - name: Upload Executable
         uses: actions/upload-artifact@v4
