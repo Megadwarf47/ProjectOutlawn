@@ -38,8 +38,8 @@ class HostDialog(QDialog):
         self.game_mode_input = QComboBox(self)
         self.map_input = QComboBox(self)
 
-        self.game_mode_input.addItems(["GameMode1", "GameMode2"])
-        self.map_input.addItems(["Map1", "Map2"])
+        self.game_mode_input.addItems(["Garden Ops", "Welcome Mat", "Gardens & Graveyards", "Team Vanquish", "Gnome Bomb", "Mixed", "Taco Bandit Crazy", "Gnome Bomb", "Suburbination",])
+        self.map_input.addItems(["Wall-nut Hills", "Cactus Canyon", "Main Street", "Driftwood Shores", "Zomboss Estate", "Jewel Junction", "Garden Center", "Suburban Flats",])
 
         layout.addRow("Server Name:", self.server_name_input)
         layout.addRow("Port:", self.port_input)
@@ -89,8 +89,13 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Project Outlawn Launcher")
         self.setFixedSize(700, 400)
 
+        # Map games to their EXE files
+        self.game_exes = {
+            "GW1": "PVZ.Main_Win64_Retail.exe",  # EXE for GW1
+            "GW2": "GW2.Main_Win64_Retail.exe"   # EXE for GW2
+        }
         self.selected_game = "GW1"
-        self.exePath = None
+        self.exePath = self.game_exes[self.selected_game]  # Initialize with the GW1 EXE path
 
         self.gw1_pixmap = base64_to_pixmap(GW1_BASE64)
         self.gw2_pixmap = base64_to_pixmap(GW2_BASE64)
@@ -181,6 +186,9 @@ class MainWindow(QMainWindow):
 
     def update_game_selection(self, selected_game):
         self.selected_game = selected_game
+        self.exePath = self.game_exes[selected_game]  # Update EXE path based on selected game
+        print(f"Selected game EXE: {self.exePath}")  # You can use this path to run the game if needed
+
         if selected_game == "GW1":
             self.set_background(self.gw1_pixmap)
         elif selected_game == "GW2":
@@ -197,7 +205,7 @@ class MainWindow(QMainWindow):
 
     def findGameFolder(self, auto_search):
         if auto_search:
-            print("Auto search for game folder is not implemented yet.")
+            print("Auto search for game folder is not implemented yet.") #I'm on linux can't do the registry stuff unless I compile for windows
         else:
             folder = QFileDialog.getExistingDirectory(self, "Select Game Folder", "", QFileDialog.Option.ShowDirsOnly)
             if folder:
