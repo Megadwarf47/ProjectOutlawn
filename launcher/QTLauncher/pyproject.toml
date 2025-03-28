@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "project-outlawn"
+version = "0.1.0"
+description = "Project Outlawn"
+authors = ["Placeholder"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+PyQt6 = "^6.0"
+pyinstaller = "^5.0"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "your-project-name"
+version = "0.1.0"
+dependencies = [
+    "PyQt6",
+    " PySide6",
+    "pyinstaller"
+]
+
+
+
+
+
+[tool.poetry]
+name = "your-project-name"
+version = "0.1.0"
+description = "A brief description of your project"
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+PyQt6 = "^6.0"
+pyinstaller = "^5.0"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pyinstaller]
+# PyInstaller specific configuration
+script = "main.py"  # Your main entry script
+additional_files = [
+    "server_browser_window.py"
+]
