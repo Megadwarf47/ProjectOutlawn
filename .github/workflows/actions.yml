@@ -1,3 +1,8 @@
+name: Build
+
+on:
+  workflow_dispatch:  # This allows you to trigger the build manually from the Actions tab
+
 jobs:
   build:
     runs-on: windows-latest
