@@ -1,4 +1,4 @@
-name: Build Launcher for Windows
+name: Build Launcher Windows
 
 on:
   workflow_dispatch:
@@ -18,8 +18,8 @@ jobs:
 
       - name: Install Qt
         run: |
-          choco install qt6-default -y
-          echo "C:\Qt\6.*/msvc*/bin" >> $GITHUB_PATH  # Add qmake to PATH
+          choco install qt6-base-dev -y
+          echo "C:\Qt\6.*/msvc*/bin" >> $GITHUB_PATH  # Add Qt binaries to PATH
 
       - name: Set up Python
         uses: actions/setup-python@v5
