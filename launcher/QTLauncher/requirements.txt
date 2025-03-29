@@ -1,2 +1,4 @@
 pyinstaller
 PyQt6
+pyyaml
+requests
