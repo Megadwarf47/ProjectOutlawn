@@ -8,13 +8,13 @@ script_name = 'main.py'
 app_name = 'outlawn-launcher'
 
 # Specify your binary directory
-binary_dir = r'.'
+binary_dir = r'D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\QTLauncher'
 
 # Collect data files (e.g., configuration files)
 data_files = collect_data_files('PyQt6')
 
 # Collect binaries
-binaries = [(binary_dir, '')]  # Start with the base directory
+binaries = [(binary_dir, '.')]  # Use '.' to place binaries in the top-level directory
 for root, dirs, files in os.walk(binary_dir):
     for file in files:
         binaries.append((os.path.join(root, file), os.path.relpath(root, binary_dir)))
