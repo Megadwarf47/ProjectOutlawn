@@ -8,7 +8,7 @@ script_name = 'main.py'
 app_name = 'outlawn-launcher'
 
 # Specify your binary directory
-binary_dir = r'D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\QTLauncher'
+binary_dir = r'.'
 
 # Collect data files (e.g., configuration files)
 data_files = collect_data_files('PyQt6')
