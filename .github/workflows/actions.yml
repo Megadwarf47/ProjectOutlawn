@@ -34,7 +34,7 @@ jobs:
       - name: Compile with PyInstaller
         run: |
           cd ProjectOutlawn/launcher/QTLauncher
-          pyinstaller --onefile --windowed --name launcher launcher.py
+          pyinstaller --onefile --windowed --name launcher main.py
 
       - name: List output files
         run: |
