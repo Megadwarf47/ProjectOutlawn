@@ -34,6 +34,7 @@ class HostDialog(QDialog):
 
         layout = QFormLayout()
         self.server_name_input = QLineEdit(self)
+        self.server_password_input = QLineEdit(self)
         self.port_input = QLineEdit(self)
         self.game_mode_input = QComboBox(self)
         self.map_input = QComboBox(self)
@@ -49,6 +50,7 @@ class HostDialog(QDialog):
         self.time_of_day_input.addItems(["Day", "Night",])
 
         layout.addRow("Server Name:", self.server_name_input)
+        layout.addRow("Server Password:", self.server_password_input)
         layout.addRow("Port:", self.port_input)
         layout.addRow("Game Mode:", self.game_mode_input)
         layout.addRow("Map:", self.map_input)
@@ -62,7 +64,7 @@ class HostDialog(QDialog):
         self.setLayout(layout)
 
     def get_inputs(self):
-        return self.server_name_input.text(), self.port_input.text(), self.game_mode_input.currentText(), self.map_input.currentText(), self.time_of_day_input.currentText()
+        return self.server_name_input.text(), self.server_password_input.text(), self.port_input.text(), self.game_mode_input.currentText(), self.map_input.currentText(), self.time_of_day_input.currentText()
 
 class JoinDialog(QDialog):
     def __init__(self):
@@ -72,8 +74,8 @@ class JoinDialog(QDialog):
 
         layout = QFormLayout()
         self.username_input = QLineEdit(self)
-        self.ip_input = QLineEdit(self)
         self.password_input = QLineEdit(self)
+        self.ip_input = QLineEdit(self)
         self.modpack_input = QLineEdit(self)
 
         # Join Defaults
@@ -82,8 +84,8 @@ class JoinDialog(QDialog):
         self.setLayout(layout)
 
         layout.addRow("Username:", self.username_input)
-        layout.addRow("IP Address:", self.ip_input)
         layout.addRow("Password:", self.password_input)
+        layout.addRow("IP Address:", self.ip_input)
         layout.addRow("Modpack:", self.modpack_input)
 
         button_box = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok | QDialogButtonBox.StandardButton.Cancel)
@@ -180,8 +182,8 @@ class MainWindow(QMainWindow):
     def openHostDialog(self):
         dialog = HostDialog()
         if dialog.exec() == QDialog.DialogCode.Accepted:
-            server_name, port, game_mode, map_name, time_of_day = dialog.get_inputs()
-            print(f"Host Details - Server Name: {server_name}, Port: {port}, Game Mode: {game_mode}, Map: {map_name}, ToD: {time_of_day}")
+            server_name, server_password, port, game_mode, map_name, time_of_day = dialog.get_inputs()
+            print(f"Host Details - Server Name: {server_name}, Server Password: {server_password}, Port: {port}, Game Mode: {game_mode}, Map: {map_name}, ToD: {time_of_day}")
 
     def openJoinDialog(self):
         dialog = JoinDialog()
