@@ -20,13 +20,13 @@ for root, dirs, files in os.walk(binary_dir):
         binaries.append((os.path.join(root, file), os.path.relpath(root, binary_dir)))
 
 # Analysis step
-a = Analysis(
-    [script_name],
-    pathex=['.'],
-    binaries=binaries,
-    datas=data_files,
-    hiddenimports=[],
-)
+#a = Analysis(
+#    [script_name],
+#    pathex=['.'],
+#    binaries=binaries,
+#    datas=data_files,
+#    hiddenimports=[],
+#)
 
 # Build the application
 exe = EXE(
