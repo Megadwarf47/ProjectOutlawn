@@ -33,7 +33,7 @@ jobs:
       - name: Compile with PyInstaller
         run: |
           cd ProjectOutlawn/launcher/QTLauncher
-          pyinstaller --onefile --windowed main.py
+          pyinstaller pyinstaller.spec
 
       - name: Zip the Executable
         run: |
