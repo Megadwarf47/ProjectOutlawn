@@ -46,7 +46,7 @@ jobs:
           
       - name: Verify Upload Path
         run: |
-          if (Test-Path "ProjectOutlawn/launcher/QTLauncher/dist/launcher.exe") {
+          if (Test-Path "ProjectOutlawn\launcher\QTLauncher\dist\launcher.exe") {
             Write-Host "File exists, proceeding to upload."
           } else {
             Write-Host "File does not exist. Check PyInstaller output."
