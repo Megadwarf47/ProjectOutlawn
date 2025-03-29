@@ -34,21 +34,14 @@ jobs:
         run: |
           cd ProjectOutlawn/launcher/QTLauncher
           pyinstaller --onefile --windowed main.py
-          
-          # Debugging: List files to ensure the exe is created
-          dir ProjectOutlawn/launcher/QTLauncher/dist
+
+      - name: Zip the Executable
+        run: |
+          Compress-Archive -Path D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\QTLauncher\dist -DestinationPath D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\QTLauncher\dist.zip
 
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
           name: Launcher-Windows
-          path: D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\QTLauncher\dist
-          
-      - name: Verify Upload Path
-        run: |
-          if (Test-Path "ProjectOutlawn\launcher\QTLauncher\dist\launcher.exe") {
-            Write-Host "File exists, proceeding to upload."
-          } else {
-            Write-Host "File does not exist. Check PyInstaller output."
-            exit 1
-          }
+          path: D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\QTLauncher\dist.zip
+
