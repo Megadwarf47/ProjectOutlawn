@@ -5,10 +5,10 @@ import os
 script_name = 'main.py'
 app_name = 'outlawn-launcher'
 
-# Specify your binary directory (e.g., DLLs, shared libraries)
+# Specify your binary directory
 binary_dir = 'libs/'
 
-# Collect data files (optional, like configuration files)
+# Collect data files (e.g., configuration files)
 data_files = collect_data_files('PyQt6')
 
 # Collect binaries
