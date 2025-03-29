@@ -1,54 +1,41 @@
-name: Build
+name: Build QTLauncher
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - name: Check out the repository
+        uses: actions/checkout@v2
 
-      - name: Clone ProjectOutlawn
-        run: git clone https://github.com/Twig6943/ProjectOutlawn.git
-
-      - name: Install Qt
-        run: |
-          choco install qt6-base-dev -y
-          echo "C:\Qt\6.*/msvc*/bin" | Out-File -Append -Encoding ASCII $env:GITHUB_PATH
-          echo "C:\Qt\6.*/msvc*/lib" | Out-File -Append -Encoding ASCII $env:GITHUB_PATH
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v2
         with:
           python-version: '3.10'
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install PyQt6 pyinstaller
+          pip install -r ProjectOutlawn/launcher/QTLauncher/requirements.txt
 
-      - name: Compile with PyInstaller
+      - name: Build using PyInstaller
         run: |
           cd ProjectOutlawn/launcher/QTLauncher
-          pyinstaller --onefile --windowed main.py
-          
-          # Debugging: List files to ensure the exe is created
-          dir ProjectOutlawn/launcher/QTLauncher/dist
+          pyinstaller main.py --onefile --distpath ./dist
 
-      - name: Upload Executable
-        uses: actions/upload-artifact@v4
-        with:
-          name: Launcher-Windows
-          path: ProjectOutlawn/launcher/QTLauncher/dist/launcher.exe
-          
-      - name: Verify Upload Path
+      - name: Verify the build output
         run: |
-          if (Test-Path "ProjectOutlawn\launcher\QTLauncher\dist\launcher.exe") {
-            Write-Host "File exists, proceeding to upload."
-          } else {
-            Write-Host "File does not exist. Check PyInstaller output."
-            exit 1
-          }
+          dir D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\QTLauncher\dist
+
+      - name: Upload the build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: QTLauncher-Build
+          path: D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\QTLauncher\dist
