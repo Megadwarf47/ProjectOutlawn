@@ -1,39 +1,40 @@
-name: Build
+name: Build Launcher for Windows
 
 on:
-  workflow_dispatch:  # Allows manual trigger of the workflow
+  push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
   build:
-    runs-on: windows-latest  # Use Windows for building
+    runs-on: windows-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Clone ProjectOutlawn
+        run: git clone https://github.com/Twig6943/ProjectOutlawn.git
+        cd ProjectOutlawn
+        cd launcher
+        cd QTLauncher
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.7'
 
-      - name: Install Poetry
-        run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-
       - name: Install Dependencies
-        run: |
-          poetry install
-
-      - name: Install Qt (to ensure qmake is available)
-        run: choco install qt --confirm
+        run: pip install PyQt6 pyinstaller
 
       - name: Compile with PyInstaller
         run: |
-          poetry run pyinstaller --onefile --windowed main.py  # Build using PyInstaller
+          cd ProjectOutlawn/launcher/QTLauncher
+          pyinstaller --onefile --windowed launcher.py
 
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
           name: Launcher-Windows
-          path: dist/launcher.exe  # Path to the generated executable
-
+          path: ProjectOutlawn/launcher/QTLauncher/dist/launcher.exe
