@@ -33,6 +33,7 @@ jobs:
 
       - name: Compile with PyInstaller
         run: |
+          cd ProjectOutlawn/launcher/QTLauncher
           pyinstaller --onefile --target-architecture x86_64 --icon=icon.ico --windowed main.py
 
       - name: Zip the Executable
