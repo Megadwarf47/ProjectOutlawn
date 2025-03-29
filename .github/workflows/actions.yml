@@ -27,12 +27,12 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd ProjectOutlawn/launcher/QTLauncher
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
       - name: Compile with PyInstaller
         run: |
+          cd ProjectOutlawn/launcher/QTLauncher
           pyinstaller --onefile --icon=icon.ico --windowed main.py
 
       - name: Zip the Executable
