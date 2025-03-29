@@ -14,28 +14,17 @@ pyinstaller = "^5.0"
 requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
-[project]
-name = "your-project-name"
-version = "0.1.0"
-dependencies = [
-    "PyQt6",
-    " PySide6",
-    "pyinstaller"
-]
-
-
-
-
-
-[tool.poetry]
-name = "your-project-name"
-version = "0.1.0"
-description = "A brief description of your project"
-authors = ["Your Name <your.email@example.com>"]
-license = "MIT"
+#[project]
+#name = "project-outlawn"
+#version = "0.0.3"
+#dependencies = [
+#    "PyQt6",
+#    "PySide6",
+#    "pyinstaller"
+#]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.10"
 PyQt6 = "^6.0"
 pyinstaller = "^5.0"
 
