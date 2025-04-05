@@ -8,7 +8,7 @@
 
 # [Discord server 💬](https://discord.gg/WuM4hWNUND)
 
-# [Faq 🙋](/docs/Faq.md)
+# [Faq 🙋🏻](/docs/Faq.md)
 
 # [Roadmap 📋](/docs/Roadmap.md)
 
