@@ -1,4 +1,11 @@
 //Connector
+#include <Windows.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <cstdint>
+#include <iostream>
+
 typedef void(__fastcall* ConnectToAddress_t)(
     unsigned long long param_1,
     unsigned long long param_2,
