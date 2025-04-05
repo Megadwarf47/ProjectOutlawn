@@ -10,7 +10,7 @@
 
 # Alpha 0.1 (Absolute first alpha release)
 
-[✅] A CLI/GUI launcher that can join/host + mods via frosty (Might need to use cli dll injector)
+[✅] A CLI/GUI launcher that can join/host + mods via frosty
 
 [✅] Get [`ServerPlayer`](/GhidraStuff/BreeMsgs/Categories.h#L1084) done
 
