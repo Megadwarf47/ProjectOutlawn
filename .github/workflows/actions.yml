@@ -28,17 +28,17 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          cd ProjectOutlawn/launcher/QTLauncher
+          cd ProjectOutlawn/launcher/src
           python -m pip install -r requirements.txt
 
       - name: Compile with PyInstaller
         run: |
-          cd ProjectOutlawn/launcher/QTLauncher
+          cd ProjectOutlawn/launcher/src
           pyinstaller --onefile --target-architecture x86_64 --icon=icon.ico --windowed main.py
 
       - name: Zip the Executable
         run: |
-          Compress-Archive -Path D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\QTLauncher\dist -DestinationPath D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\QTLauncher\dist.zip
+          Compress-Archive -Path D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\src\dist -DestinationPath D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\src\dist.zip
 
       - name: Upload Executable
         uses: actions/upload-artifact@v4
