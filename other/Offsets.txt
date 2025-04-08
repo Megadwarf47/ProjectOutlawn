@@ -1,3 +1,5 @@
+//Offsets by Silkker
+
 //DEDI SERVER
 0x14000B070 => Main::Init
 0x140011AE0 => Main::SpawnServer
