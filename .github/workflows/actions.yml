@@ -38,11 +38,10 @@ jobs:
 
       - name: Zip the Executable
         run: |
-          Compress-Archive -Path D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\src\dist -DestinationPath D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\src\dist.zip
+          Compress-Archive -Path ProjectOutlawn/launcher/src/dist -DestinationPath ProjectOutlawn/launcher/src/dist.zip
 
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
           name: Launcher-Windows
-          path: D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\QTLauncher\dist.zip
-
+          path: ProjectOutlawn/launcher/src/dist.zip
