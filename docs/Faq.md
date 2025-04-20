@@ -12,8 +12,6 @@ Yes, but they're waiting on maxima. An open source reimplementation of the ea ap
 Why's the development so slow?
 This is a passion project. People work on it whenever they want.
 
-For more information check the [faq](https://github.com/Twig6943/ProjectOutlawn/blob/main/docs/Faq.md)
-
 ### How can I try the server?
 It's not ready yet. We're trying to have the alpha release as soon as possible.
 
