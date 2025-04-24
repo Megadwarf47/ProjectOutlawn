@@ -9,7 +9,7 @@ No, this is a private server project created for educational and experimental pu
 ### Why's this project a thing? Aren't people behind plants vs zombies frostbite discord server also working on private servers?
 Yes, but they're waiting on maxima. An open source reimplementation of the ea app/origin. Which still has a long way to go it seems. Not to mention they've been waiting on it for almost a year at this point despite having servers that are clearly ready for at least an open beta release. The reason why they're waiting on maxima is that its supposed to make hosting a lot easier where in reality it makes stuff just a little bit easier (definitely not worth waiting over it) and I've told them about how there are projects like [marne and tonga](https://marne.io) (Private servers for battlefield games) that just work fine without maxima but that didn't really change their minds now did it :man_shrugging: 
 
-Why's the development so slow?
+### Why's the development so slow?
 This is a passion project. People work on it whenever they want.
 
 ### What's the closest you guys have gotten?
