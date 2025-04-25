@@ -13,7 +13,9 @@ Yes, but they're waiting on maxima. An open source reimplementation of the ea ap
 This is a passion project. People work on it whenever they want.
 
 ### What's the closest you guys have gotten?
-The closest attempt is this where somebody from the team had the server load the map but couldnt connect to it https://cdn.discordapp.com/attachments/1340392193466040452/1341852896681136210/image.png?ex=680b38a4&is=6809e724&hm=1eac4962239d672c5e680ad8d8f03f6f0d5a41a588e3c822fcc9f0ef77061e9c&
+The closest attempt is this where somebody from the team had the server load the map but couldnt connect to it 
+
+<img src="/other/PeakProgress.png" width="600"/>
 
 ### How can I try the server?
 It's not ready yet. We're trying to have the alpha release as soon as possible.
