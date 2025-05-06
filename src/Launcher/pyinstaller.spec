@@ -8,8 +8,7 @@ block_cipher = None
 hiddenimports = (
     collect_submodules('pyqt6') +
     collect_submodules('pyaml') +
-    collect_submodules('requests') +
-    ['server_browser_window']
+    collect_submodules('requests')
 )
 
 a = Analysis(
