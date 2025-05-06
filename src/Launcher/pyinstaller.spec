@@ -4,17 +4,12 @@ from PyInstaller.utils.hooks import collect_submodules
 
 block_cipher = None
 
-
-# Collect all submodules of PyQt6
-hiddenimports = collect_submodules('PyQt6')
-
-
 a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
     datas=[('gw1.jpg', '.'), ('gw2.jpg', '.'), ('icon.ico', '.')],  # Include your image and icon files
-    hiddenimports=['pyqt6', 'yaml', 'requests'],  # Explicitly add hidden imports if necessary
+    hiddenimports=collect_submodules('PyQt6', 'pyyaml' 'requests')
     hookspath=[],
     runtime_hooks=[],
     excludes=[],
