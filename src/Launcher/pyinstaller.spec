@@ -17,9 +17,9 @@ a = Analysis(
     pathex=[],
     binaries=[],
     datas=[
-        ('assets/gw1.jpg', '.'),
-        ('assets/gw2.jpg', '.'),
-        ('assets/icon.ico', '.')
+        ('gw1.jpg', '.'),
+        ('gw2.jpg', '.'),
+        ('icon.ico', '.')
     ],
     hiddenimports=hiddenimports,
     hookspath=[],
@@ -45,5 +45,5 @@ exe = EXE(
     strip=False,
     upx=True,
     console=False,
-    icon='assets/icon.ico'
+    icon='icon.ico'
 )
