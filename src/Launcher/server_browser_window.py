@@ -1,7 +1,7 @@
 from PyQt6.QtWidgets import QDialog, QVBoxLayout, QLabel, QPushButton, QLineEdit, QFormLayout
 from PyQt6.QtCore import Qt
 import requests
-import yaml
+import pyaml
 
 class ServerBrowserWindow(QDialog):
     def __init__(self):
