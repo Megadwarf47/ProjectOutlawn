@@ -6,7 +6,7 @@ block_cipher = None
 
 # Combine all required submodules
 hiddenimports = (
-    collect_submodules('PyQt6') +
+    collect_submodules('pyqt6') +
     collect_submodules('pyaml') +
     collect_submodules('requests') +
     ['requests', 'server_browser_window']  # Add 'server_browser_window' here
