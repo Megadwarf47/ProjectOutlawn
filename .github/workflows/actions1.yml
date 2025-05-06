@@ -15,15 +15,14 @@ jobs:
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
 
       - name: Set up MSVC Build Tools
-        uses: microsoft/setup-msbuild@v1.0.4
+        uses: visualstudio/setup-msbuild@v1
         with:
-          msbuild-version: 'latest'  # Ensure the latest version of MSBuild is installed
-          include-net: true           # Optionally include .NET build tools
+          vs-version: 'latest'  # Use the latest available Visual Studio version
 
       - name: Build Client
         run: |
           cd ProjectOutlawn/src/Client
           # Set up the MSVC environment using the Visual Studio build tools
-          cmd /c "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64"
+          cmd /c ""C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64"
           # Compile using MSVC (cl) and set options as needed
-          cl /EHsc dllmain.cpp
+          cl /EHsc your_program.cpp
