@@ -6,7 +6,7 @@ block_cipher = None
 
 # Collect all necessary submodules
 hiddenimports = (
-    collect_submodules('PyQt6') +
+    collect_submodules('pyqt6') +
     collect_submodules('pyaml') +
     collect_submodules('requests') +
     collect_submodules('idna') +      # requests dependency
