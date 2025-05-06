@@ -15,7 +15,7 @@ jobs:
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
 
       - name: Set up MSVC Build Tools
-        uses: visualstudio/setup-msbuild@v1
+        uses: visualstudio/setup-msbuild@v2
         with:
           vs-version: 'latest'  # Use the latest available Visual Studio version
 
