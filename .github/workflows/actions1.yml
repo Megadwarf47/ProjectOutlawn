@@ -19,7 +19,7 @@ jobs:
       - name: Setup MSVC
         run: |
           # Use cmd.exe and correctly handle the space in "Program Files"
-          cmd.exe /C "\"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvarsall.bat\" x64"
+          cmd.exe /C "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvarsall.bat\" x64"
 
       - name: Clone ProjectOutlawn
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
@@ -28,4 +28,4 @@ jobs:
         run: |
           cd ProjectOutlawn/src/Client
           # Compile using MSVC (cl)
-          cmd.exe /C "cl /EHsc your_program.cpp"
+          cmd.exe /C "cl /EHsc dllmain.cpp"
