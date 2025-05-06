@@ -1,47 +1,39 @@
-#This is just a placeholder
+# -*- mode: python ; coding: utf-8 -*-
 
-from PyInstaller.utils.hooks import collect_data_files
-from PyInstaller import __main__
-from PyInstaller.building.build_main import Analysis, EXE, COLLECT
-import os
+block_cipher = None
 
-# Specify the entry script and app name
-script_name = 'main.py'
-app_name = 'outlawn-launcher'
-
-# Specify your binary directory
-binary_dir = r'D:\a\ProjectOutlawn\ProjectOutlawn\ProjectOutlawn\launcher\QTLauncher'
-
-# Collect data files (e.g., configuration files)
-data_files = collect_data_files('PyQt6')
-
-# Collect binaries
-binaries = [(binary_dir, '.')]  # Use '.' to place binaries in the top-level directory
-for root, dirs, files in os.walk(binary_dir):
-    for file in files:
-        binaries.append((os.path.join(root, file), os.path.relpath(root, binary_dir)))
-
-# Analysis step
-#a = Analysis(
-#    [script_name],
-#    pathex=['.'],
-#    binaries=binaries,
-#    datas=data_files,
-#    hiddenimports=[],
-#)
-
-# Build the application
-exe = EXE(
-    a.pure,
-    a.scripts,
-    [],
-    exclude_binaries=False,
-    name=app_name,
-    console=False,  # Set to True if you need a console window
-    icon='icon.ico',  # Optional icon for the app
+a = Analysis(
+    ['main.py'],
+    pathex=[],
+    binaries=[],
+    datas=[('gw1.jpg', '.'), ('gw2.jpg', '.'), ('icon.ico', '.')],  # Include your image and icon files
+    hiddenimports=['yaml', 'requests'],  # Explicitly add hidden imports if necessary
+    hookspath=[],
+    runtime_hooks=[],
+    excludes=[],
+    win_no_prefer_redirects=False,
+    win_private_assemblies=False,
+    cipher=block_cipher,
 )
 
-# Collect the files into the final app bundle
+pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    [],
+    name='main',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    console=False,  # Set to True if you want a console window
+    icon='icon.ico'
+)
+
 coll = COLLECT(
     exe,
     a.binaries,
@@ -49,5 +41,5 @@ coll = COLLECT(
     a.datas,
     strip=False,
     upx=True,
-    name=app_name,
+    name='main'
 )
