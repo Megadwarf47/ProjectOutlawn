@@ -12,12 +12,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install Visual Studio Build Tools
-        uses: microsoft/setup-msbuild@v1  # Using the official setup-msbuild action
+        run: |
+          # Download and install Visual Studio Build Tools
+          choco install visualstudio2019buildtools --version=16.11.7 -y
 
       - name: Setup MSVC
         run: |
-          # Set up Visual Studio build environment
-          call "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64
+          # Set up Visual Studio environment using cmd (since call is a cmd command)
+          cmd.exe /C "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64
 
       - name: Clone ProjectOutlawn
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
@@ -25,5 +27,5 @@ jobs:
       - name: Build Client
         run: |
           cd ProjectOutlawn/src/Client
-          # Compile using MSVC cl command
-          cl /EHsc dllmain.cpp
+          # Compile using MSVC (cl)
+          cmd.exe /C "cl /EHsc dllmain.cpp"
