@@ -20,20 +20,16 @@ jobs:
       - name: Clone ProjectOutlawn
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
 
-      - name: Build ServerR
+      - name: Build Server
         run: |
-          cd ProjectOutlawn\src\Server
+          cd ProjectOutlawn/src/Server
           mkdir build
           cd build
-          cmake ..
-
-      - name: Build with CMake
-        run: |
-        cd build
-        cmake --build . --config Release
+          cmake .. -G "Visual Studio 16 2019"
+          cmake --build . --config Release
 
       - name: Upload Compiled DLL
         uses: actions/upload-artifact@v4
         with:
           name: Server
-          path: ProjectOutlawn/src/Server/build
+          path: ProjectOutlawn/src/Server/build/Release
