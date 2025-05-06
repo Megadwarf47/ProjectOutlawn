@@ -1,6 +1,5 @@
 import sys
 import os
-import base64
 from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QPushButton, QVBoxLayout, QLabel, QComboBox, QSizePolicy, QSpacerItem,
     QHBoxLayout, QWidget, QDialog, QLineEdit, QFormLayout, QDialogButtonBox, QFileDialog
