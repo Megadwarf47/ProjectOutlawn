@@ -11,20 +11,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Install Visual Studio Build Tools
-        run: |
-          choco install visualstudio2019buildtools --version=16.11.7 -y
+      #- name: Install Visual Studio Build Tools
+       # run: |
+        #  choco install visualstudio2019buildtools --version=16.11.7 -y
 
       - name: Setup MSVC
-        shell: cmd
-        run: |
-          call "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64
+        uses: ilammy/msvc-dev-cmd@v1.4.1
 
       - name: Clone ProjectOutlawn
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
 
       - name: Build Client
-        shell: cmd
         run: |
           cd ProjectOutlawn\src\Client
-          cl /EHsc dllmain.cpp
+          cl dllmain.cpp /EHsc /Fe:placeholder /std:c++latest
