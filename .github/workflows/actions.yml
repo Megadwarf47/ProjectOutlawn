@@ -28,20 +28,20 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          cd ProjectOutlawn/launcher/src
+          cd ProjectOutlawn/src/launcher
           python -m pip install -r requirements.txt
 
       - name: Compile with PyInstaller
         run: |
-          cd ProjectOutlawn/launcher/src
+          cd ProjectOutlawn/src/launcher
           pyinstaller --onefile --target-architecture x86_64 --icon=icon.ico --windowed main.py
 
       - name: Zip the Executable
         run: |
-          Compress-Archive -Path ProjectOutlawn/launcher/src/dist -DestinationPath ProjectOutlawn/launcher/src/dist.zip
+          Compress-Archive -Path ProjectOutlawn/src/launcher/dist -DestinationPath ProjectOutlawn/src/launcher/dist.zip
 
       - name: Upload Executable
         uses: actions/upload-artifact@v4
         with:
           name: Launcher-Windows
-          path: ProjectOutlawn/launcher/src/dist.zip
+          path: ProjectOutlawn/src/launcher/dist.zip
