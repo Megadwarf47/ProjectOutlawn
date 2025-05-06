@@ -33,13 +33,3 @@ exe = EXE(
     console=False,  # Set to True if you want a console window
     icon='icon.ico'
 )
-
-coll = COLLECT(
-    exe,
-    a.binaries,
-    a.zipfiles,
-    a.datas,
-    strip=False,
-    upx=True,
-    name='main'
-)
