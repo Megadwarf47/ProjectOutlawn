@@ -4,29 +4,16 @@ from PyInstaller.utils.hooks import collect_submodules
 
 block_cipher = None
 
-# Combine all required submodules
+# Collect all necessary submodules
 hiddenimports = (
     collect_submodules('PyQt6') +
     collect_submodules('pyaml') +
     collect_submodules('requests') +
-    ['server_browser_window'] +
-    # Additional explicit dependencies
-    [
-        'PyQt6.QtCore',
-        'PyQt6.QtGui',
-        'PyQt6.QtWidgets',
-        'yaml',                # pyaml dependency
-        'urllib3',             # requests dependency
-        'chardet',             # requests dependency
-        'idna',                # requests dependency
-        'certifi',             # requests dependency
-        'socket',              # common networking dependency
-        'ssl',                 # SSL support
-        'json',                # JSON handling
-        'sys',                 # system module
-        'os',                  # operating system module
-        'logging'              # logging module
-    ]
+    collect_submodules('idna') +  # requests dependency
+    collect_submodules('urllib3') +  # requests dependency
+    collect_submodules('chardet') +  # fallback requests dependency
+    collect_submodules('certifi') +  # requests SSL certs
+    ['server_browser_window']
 )
 
 a = Analysis(
