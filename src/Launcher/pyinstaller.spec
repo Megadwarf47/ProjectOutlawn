@@ -16,11 +16,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[
-        ('gw1.jpg', '.'),
-        ('gw2.jpg', '.'),
-        ('icon.ico', '.')
-    ],
+    datas=[],
     hiddenimports=hiddenimports,
     hookspath=[],
     runtime_hooks=[],
