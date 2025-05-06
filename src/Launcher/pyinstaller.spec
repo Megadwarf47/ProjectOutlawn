@@ -41,5 +41,5 @@ exe = EXE(
     strip=False,
     upx=True,
     console=False,
-    icon='icon.ico'
+    icon='assets/icon.ico'
 )
