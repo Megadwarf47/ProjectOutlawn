@@ -13,6 +13,12 @@ jobs:
 
       - name: Clone ProjectOutlawn
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
-      
+
+      - name: Set up MSVC Environment
+        run: |
+          call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
+
       - name: Build Client
-        run: cd ProjectOutlawn/src/Client
+        run: |
+          cd ProjectOutlawn/src/Client
+          cl /EHsc dllmain.cpp
