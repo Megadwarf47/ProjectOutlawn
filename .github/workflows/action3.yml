@@ -1,0 +1,28 @@
+name: Build Server 🔥
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup MSVC
+        uses: ilammy/msvc-dev-cmd@v1.4.1
+
+      - name: Clone ProjectOutlawn
+        run: git clone https://github.com/Twig6943/ProjectOutlawn.git
+
+      - name: Build Server
+        run: |
+          cd ProjectOutlawn\src\Server
+
+      - name: Upload Compiled DLL
+        uses: actions/upload-artifact@v4
+        with:
+          name: dinput8
+          path: ProjectOutlawn/src/Client/dinput8.dll
