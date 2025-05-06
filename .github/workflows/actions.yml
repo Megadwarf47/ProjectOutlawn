@@ -34,7 +34,7 @@ jobs:
       - name: Compile with PyInstaller
         run: |
           cd ProjectOutlawn/src/Launcher
-          pyinstaller --onefile --target-architecture x86_64 --icon=icon.ico --windowed main.py
+          pyinstaller pyinstaller.spec
 
       - name: Zip the Executable
         run: |
