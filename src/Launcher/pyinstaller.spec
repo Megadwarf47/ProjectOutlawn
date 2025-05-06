@@ -1,6 +1,13 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+from PyInstaller.utils.hooks import collect_submodules
+
 block_cipher = None
+
+
+# Collect all submodules of PyQt6
+hiddenimports = collect_submodules('PyQt6')
+
 
 a = Analysis(
     ['main.py'],
