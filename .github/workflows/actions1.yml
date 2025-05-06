@@ -11,18 +11,19 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Install Visual Studio Build Tools
+        uses: microsoft/setup-msbuild@v1  # Using the official setup-msbuild action
+
+      - name: Setup MSVC
+        run: |
+          # Set up Visual Studio build environment
+          call "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64
+
       - name: Clone ProjectOutlawn
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
-
-      - name: Set up MSVC Build Tools
-        uses: visualstudio/setup-msbuild@v4
-        with:
-          vs-version: 'latest'  # Use the latest available Visual Studio version
 
       - name: Build Client
         run: |
           cd ProjectOutlawn/src/Client
-          # Set up the MSVC environment using the Visual Studio build tools
-          cmd /c ""C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64"
-          # Compile using MSVC (cl) and set options as needed
-          cl /EHsc your_program.cpp
+          # Compile using MSVC cl command
+          cl /EHsc dllmain.cpp
