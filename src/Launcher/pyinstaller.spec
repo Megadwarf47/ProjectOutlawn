@@ -9,26 +9,24 @@ hiddenimports = (
     collect_submodules('PyQt6') +
     collect_submodules('pyaml') +
     collect_submodules('requests') +
-    ['server_browser_window']
-)
-
-
-a = Analysis(
-    ['main.py'],
-    pathex=[],
-    binaries=[],
-    datas=[
-        ('assets/gw1.jpg', '.'),
-        ('assets/gw2.jpg', '.'),
-        ('assets/icon.ico', '.')
-    ],
-    hiddenimports=hiddenimports,
-    hookspath=[],
-    runtime_hooks=[],
-    excludes=[],
-    win_no_prefer_redirects=False,
-    win_private_assemblies=False,
-    cipher=block_cipher,
+    ['server_browser_window'] +
+    # Additional explicit dependencies
+    [
+        'PyQt6.QtCore',
+        'PyQt6.QtGui',
+        'PyQt6.QtWidgets',
+        'yaml',                # pyaml dependency
+        'urllib3',             # requests dependency
+        'chardet',             # requests dependency
+        'idna',                # requests dependency
+        'certifi',             # requests dependency
+        'socket',              # common networking dependency
+        'ssl',                 # SSL support
+        'json',                # JSON handling
+        'sys',                 # system module
+        'os',                  # operating system module
+        'logging'              # logging module
+    ]
 )
 
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
