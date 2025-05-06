@@ -10,3 +10,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Clone ProjectOutlawn
+        run: git clone https://github.com/Twig6943/ProjectOutlawn.git
+      
+      - name: Build Client
+        run: cd ProjectOutlawn/src/Client
