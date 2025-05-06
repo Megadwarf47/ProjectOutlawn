@@ -14,15 +14,26 @@ jobs:
       - name: Setup MSVC
         uses: ilammy/msvc-dev-cmd@v1.4.1
 
+      - name: Install CMake
+        run: choco install cmake
+
       - name: Clone ProjectOutlawn
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
 
-      - name: Build Server
+      - name: Build ServerR
         run: |
           cd ProjectOutlawn\src\Server
+          mkdir build
+          cd build
+          cmake ..
+
+      - name: Build with CMake
+        run: |
+        cd build
+        cmake --build . --config Release
 
       - name: Upload Compiled DLL
         uses: actions/upload-artifact@v4
         with:
-          name: dinput8
-          path: ProjectOutlawn/src/Client/dinput8.dll
+          name: Server
+          path: ProjectOutlawn/src/Server/build
