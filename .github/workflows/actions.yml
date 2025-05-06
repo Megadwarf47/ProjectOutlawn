@@ -1,4 +1,4 @@
-name: Build launcher
+name: Build Launcher 🔥
 
 on:
   workflow_dispatch:
