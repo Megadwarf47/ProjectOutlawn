@@ -95,7 +95,7 @@ class MainWindow(QMainWindow):
         self.selected_game = "GW1"
         self.exePath = self.game_exes[self.selected_game]  # Initialize with the GW1 EXE path
 
-        self.gw1_pixmap = QPixmap("assets/gw1.jpg")
+        self.gw1_pixmap = QPixmap("gw1.jpg")
         self.gw2_pixmap = QPixmap("gw2.jpg")
         self.set_background(self.gw1_pixmap)
         self.initUI()
