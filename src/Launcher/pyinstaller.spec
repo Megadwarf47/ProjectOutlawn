@@ -9,11 +9,7 @@ hiddenimports = (
     collect_submodules('pyqt6') +
     collect_submodules('pyaml') +
     collect_submodules('requests') +
-    collect_submodules('idna') +      # requests dependency
-    collect_submodules('urllib3') +   # requests dependency
-    collect_submodules('chardet') +   # fallback requests dependency
-    collect_submodules('certifi') +   # requests SSL certs
-    ['server_browser_window']         # your local module
+    ['server_browser_window']
 )
 
 a = Analysis(
