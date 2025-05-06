@@ -9,7 +9,14 @@ a = Analysis(
     pathex=[],
     binaries=[],
     datas=[('assets/gw1.jpg', '.'), ('assets/gw2.jpg', '.'), ('assets/icon.ico', '.')],  # Include your image and icon files
-    hiddenimports=collect_submodules('pyqt6', 'pyyaml', 'requests',)
+
+#Hidden Imports
+    hiddenimports = (
+    collect_submodules('pyqt6') +
+    collect_submodules('pyyaml') +
+    collect_submodules('requests')
+    )
+    
     hookspath=[],
     runtime_hooks=[],
     excludes=[],
