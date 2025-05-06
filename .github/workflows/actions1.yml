@@ -24,4 +24,4 @@ jobs:
       - name: Build Client
         run: |
           cd ProjectOutlawn\src\Client
-          cl dllmain.cpp /EHsc /Fe:dinput8.dll /std:c++latest
+          cl /LD dllmain.cpp MinHook.x64.lib /link /OUT:dllmain.dll /IMPLIB:dllmain.lib
