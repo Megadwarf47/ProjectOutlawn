@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <fstream>
 #include <string>
-#include "MinHook.h"
+#include "./libs/MinHook.h"
 
 typedef HRESULT(WINAPI* DirectInput8Create_t)(HINSTANCE hinst, DWORD dwVersion, REFIID riidltf, LPVOID* ppvOut, LPUNKNOWN punkOuter);
 static DirectInput8Create_t g_RealDirectInput8Create = nullptr;
