@@ -28,4 +28,4 @@ jobs:
         run: |
           cd ProjectOutlawn/src/Client
           # Compile using MSVC (cl)
-          cmd.exe /C "cl /EHsc dllmain.cpp"
+          cmd.exe /C "cl /EHsc your_program.cpp"
