@@ -13,13 +13,13 @@ jobs:
 
       - name: Install Visual Studio Build Tools
         run: |
-          # Download and install Visual Studio Build Tools
+          # Install Visual Studio Build Tools 2019 (if needed, adjust for your version)
           choco install visualstudio2019buildtools --version=16.11.7 -y
 
       - name: Setup MSVC
         run: |
-          # Set up Visual Studio environment using cmd (since call is a cmd command)
-          cmd.exe /C "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64
+          # Use cmd.exe and correctly handle the space in "Program Files"
+          cmd.exe /C "\"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvarsall.bat\" x64"
 
       - name: Clone ProjectOutlawn
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
