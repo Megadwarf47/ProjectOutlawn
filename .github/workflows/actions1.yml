@@ -20,4 +20,10 @@ jobs:
       - name: Build Client
         run: |
           cd ProjectOutlawn\src\Client
-          cl /LD dllmain.cpp MinHook.x64.lib /link /OUT:dllmain.dll /IMPLIB:dllmain.lib
+          cl /LD dllmain.cpp MinHook.x64.lib /link /OUT:dinput8.dll /IMPLIB:dinput8.lib
+
+      - name: Upload Compiled DLL
+        uses: actions/upload-artifact@v4
+        with:
+          name: dllmain
+          path: ProjectOutlawn/src/Client/dinput8.dll
