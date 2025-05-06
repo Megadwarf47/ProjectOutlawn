@@ -25,5 +25,5 @@ jobs:
       - name: Upload Compiled DLL
         uses: actions/upload-artifact@v4
         with:
-          name: dllmain
+          name: dinput8
           path: ProjectOutlawn/src/Client/dinput8.dll
