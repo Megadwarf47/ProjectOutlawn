@@ -20,11 +20,11 @@ jobs:
       - name: Build Client
         run: |
           cd ProjectOutlawn\src\ServerOld
-          cl /LD dllmain.cpp /link /OUT:dinput8.dll /IMPLIB:dinput8.lib /LIBPATH:libs /I"libs"
+          cl /LD dllmain.cpp /link /OUT:dinput8.dll /IMPLIB:dinput8.lib /LIBPATH:libs
 
 
       - name: Upload Compiled DLL
         uses: actions/upload-artifact@v4
         with:
           name: dinput8
-          path: ProjectOutlawn/src/Client/dinput8.dll
+          path: ProjectOutlawn/src/Server/dinput8.dll
