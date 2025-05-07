@@ -22,7 +22,6 @@ jobs:
           cd ProjectOutlawn\src\ServerOld
           cl /LD dllmain.cpp /link /OUT:dinput8.dll /IMPLIB:dinput8.lib /LIBPATH:libs
 
-
       - name: Upload Compiled DLL
         uses: actions/upload-artifact@v4
         with:
