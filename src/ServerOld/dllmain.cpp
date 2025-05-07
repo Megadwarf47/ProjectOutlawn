@@ -1,9 +1,9 @@
+#include <Windows.h>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <cstdint>
 #include <iostream>
-﻿#include "./libs/Windows.h"
 
 //Proxy for DirectInput8Create
 typedef HRESULT(WINAPI* DirectInput8Create_t)(
