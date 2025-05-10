@@ -29,10 +29,10 @@ jobs:
           cmake --build . --config Release
 
       - name: Upload binaries
-        uses: actions/upload-artifact@v4
-        with:
-          name: Server
-          path: | 
-          ProjectOutlawn/src/Server/build/Release*,
-          ProjectOutlawn/src/Server/build/Installer/Release*,
-          ProjectOutlawn/src/Server/build/Launcher/Release*
+      uses: actions/upload-artifact@v4
+      with:
+      name: Server
+      path: |
+        ProjectOutlawn/src/Server/build/Release*
+        ProjectOutlawn/src/Server/build/Installer/Release*
+        ProjectOutlawn/src/Server/build/Launcher/Release*
