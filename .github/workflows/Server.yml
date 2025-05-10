@@ -31,16 +31,16 @@ jobs:
       - name: Upload DLL
         uses: actions/upload-artifact@v4
         with:
-          name: Dll
+          name: DLL
           path: ProjectOutlawn/src/Server/build/Release*
       
-      - name: Upload installer
+      - name: Upload Installer
         uses: actions/upload-artifact@v4
         with:
           name: Installer
           path: ProjectOutlawn/src/Server/build/Installer/Release*
 
-      - name: Upload launcher
+      - name: Upload Launcher
         uses: actions/upload-artifact@v4
         with:
           name: Launcher
