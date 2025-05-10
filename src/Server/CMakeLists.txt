@@ -54,6 +54,10 @@ set_target_properties(KyberInstaller PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-# Subdirectories
+# Add subdirectories, but rename the executable target in Installer to avoid conflict
 add_subdirectory(Launcher)
-add_subdirectory(Installer)
+
+# Fix naming conflict in Installer
+if(NOT TARGET KyberInstallerExecutable)
+    add_subdirectory(Installer)
+endif()
