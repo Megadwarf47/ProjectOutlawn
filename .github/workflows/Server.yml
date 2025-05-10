@@ -31,5 +31,9 @@ jobs:
       - name: Upload binaries
         uses: actions/upload-artifact@v4
         with:
-          name: Server
-          path: ProjectOutlawn/src/Server/build/*
+          name: Dll
+          path: ProjectOutlawn/src/Server/build/Release*
+          name: Installer
+          path: ProjectOutlawn/src/Server/build/Installer/Release*
+          name: Launcher
+          path: ProjectOutlawn/src/Server/build/Launcher/Release*
