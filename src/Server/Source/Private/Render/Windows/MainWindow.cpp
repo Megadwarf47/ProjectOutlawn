@@ -32,7 +32,7 @@ bool MainWindow::IsEnabled()
 
 void MainWindow::Draw()
 {
-    ImGui::Begin("KYBER", &m_isEnabled, ImGuiWindowFlags_AlwaysAutoResize);
+    ImGui::Begin("OUTLAWN", &m_isEnabled, ImGuiWindowFlags_AlwaysAutoResize);
 
     if (ImGui::Button("SERVER SETUP"))
     {
