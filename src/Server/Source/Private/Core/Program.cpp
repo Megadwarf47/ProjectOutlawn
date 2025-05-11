@@ -36,7 +36,7 @@ Program::Program(HMODULE module)
 {
     if (g_program || MH_Initialize() != MH_OK)
     {
-        ErrorUtils::ThrowException("Initialization failed. Please restart Battlefront and try again!");
+        ErrorUtils::ThrowException("Initialization failed. Please restart Garden Warfare and try again!");
     }
 
     // Open a console
@@ -58,7 +58,7 @@ Program::Program(HMODULE module)
 
 Program::~Program()
 {
-    KYBER_LOG(LogLevel::Info, "Destroying Kyber");
+    KYBER_LOG(LogLevel::Info, "Destroying Outlawn");
     HookManager::RemoveHooks();
     delete m_server;
     delete m_api;
@@ -68,25 +68,27 @@ Program::~Program()
 DWORD WINAPI Program::InitializationThread()
 {
     KYBER_LOG(LogLevel::Info, "Initializing...");
-    KYBER_LOG(LogLevel::Info, " _____     _   _   _     ____           _ ");
-    KYBER_LOG(LogLevel::Info, "| __  |___| |_| |_| |___|    \\ ___ ___| |_");
-    KYBER_LOG(LogLevel::Info, "| __ -| .'|  _|  _| | -_|  |  | .'|_ -|   |");
-    KYBER_LOG(LogLevel::Info, "|_____|__,|_| |_| |_|___|____/|__,|___|_|_|");
-
+    KYBER_LOG(LogLevel::Info, "  ______    __    __  .___________. __          ___   ____    __    ____ .__   __. ");
+    KYBER_LOG(LogLevel::Info, " /  __  \  |  |  |  | |           ||  |        /   \  \   \  /  \  /   / |  \ |  | ");
+    KYBER_LOG(LogLevel::Info, "|  |  |  | |  |  |  | `---|  |----`|  |       /  ^  \  \   \/    \/   /  |   \|  | ");
+    KYBER_LOG(LogLevel::Info, "|  |  |  | |  |  |  |     |  |     |  |      /  /_\  \  \            /   |  . `  | ");
+    KYBER_LOG(LogLevel::Info, "|  `--'  | |  `--'  |     |  |     |  `----./  _____  \  \    /\    /    |  |\   | ");
+    KYBER_LOG(LogLevel::Info, " \______/   \______/      |__|     |_______/__/     \__\  \__/  \__/     |__| \__| ");
+    
     InitializeGameHooks();
 
     m_api = new KyberAPIService();
     g_renderer = new Renderer();
     m_server = new Server();
 
-    KYBER_LOG(LogLevel::Info, "Initialized Kyber v" << KYBER_VERSION);
-    KYBER_LOG(LogLevel::Warning, "Press [INSERT] on your Keyboard to use Kyber!");
+    KYBER_LOG(LogLevel::Info, "Initialized Outlawn" << KYBER_VERSION);
+    KYBER_LOG(LogLevel::Warning, "Press [INSERT] on your Keyboard to use Outlawn!");
 
     while (1)
     {
         if (GetAsyncKeyState(VK_END) & 1)
         {
-            KYBER_LOG(LogLevel::Info, "Ejecting Kyber");
+            KYBER_LOG(LogLevel::Info, "Ejecting Outlawn");
             FreeLibrary(m_module);
             delete this;
             break;
