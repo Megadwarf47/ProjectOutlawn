@@ -53,7 +53,7 @@ void DownloadDLL()
         {
             std::stringstream ss;
             ss << "Failed to download Kyber.dll: " << std::to_string(response->status);
-            MessageBoxA(NULL, ss.str().c_str(), "Kyber Launcher", MB_OK);
+            MessageBoxA(NULL, ss.str().c_str(), "Outlawn Launcher", MB_OK);
         }
         dllUpdating = false;
     });
@@ -75,7 +75,7 @@ void InjectDLL()
     {
         do
         {
-            if (strcmp(pe.szExeFile, "starwarsbattlefrontii.exe") == 0)
+            if (strcmp(pe.szExeFile, "PVZ.Main_Win64_Retail.exe") == 0)
             {
                 pid = pe.th32ProcessID;
                 break;
@@ -87,7 +87,7 @@ void InjectDLL()
     hProc = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);
     if (hProc == NULL)
     {
-        MessageBoxA(NULL, "Failed to open starwarsbattlefrontii.exe", "Kyber Launcher", MB_OK);
+        MessageBoxA(NULL, "Failed to open PVZ.Main_Win64_Retail.exe", "Outlawn Launcher", MB_OK);
         return;
     }
 
@@ -95,27 +95,27 @@ void InjectDLL()
     auto loadLibraryA = (LPVOID)GetProcAddress(GetModuleHandleA("kernel32.dll"), "LoadLibraryA");
     if (loadLibraryA == NULL)
     {
-        MessageBoxA(NULL, "Failed to get address of LoadLibraryA", "Kyber Launcher", MB_OK);
+        MessageBoxA(NULL, "Failed to get address of LoadLibraryA", "Outlawn Launcher", MB_OK);
         return;
     }
 
     LPVOID remoteDLL = VirtualAllocEx(hProc, NULL, kyberDllPath.string().size(), MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
     if (remoteDLL == NULL)
     {
-        MessageBoxA(NULL, "Failed to allocate memory in starwarsbattlefrontii.exe", "Kyber Launcher", MB_OK);
+        MessageBoxA(NULL, "Failed to allocate memory in PVZ.Main_Win64_Retail.exe", "Outlawn Launcher", MB_OK);
         return;
     }
 
     if (!WriteProcessMemory(hProc, remoteDLL, kyberDllPath.string().c_str(), kyberDllPath.string().size(), NULL))
     {
-        MessageBoxA(NULL, "Failed to write memory in starwarsbattlefrontii.exe", "Kyber Launcher", MB_OK);
+        MessageBoxA(NULL, "Failed to write memory in PVZ.Main_Win64_Retail.exe", "Outlawn Launcher", MB_OK);
         return;
     }
 
     LPVOID remoteThread = CreateRemoteThread(hProc, NULL, 0, (LPTHREAD_START_ROUTINE)loadLibraryA, remoteDLL, 0, NULL);
     if (remoteThread == NULL)
     {
-        MessageBoxA(NULL, "Failed to create remote thread in starwarsbattlefrontii.exe", "Kyber Launcher", MB_OK);
+        MessageBoxA(NULL, "Failed to create remote thread in PVZ.Main_Win64_Retail.exe", "Outlawn Launcher", MB_OK);
         return;
     }
 
@@ -135,7 +135,7 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 
-    GLFWwindow* window = glfwCreateWindow(500, 400, "Kyber Launcher", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(500, 400, "Outlawn Launcher", NULL, NULL);
     if (window == NULL)
     {
         return 1;
