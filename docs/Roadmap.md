@@ -10,6 +10,8 @@
 
 # Alpha 0.1 (Absolute first alpha release)
 
+[❌] Make the build pipeline not rely on github packages
+
 [✅] A CLI/GUI launcher that can join/host + mods via frosty
 
 [✅] Get [`ServerPlayer`](/docs/GhidraStuff/BreeMsgs/Categories.h#L1084) done
