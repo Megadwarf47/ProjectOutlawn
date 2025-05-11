@@ -15,7 +15,7 @@ This is a passion project. People work on it whenever they want.
 ### What's the closest you guys have gotten?
 The closest attempt is this where somebody from the team had the server load the map but couldnt connect to it 
 
-<img src="/other/PeakProgress.png" width="600"/>
+<img src="/docs/PeakProgress.png" width="600"/>
 
 ### How can I try the server?
 It's not ready yet. We're trying to have the alpha release as soon as possible.
