@@ -5,6 +5,9 @@
 0x140011AE0 => Main::SpawnServer
 0x14000AFB0 => GameLoopInfo::Init
 
+0x1421EFE10 => BFSERVERSETTINGS // Not sure about this
+0x141C472E8 => BFDedicatedServerSettings // Not sure about this
+
 //MULTI PURPOSE
 0x140767A60 => ServerPlayer::SetTeamId
 0x1408038F0 => EnginePeer::Init
