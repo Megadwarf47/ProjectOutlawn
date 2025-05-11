@@ -16,15 +16,11 @@ public:
         ("Outlawn v" + KYBER_VERSION).c_str(),
         ""
         "DEVELOPERS",
-        "",
         "Silkker",
         "FlashHit",
-        "0x90akomenda",
-        "KimAndy",
         "bwarlDB",
         "zefanjajobse",
         "MixaDoDs",
-        "Nerosus",
         "ArmchairDevelopers",
         "Twig6943"
     };
