@@ -5,6 +5,7 @@
 
 #define _WINSOCKAPI_
 #define CPPHTTPLIB_OPENSSL_SUPPORT
+#define GLFW_EXPOSE_NATIVE_WIN32
 #include <Windows.h>
 
 #include "Libraries/Images/resource.h"
@@ -12,11 +13,13 @@
 #include <imgui/imgui.h>
 #include <imgui/imgui_impl_glfw.h>
 #include <imgui/imgui_impl_opengl3.h>
+//#include <tchar.h>
 #include <stdio.h>
 #if defined(IMGUI_IMPL_OPENGL_ES2)
     #include <GLES2/gl2.h>
 #endif
 #include <GLFW/glfw3.h>
+#include <GLFW/glfw3native.h>
 
 #include <cpp-httplib/httplib.h>
 #include <experimental/thread_pool>
