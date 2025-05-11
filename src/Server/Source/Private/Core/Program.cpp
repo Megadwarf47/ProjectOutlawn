@@ -68,7 +68,7 @@ Program::~Program()
 DWORD WINAPI Program::InitializationThread()
 {
     KYBER_LOG(LogLevel::Info, "Initializing...");
-    KYBER_LOG(LogLevel::Info, "  ooo   u   u  ttttt  l      aaaaa w   w  n   n ");
+    KYBER_LOG(LogLevel::Info, "  ooo   u   u  ttttt  l      aaa   w   w  n   n ");
     KYBER_LOG(LogLevel::Info, " o   o  u   u    t    l     a   a  w   w  nn  n ");
     KYBER_LOG(LogLevel::Info, " o   o  u   u    t    l     aaaaa  w w w  n n n ");
     KYBER_LOG(LogLevel::Info, " o   o  u   u    t    l     a   a  ww ww  n  nn ");
