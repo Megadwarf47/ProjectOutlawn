@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.15)
 
 project(
 	KyberInstaller
-	DESCRIPTION "Private servers for STAR WARS Battlefront II"
-	HOMEPAGE_URL "https://github.com/BattleDash/Kyber"
+	DESCRIPTION "Private servers for Plants vs. Zombies: Garden Warfare"
+	HOMEPAGE_URL "https://github.com/Twig6943/ProjectOutlawn"
 	LANGUAGES C CXX
 )
 
