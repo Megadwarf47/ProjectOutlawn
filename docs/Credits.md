@@ -26,7 +26,9 @@
 
 ### Miscellaneous
 
-`@Twig6943`
+`@ArmchairDevelopers` for Kyber
+
+`@Twig6943` misc
 
 ### Shoutouts
 
