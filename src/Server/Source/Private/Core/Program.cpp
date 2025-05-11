@@ -68,12 +68,12 @@ Program::~Program()
 DWORD WINAPI Program::InitializationThread()
 {
     KYBER_LOG(LogLevel::Info, "Initializing...");
-    KYBER_LOG(LogLevel::Info, "  ______    __    __  .___________. __          ___   ____    __    ____ .__   __. ");
-    KYBER_LOG(LogLevel::Info, " /  __  \  |  |  |  | |           ||  |        /   \  \   \  /  \  /   / |  \ |  | ");
-    KYBER_LOG(LogLevel::Info, "|  |  |  | |  |  |  | `---|  |----`|  |       /  ^  \  \   \/    \/   /  |   \|  | ");
-    KYBER_LOG(LogLevel::Info, "|  |  |  | |  |  |  |     |  |     |  |      /  /_\  \  \            /   |  . `  | ");
-    KYBER_LOG(LogLevel::Info, "|  `--'  | |  `--'  |     |  |     |  `----./  _____  \  \    /\    /    |  |\   | ");
-    KYBER_LOG(LogLevel::Info, " \______/   \______/      |__|     |_______/__/     \__\  \__/  \__/     |__| \__| ");
+    KYBER_LOG(LogLevel::Info, "  ooo   u   u  ttttt  l      aaaaa  w   w  n   n ");
+    KYBER_LOG(LogLevel::Info, " o   o  u   u    t    l     a   a  w   w  nn  n ");
+    KYBER_LOG(LogLevel::Info, " o   o  u   u    t    l     aaaaa  w w w  n n n ");
+    KYBER_LOG(LogLevel::Info, " o   o  u   u    t    l     a   a  ww ww  n  nn ");
+    KYBER_LOG(LogLevel::Info, "  ooo    uuu     t    l____ a   a  w   w  n   n ");
+
     
     InitializeGameHooks();
 
