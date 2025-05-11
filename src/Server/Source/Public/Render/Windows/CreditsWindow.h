@@ -13,18 +13,20 @@ class CreditsWindow : public Window
 public:
     // clang-format off
     const char* credits[11] = {
-        ("Kyber v" + KYBER_VERSION).c_str(),
+        ("Outlawn v" + KYBER_VERSION).c_str(),
         ""
-        "CREATOR & DEVELOPER",
-        "BattleDash",
+        "DEVELOPERS",
         "",
-        "COMMUNITY MANAGER",
-        "Dangercat",
-        "",
-        "CONTRIBUTORS",
-        "Cade",
-        "Mophead",
-        "Dyvinia"
+        "Silkker",
+        "FlashHit",
+        "0x90akomenda",
+        "KimAndy",
+        "bwarlDB",
+        "zefanjajobse",
+        "MixaDoDs",
+        "Nerosus",
+        "ArmchairDevelopers",
+        "Twig6943"
     };
     // clang-format on
 
