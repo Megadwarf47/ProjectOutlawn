@@ -24,11 +24,13 @@
 
 `@Nerosus`
 
-### Miscellaneous
+`@Twig6943` misc
+
+### Special Thanks
 
 `@ArmchairDevelopers` for Kyber
 
-`@Twig6943` misc
+`@CargoPants` for Auric
 
 ### Shoutouts
 

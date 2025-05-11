@@ -14,15 +14,16 @@ public:
     // clang-format off
     const char* credits[11] = {
         ("Outlawn v" + KYBER_VERSION).c_str(),
-        ""
-        "DEVELOPERS",
+        "Contributors:"
         "Silkker",
         "FlashHit",
         "bwarlDB",
         "zefanjajobse",
         "MixaDoDs",
+        "Twig6943",
+        "Special Thanks:",
         "ArmchairDevelopers",
-        "Twig6943"
+        "CargoPants"
     };
     // clang-format on
 

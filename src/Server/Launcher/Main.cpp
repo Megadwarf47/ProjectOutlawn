@@ -7,6 +7,8 @@
 #define CPPHTTPLIB_OPENSSL_SUPPORT
 #include <Windows.h>
 
+#include "Libraries/Images/resource.h"
+
 #include <imgui/imgui.h>
 #include <imgui/imgui_impl_glfw.h>
 #include <imgui/imgui_impl_opengl3.h>
@@ -139,6 +141,17 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
     if (window == NULL)
     {
         return 1;
+    }
+
+    HICON hIcon = LoadIcon(GetModuleHandle(NULL), MAKEINTRESOURCE(IDI_MYICON));
+
+    if (hIcon)
+
+    {
+        HWND hwnd = glfwGetWin32Window(window);
+        // Set the big and small icon
+        SendMessage(hwnd, WM_SETICON, ICON_BIG, (LPARAM)hIcon);
+        SendMessage(hwnd, WM_SETICON, ICON_SMALL, (LPARAM)hIcon);
     }
 
     glfwMakeContextCurrent(window);
