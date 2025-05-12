@@ -22,12 +22,19 @@ jobs:
             '--add', 'Microsoft.VisualStudio.Workload.Needed', `
             '--includeRecommended', '--passive'
 
-      # Set up MSVC and NMake for the build environment
+      # Dynamically find and call the correct vcvars64.bat
       - name: Setup MSVC Environment
-        shell: cmd
+        shell: pwsh
         run: |
-          call "%ProgramFiles(x86)%\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
-          where nmake
+          $vsPath = "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build"
+          $vcvarsFile = Get-ChildItem -Path $vsPath -Recurse -Filter "vcvars64.bat" | Select-Object -First 1
+          if ($vcvarsFile) {
+            Write-Host "Found vcvars64.bat at: $($vcvarsFile.FullName)"
+            & $vcvarsFile.FullName
+          } else {
+            Write-Host "vcvars64.bat not found!"
+            exit 1
+          }
 
       # Clone your project
       - name: Clone ProjectOutlawn
@@ -37,7 +44,6 @@ jobs:
       - name: Build Server
         shell: cmd
         run: |
-          call "%ProgramFiles(x86)%\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
           cd ProjectOutlawn\src\Server
           mkdir build
           cd build
