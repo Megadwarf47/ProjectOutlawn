@@ -2,7 +2,6 @@
 
 **Before submitting a feature request:**
 - Please check if a similar request has already been made to avoid duplicates.
-- Be clear about whether this affects the launcher, the server, or both.
 
 ---
 
