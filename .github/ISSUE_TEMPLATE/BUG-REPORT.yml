@@ -12,7 +12,7 @@ body:
         - Otherwise, fill out the information below to the best of your ability. Thank you!
 
         [chat]: https://discord.gg/CS5GzFTVWr
-        [faq]: /docs/Faq.md
+        [faq]: ./docs/Faq.md
   - type: textarea
     attributes:
       label: Describe the bug
