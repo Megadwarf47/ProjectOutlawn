@@ -43,7 +43,7 @@ body:
       description: What's your OS?
       options:
         - Windows 10/11
-        - Linux (Wine)
+        - Linux (Wine/Proton)
     validations:
       required: true
   - type: textarea
