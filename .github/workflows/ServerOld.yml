@@ -1,4 +1,4 @@
-name: Build ServerOld 🌹
+name: Build Client 🌹
 
 on:
   workflow_dispatch:
@@ -11,16 +11,35 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup MSVC
-        uses: ilammy/msvc-dev-cmd@v1.4.1
+      - name: Install Visual Studio Build Tools
+        shell: pwsh
+        run: |
+          $vsInstallerUrl = "https://aka.ms/vs/17/release/vs_BuildTools.exe"
+          $vsInstallerPath = "$env:RUNNER_TEMP\vs_BuildTools.exe"
+          $installDir = "C:\MyVS"
+
+          Invoke-WebRequest $vsInstallerUrl -OutFile $vsInstallerPath
+
+          Start-Process -Wait -FilePath $vsInstallerPath -ArgumentList `
+            "--installPath `"$installDir`"", `
+            "--add Microsoft.VisualStudio.Workload.VCTools", `
+            "--includeRecommended", `
+            "--passive", "--norestart", "--wait"
+
+      - name: Setup MSVC Environment
+        shell: cmd
+        run: |
+          call "C:\MyVS\VC\Auxiliary\Build\vcvars64.bat"
 
       - name: Clone ProjectOutlawn
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
 
       - name: Build ServerOld
+        shell: cmd
         run: |
-          cd ProjectOutlawn\src\ServerOld
-          cl /LD dllmain.cpp /link /OUT:dinput8.dll /IMPLIB:dinput8.lib /LIBPATH:libs
+          call "C:\MyVS\VC\Auxiliary\Build\vcvars64.bat" && ^
+          cd ProjectOutlawn\src\ServerOld && ^
+          cl /LD dllmain.cpp /link /OUT:dinput8.dll /IMPLIB:dinput8.lib /LIBPATH:libs MinHook.x64.lib
 
       - name: Upload Compiled DLL
         uses: actions/upload-artifact@v4
