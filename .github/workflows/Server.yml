@@ -11,10 +11,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Find Visual Studio Installation
+        id: find_vs
+        shell: powershell
+        run: |
+          $vsPath = &"${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
+          echo "VS_PATH=$vsPath" >> $env:GITHUB_OUTPUT
+
       - name: Set up MSVC Environment
         shell: cmd
         run: |
-          call "C:\Program Files (x86)\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x64
+          call "%{{ steps.find_vs.outputs.VS_PATH }}%\VC\Auxiliary\Build\vcvarsall.bat" x64
           echo "MSVC environment set up" >> "%GITHUB_ENV%"
 
       - name: Install CMake
