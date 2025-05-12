@@ -3,7 +3,7 @@
 **Before reporting a bug, please read the following:**
 
 - If you have a question about Project Outlawn, you can ask for help on our [Discord](https://discord.gg/CS5GzFTVWr).
-- Also consult the [Frequently Asked Questions](https://github.com/Twig6943/ProjectOutlawn/blob/main/docs/faq) for common issues and questions.
+- Also consult the [Frequently Asked Questions](/docs/Faq.md) for common issues and questions.
 - Please search for duplicate issues before filing a new one to keep the issue section clean.
 - Make sure you are using the latest available version of everything (OS, Launcher, etc.).
 
