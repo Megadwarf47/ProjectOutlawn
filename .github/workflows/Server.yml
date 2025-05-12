@@ -11,20 +11,29 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Install CMake
-        run: choco install cmake --yes
+      # Install Visual Studio Build Tools with MSVC C++ workload
+      - name: Install Visual Studio Build Tools
+        shell: pwsh
+        run: |
+          Invoke-WebRequest https://aka.ms/vs/17/release/vs_BuildTools.exe -OutFile vs_BuildTools.exe
+          Start-Process -Wait -FilePath .\vs_BuildTools.exe -ArgumentList `
+            '--quiet', '--wait', '--norestart', `
+            '--add', 'Microsoft.VisualStudio.Workload.VCTools', `
+            '--includeRecommended', '--passive'
 
+      # Clone your project
       - name: Clone ProjectOutlawn
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
 
+      # Set up MSVC and build using CMake
       - name: Build Server
         shell: cmd
         run: |
-          "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat" &&
-          cd ProjectOutlawn\src\Server &&
-          mkdir build &&
-          cd build &&
-          cmake .. -G "Visual Studio 17 2022" &&
+          call "%ProgramFiles(x86)%\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
+          cd ProjectOutlawn\src\Server
+          mkdir build
+          cd build
+          cmake .. -G "NMake Makefiles"
           cmake --build . --config Release
 
       - name: Upload DLL
