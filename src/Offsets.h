@@ -26,7 +26,7 @@
 0x14055D3B0 => OnlineManager::OnGotDisconnected
 
 
-//Offsets that are needed (Not sure if all of these exist)
+//Offsets to find (Not sure if all of these exist)
 ? => CLIENT_STATE_CHANGE
 ? => GET_SETTINGS_OBJECT
 ? => SERVER_CONSTRUCTOR
