@@ -35,7 +35,9 @@ jobs:
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
 
       - name: Build Client
+        shell: cmd
         run: |
+          call "C:\MyVS\VC\Auxiliary\Build\vcvars64.bat"  # Ensure this is called again in the same shell
           cd ProjectOutlawn\src\Client
           cl /LD dllmain.cpp /link /OUT:dinput8.dll /IMPLIB:dinput8.lib /LIBPATH:libs MinHook.x64.lib
 
