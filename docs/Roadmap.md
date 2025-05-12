@@ -16,7 +16,7 @@
 
 [❌] [Gitlab issue templates](/.gitlab/issue_templates/)
 
-[❌] Make the build pipeline not rely on any packages
+[✅] Make the build pipeline not rely on any packages
 
 [✅] A GUI launcher that can join/host
 
