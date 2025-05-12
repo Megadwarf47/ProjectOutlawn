@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup MSVC Environment
-        uses: ilammy/msvc-dev-cmd@v1.4.1
+        uses: ./.github/packages/msvc-dev-cmd@v1.4.1
 
       - name: Install CMake
         run: choco install cmake --yes
