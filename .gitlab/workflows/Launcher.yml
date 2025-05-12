@@ -1,1 +1,35 @@
+stages:
+  - build
 
+build_launcher:
+  stage: build
+  tags:
+    - windows
+  script:
+    - echo "Checkout Repository"
+    - git clone https://github.com/Twig6943/ProjectOutlawn.git
+
+    - echo "Install Qt"
+    - choco install qt6-base-dev -y
+    - echo "C:\Qt\6.*/msvc*/bin" | Out-File -Append -Encoding ASCII $env:CI_PROJECT_DIR\path.txt
+    - echo "C:\Qt\6.*/msvc*/lib" | Out-File -Append -Encoding ASCII $env:CI_PROJECT_DIR\path.txt
+
+    - echo "Set up Python"
+    - choco install python --version=3.10.0 -y
+    - refreshenv
+
+    - echo "Install Dependencies"
+    - python -m pip install --upgrade pip
+    - cd ProjectOutlawn\src\Launcher
+    - python -m pip install -r requirements.txt
+
+    - echo "Compile with PyInstaller"
+    - pyinstaller pyinstaller.spec
+
+    - echo "Zip the Executable"
+    - powershell Compress-Archive -Path dist -DestinationPath dist.zip
+
+  artifacts:
+    paths:
+      - ProjectOutlawn/src/Launcher/dist.zip
+    name: "Launcher-Windows"
