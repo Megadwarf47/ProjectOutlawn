@@ -20,7 +20,7 @@
 
 [✅] Get [`ServerPlayer`](/docs/GhidraStuff/BreeMsgs/Categories.h#L1084) done
 
-[🟨] A launcher that can join/host
+[🟨] A launcher that can host/join
 
 [❌] Finish [Offsets](https://github.com/Twig6943/ProjectOutlawn/blob/main/src/Offsets.h)
 
