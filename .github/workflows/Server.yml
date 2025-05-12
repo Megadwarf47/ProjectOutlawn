@@ -22,12 +22,11 @@ jobs:
             '--add', 'Microsoft.VisualStudio.Workload.Needed', `
             '--includeRecommended', '--passive'
 
-      # Dynamically find and call the correct vcvars64.bat
+      # Dynamically search for the vcvars64.bat file (detects all possible installation locations)
       - name: Setup MSVC Environment
         shell: pwsh
         run: |
-          $vsPath = "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build"
-          $vcvarsFile = Get-ChildItem -Path $vsPath -Recurse -Filter "vcvars64.bat" | Select-Object -First 1
+          $vcvarsFile = Get-ChildItem -Path "C:\" -Recurse -Filter "vcvars64.bat" -ErrorAction SilentlyContinue | Select-Object -First 1
           if ($vcvarsFile) {
             Write-Host "Found vcvars64.bat at: $($vcvarsFile.FullName)"
             & $vcvarsFile.FullName
