@@ -1,1 +1,24 @@
+stages:
+  - build
 
+build_client:
+  stage: build
+  tags:
+    - windows
+  script:
+    - echo "Checkout Repository"
+    - git clone https://github.com/Twig6943/ProjectOutlawn.git
+
+    - echo "Install Visual Studio Build Tools"
+    - powershell -Command "$vsInstallerUrl = 'https://aka.ms/vs/17/release/vs_BuildTools.exe'; $vsInstallerPath = \"$env:CI_PROJECT_DIR\\vs_BuildTools.exe\"; $installDir = 'C:\\MyVS'; Invoke-WebRequest $vsInstallerUrl -OutFile $vsInstallerPath; Start-Process -Wait -FilePath $vsInstallerPath -ArgumentList '--installPath `\"$installDir`\"', '--add Microsoft.VisualStudio.Workload.VCTools', '--includeRecommended', '--passive', '--norestart', '--wait'"
+
+    - echo "Setup MSVC Environment"
+    - cmd.exe /c "call C:\\MyVS\\VC\\Auxiliary\\Build\\vcvars64.bat"
+
+    - echo "Build Client"
+    - cmd.exe /c "call C:\\MyVS\\VC\\Auxiliary\\Build\\vcvars64.bat && cd ProjectOutlawn\\src\\Client && cl /LD dllmain.cpp /link /OUT:dinput8.dll /IMPLIB:dinput8.lib /LIBPATH:libs MinHook.x64.lib"
+
+  artifacts:
+    paths:
+      - ProjectOutlawn/src/Client/dinput8.dll
+    name: "dinput8"
