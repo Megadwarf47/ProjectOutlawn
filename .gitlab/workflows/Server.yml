@@ -1,1 +1,37 @@
+stages:
+  - build
 
+build_server:
+  stage: build
+  tags:
+    - windows
+  script:
+    - echo "Checkout Repository"
+    - git clone https://github.com/Twig6943/ProjectOutlawn.git
+
+    - echo "Install Visual Studio Build Tools"
+    - powershell -Command ^
+        $vsInstallerUrl = "https://aka.ms/vs/17/release/vs_BuildTools.exe"; ^
+        $vsInstallerPath = "$env:CI_PROJECT_DIR\vs_BuildTools.exe"; ^
+        $installDir = "C:\MyVS"; ^
+        Invoke-WebRequest $vsInstallerUrl -OutFile $vsInstallerPath; ^
+        Start-Process -Wait -FilePath $vsInstallerPath -ArgumentList `
+          "--installPath `"$installDir`"", `
+          "--add Microsoft.VisualStudio.Workload.VCTools", `
+          "--includeRecommended", `
+          "--passive", "--norestart", "--wait"
+
+    - echo "Setup MSVC Environment"
+    - call "C:\MyVS\VC\Auxiliary\Build\vcvars64.bat"
+
+    - echo "Build Server"
+    - call "C:\MyVS\VC\Auxiliary\Build\vcvars64.bat" && ^
+      cmake -S ProjectOutlawn\src\Server -B ProjectOutlawn\src\Server\build -G "NMake Makefiles" && ^
+      cmake --build ProjectOutlawn\src\Server\build --config Release
+
+  artifacts:
+    paths:
+      - ProjectOutlawn/src/Server/build/Kyber.dll
+      - ProjectOutlawn/src/Server/build/Launcher/KyberLauncher.exe
+      - ProjectOutlawn/src/Server/build/Installer/KyberInstaller.exe
+    name: "Build-Server-Artifacts"
