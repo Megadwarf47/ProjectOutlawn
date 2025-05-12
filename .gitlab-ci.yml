@@ -1,0 +1,4 @@
+# Change this whenever you want to run another pipeline.
+
+include:
+  - local: '/.gitlab/workflows/Server.yml'
