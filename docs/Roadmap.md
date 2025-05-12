@@ -12,7 +12,9 @@
 
 [✅] Fix the icon stuff
 
-[❌] Make the build pipeline not rely on github packages
+[❌] GitLab build pipeline
+
+[❌] Make the build pipeline not rely on any packages
 
 [✅] A GUI launcher that can join/host
 
