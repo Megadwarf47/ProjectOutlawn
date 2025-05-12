@@ -12,7 +12,9 @@
 
 [✅] Fix the icon stuff
 
-[❌] GitLab build pipeline
+[❌] [GitLab build pipeline](/.gitlab/workflows/)
+
+[❌] [Gitlab issue templates](/.gitlab/issue_templates/)
 
 [❌] Make the build pipeline not rely on any packages
 
