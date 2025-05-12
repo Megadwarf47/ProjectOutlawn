@@ -41,20 +41,8 @@ jobs:
           cmake -S ProjectOutlawn\src\Server -B ProjectOutlawn\src\Server\build -G "NMake Makefiles"
           cmake --build ProjectOutlawn\src\Server\build --config Release
 
-      - name: Upload DLL
+      - name: Upload Everything
         uses: actions/upload-artifact@v4
         with:
           name: DLL
-          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build/Release*
-
-      - name: Upload Installer
-        uses: actions/upload-artifact@v4
-        with:
-          name: Installer
-          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build/Installer/Release*
-      
-      - name: Upload Launcher
-        uses: actions/upload-artifact@v4
-        with:
-          name: Launcher
-          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build/Launcher/Release*
+          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build*
