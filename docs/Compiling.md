@@ -1,8 +1,11 @@
-# Compiling the launcher
-## Prerequisites
+# Compilation Instructions
 
-Before you start, ensure you have the following [pip packages](/launcher/QTLauncher/requirements.txt) on your system.
+You can refer to the workflow files for detailed instructions on how to compile the project.
 
-# Compiling the DllProxy
+### [Compiling the Client](/.github/workflows/Client.yml)
 
-placeholder
+### [Compiling the Launcher](/.github/workflows/Launchher.yml)
+
+### [Server](/.github/workflows/Server.yml)
+
+### [ServerOld](/.github/workflows/ServerOld.yml)
