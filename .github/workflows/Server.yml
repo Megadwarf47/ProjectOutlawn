@@ -41,8 +41,20 @@ jobs:
           cmake -S ProjectOutlawn\src\Server -B ProjectOutlawn\src\Server\build -G "NMake Makefiles"
           cmake --build ProjectOutlawn\src\Server\build --config Release
 
-      - name: Upload Everything
+      - name: Upload Dll
         uses: actions/upload-artifact@v4
         with:
           name: DLL
-          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build*
+          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build/Kyber.dll
+
+      - name: Upload Launcher
+        uses: actions/upload-artifact@v4
+        with:
+          name: Launcher
+          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build/Launcher/KyberLauncher.exe
+
+      - name: Upload Installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: Installer
+          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build/Installer/KyberInstaller.exe
