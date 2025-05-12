@@ -1,0 +1,60 @@
+name: Build Server 🔥
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Visual Studio Build Tools
+        shell: pwsh
+        run: |
+          $vsInstallerUrl = "https://aka.ms/vs/17/release/vs_BuildTools.exe"
+          $vsInstallerPath = "$env:RUNNER_TEMP\vs_BuildTools.exe"
+          $installDir = "C:\MyVS"
+
+          Invoke-WebRequest $vsInstallerUrl -OutFile $vsInstallerPath
+
+          Start-Process -Wait -FilePath $vsInstallerPath -ArgumentList `
+            "--installPath `"$installDir`"", `
+            "--add Microsoft.VisualStudio.Workload.VCTools", `
+            "--includeRecommended", `
+            "--passive", "--norestart", "--wait"
+
+      - name: Setup MSVC Environment
+        shell: cmd
+        run: |
+          call "C:\MyVS\VC\Auxiliary\Build\vcvars64.bat"
+
+      - name: Clone ProjectOutlawn
+        run: git clone https://github.com/Twig6943/ProjectOutlawn.git
+
+      - name: Build Server
+        shell: cmd
+        run: |
+          call "C:\MyVS\VC\Auxiliary\Build\vcvars64.bat"
+          cmake -S ProjectOutlawn\src\Server -B ProjectOutlawn\src\Server\build -G "NMake Makefiles"
+          cmake --build ProjectOutlawn\src\Server\build --config Release
+
+      - name: Upload DLL
+        uses: actions/upload-artifact@v4
+        with:
+          name: DLL
+          path: ProjectOutlawn/src/Server/build/Release*
+
+      - name: Upload Installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: Installer
+          path: ProjectOutlawn/src/Server/build/Installer/Release*
+
+      - name: Upload Launcher
+        uses: actions/upload-artifact@v4
+        with:
+          name: Launcher
+          path: ProjectOutlawn/src/Server/build/Launcher/Release*
