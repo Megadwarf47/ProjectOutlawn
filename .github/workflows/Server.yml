@@ -17,7 +17,7 @@ jobs:
         run: |
           $vsInstallerUrl = "https://aka.ms/vs/17/release/vs_BuildTools.exe"
           $vsInstallerPath = "$env:RUNNER_TEMP\vs_BuildTools.exe"
-          $installDir = "D:\MyVS"
+          $installDir = "C:\MyVS"
 
           Invoke-WebRequest $vsInstallerUrl -OutFile $vsInstallerPath
 
@@ -31,7 +31,7 @@ jobs:
       - name: Setup MSVC Environment
         shell: cmd
         run: |
-          call "D:\MyVS\VC\Auxiliary\Build\vcvars64.bat"
+          call "C:\MyVS\VC\Auxiliary\Build\vcvars64.bat"
 
       # Clone the project
       - name: Clone ProjectOutlawn
@@ -41,7 +41,7 @@ jobs:
       - name: Build Server
         shell: cmd
         run: |
-          call "D:\MyVS\VC\Auxiliary\Build\vcvars64.bat"
+          call "C:\MyVS\VC\Auxiliary\Build\vcvars64.bat"
           cd ProjectOutlawn\src\Server
           mkdir build
           cd build
