@@ -11,7 +11,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Install Visual Studio Build Tools with MSVC C++ workload
+      # Install Visual Studio Build Tools with MSVC C++ and NMake
       - name: Install Visual Studio Build Tools
         shell: pwsh
         run: |
@@ -19,13 +19,21 @@ jobs:
           Start-Process -Wait -FilePath .\vs_BuildTools.exe -ArgumentList `
             '--quiet', '--wait', '--norestart', `
             '--add', 'Microsoft.VisualStudio.Workload.VCTools', `
+            '--add', 'Microsoft.VisualStudio.Workload.Needed', `
             '--includeRecommended', '--passive'
+
+      # Set up MSVC and NMake for the build environment
+      - name: Setup MSVC Environment
+        shell: cmd
+        run: |
+          call "%ProgramFiles(x86)%\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
+          where nmake
 
       # Clone your project
       - name: Clone ProjectOutlawn
         run: git clone https://github.com/Twig6943/ProjectOutlawn.git
 
-      # Set up MSVC and build using CMake
+      # Build Server using CMake with NMake
       - name: Build Server
         shell: cmd
         run: |
@@ -36,18 +44,21 @@ jobs:
           cmake .. -G "NMake Makefiles"
           cmake --build . --config Release
 
+      # Upload DLL
       - name: Upload DLL
         uses: actions/upload-artifact@v4
         with:
           name: DLL
           path: ProjectOutlawn/src/Server/build/Release*
 
+      # Upload Installer
       - name: Upload Installer
         uses: actions/upload-artifact@v4
         with:
           name: Installer
           path: ProjectOutlawn/src/Server/build/Installer/Release*
 
+      # Upload Launcher
       - name: Upload Launcher
         uses: actions/upload-artifact@v4
         with:
