@@ -24,7 +24,7 @@ file(GLOB_RECURSE INCLUDE_SOURCES CONFIGURE_DEPENDS
         ${PROJECT_SOURCE_DIR}/Libraries/Sources/*.cpp
 )
 
-add_executable(AuricLauncher WIN32 Main.cpp ${INCLUDE_SOURCES} "Libraries/Images/resource.rc")
+add_executable(KyberLauncher WIN32 Main.cpp ${INCLUDE_SOURCES} "Libraries/Images/resource.rc")
 
 set_target_properties(KyberLauncher PROPERTIES LINK_FLAGS "/ignore:4098")
 set(LAUNCHER_BINARIES_DIR ${PROJECT_SOURCE_DIR}/Libraries/Binaries)
