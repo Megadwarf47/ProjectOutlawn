@@ -4,7 +4,7 @@ You can refer to the workflow files for detailed instructions on how to compile 
 
 ### [Compiling the Client](/.github/workflows/Client.yml)
 
-### [Compiling the Launcher](/.github/workflows/Launchher.yml)
+### [Compiling the Launcher](/.github/workflows/Launcher.yml)
 
 ### [Server](/.github/workflows/Server.yml)
 
