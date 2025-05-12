@@ -12,15 +12,15 @@
 
 [✅] Fix the icon stuff
 
-[❌] [GitLab build pipeline](/.gitlab/workflows/)
+[✅] [GitLab build pipeline](/.gitlab/workflows/)
 
-[❌] [Gitlab issue templates](/.gitlab/issue_templates/)
+[✅] [Gitlab issue templates](/.gitlab/issue_templates/)
 
 [✅] Make the build pipeline not rely on any packages
 
-[✅] A GUI launcher that can join/host
-
 [✅] Get [`ServerPlayer`](/docs/GhidraStuff/BreeMsgs/Categories.h#L1084) done
+
+[🟨] A launcher that can join/host
 
 [❌] Finish [Offsets](https://github.com/Twig6943/ProjectOutlawn/blob/main/src/Offsets.h)
 
