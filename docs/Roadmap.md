@@ -22,7 +22,7 @@
 
 [🟨] Finish [Offsets](https://github.com/Twig6943/ProjectOutlawn/blob/main/src/Offsets.h)
 
-[❌] A Server that gets in-game
+[🟨] A Server that gets in-game
 
 [🟨] A launcher that can host/join
 
