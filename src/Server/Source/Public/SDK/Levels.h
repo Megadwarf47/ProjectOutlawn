@@ -29,3 +29,13 @@ static GameLevel s_game_levels[] = {
 
 GameLevel GetGameLevel(const char* level);
 } // namespace Kyber
+
+// Unknown
+// "_pvz/Levels/Coastal/Level_COOP_Coastal/Arena"
+// "_pvz/Levels/COOP_Suburbia/Level_COOP_Suburbia/Stage"
+// "_pvz/Levels/Mainstreet/Level_COOP_Mainstreet/Arena"
+// "_pvz/Levels/Desert/Rush_Desert_001/1_Crashsite"
+// "_pvz/Levels/Desert/Rush_Desert_001/2_Trailer_Park"
+// "_pvz/Levels/Desert/Rush_Desert_001/3_Suburbs"
+// "_pvz/Levels/Desert/Rush_Desert_001/4_Resort"
+// "_pvz/Levels/Desert/Rush_Desert_001/6_Golf_Course"
