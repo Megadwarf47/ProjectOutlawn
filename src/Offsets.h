@@ -30,18 +30,18 @@ OnlineManager::OnGotDisconnected => 0x14055D3B0
 APPLY_SETTINGS => ? //Closest thing: "ApplySettingOnCreation" => 14168b748
 
 CLIENT_STATE_CHANGE => ? //Closest thing: "ClientStateChangingStateMessage" => 1416b5020
-CLIENT_INIT_NETWORK => ? //Closest thing: =>
+CLIENT_INIT_NETWORK => ? //Closest thing: "Network" => 141578778
 
-GET_CLIENT_INSTANCE => ? //Closest thing: =>
-GET_SETTINGS_OBJECT => ? //Closest thing: =>
+GET_CLIENT_INSTANCE => ? //Closest thing: "GetClientRect" => 141bc9ece
+GET_SETTINGS_OBJECT => ? //Closest thing: "GetSetting" => 1418ae428
 
-SERVER_START => ? //Closest thing: =>
-SERVER_CONSTRUCTOR => ? //Closest thing: =>
-SERVER_PATCH => ? //Closest thing: =>
-SERVER_PATCH2 => ? //Closest thing: =>
-SERVERPLAYERMANAGER => ? //Closest thing: =>
-SERVERGAMECONTEXT_INSTANCE => ? //Closest thing: =>
+SERVER_START => ? //Closest thing: "ServerStartPointEntity" => 14170a7d0
+SERVER_CONSTRUCTOR => ? //Closest thing: => 
+SERVER_PATCH => ? //Closest thing: => 
+SERVER_PATCH2 => ? //Closest thing: => 
+SERVERPLAYERMANAGER => ? //Closest thing: "ServerPlayerManager" => 14170eb80 
+SERVERGAMECONTEXT_INSTANCE => ? //Closest thing: => 
 
-GLOBAL_CLIENT => ?
-GLOBAL_SETTINGS_MANAGER => ?
-EXECUTIONCONTEXT_GETNATIVEDATAPATH => ?
+GLOBAL_CLIENT => ? //Closest thing: => "Client" => 1415ad418
+GLOBAL_SETTINGS_MANAGER => ? //Closest thing: "SettingsManager" => 141674b38
+EXECUTIONCONTEXT_GETNATIVEDATAPATH => ? //Closest thing: "dataPath" => 1416725f0
