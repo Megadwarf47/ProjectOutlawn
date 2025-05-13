@@ -8,7 +8,7 @@
 
 [Categories](/docs/GhidraStuff/BreeMsgs/Categories.h) > [Progress](/src/Server/Source/Public/SDK)
 
-# Files done from scratch:
+# Files made from scratch:
 
 [`ServerPlayer.h`](/src/Server/Source/Public/SDK/ServerPlayer.h)
 
