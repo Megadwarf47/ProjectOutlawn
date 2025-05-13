@@ -19,6 +19,26 @@ struct GameMode
 
 //clang-format off
 // What if you wanted to format something nicely, but clang-format said:
+
+//GameModes?
+//Coop0
+//Coop1
+//TeamDeathMatch2
+//TeamDeathMatch3
+//TeamDeathMatch0
+//TeamDeathMatch1
+//GnomeBomb0
+//GnomeBomb1
+//KillConfirmed0
+//KillConfirmed1
+//Domination0
+//Domination1
+//SingleFlagCTF0
+//SingleFlagCTF1
+//ChompVirus0
+//ChompVirus1
+//RushLarge0
+
 static GameMode s_game_modes[] = {
     {
     "HeroesVersusVillains",
