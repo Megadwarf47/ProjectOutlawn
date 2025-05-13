@@ -18,7 +18,7 @@
 
 [✅] Make the build pipeline not rely on any packages
 
-[✅] Get [`ServerPlayer`](/docs/GhidraStuff/BreeMsgs/Categories.h#L1084) done
+[✅] Get [`ServerPlayer`](/docs/GhidraStuff/BreeMsgs/Categories.h#L1086) done
 
 [🟨] Finish [Offsets](https://github.com/Twig6943/ProjectOutlawn/blob/main/src/Offsets.h)
 
