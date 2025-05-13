@@ -2,7 +2,13 @@
 
 # Files
 
+# [.cpp files](/src/Server/Source/Private/SDK/)
+
 [The right format](/docs/GhidraStuff/BreeMsgs/RightFormatExample.h)
 
-[Categories](/docs/GhidraStuff/BreeMsgs/Categories.h) > [Progress](/docs/GhidraStuff/Progress)
+[Categories](/docs/GhidraStuff/BreeMsgs/Categories.h) > [Progress](/src/Server/Source/Public/SDK)
+
+# Files done manully:
+
+`ServerPlayer.h`
 
