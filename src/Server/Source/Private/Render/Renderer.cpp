@@ -296,7 +296,7 @@ Renderer::Renderer()
 
     KYBER_LOG(LogLevel::Debug, "Attempting to find Battlefront window");
 
-    hWnd = FindWindow("Frostbite", "PVZ Garden Warfare");
+    hWnd = FindWindow(nullptr, "PVZ Garden Warfare");
 
     if (!hWnd)
     {
