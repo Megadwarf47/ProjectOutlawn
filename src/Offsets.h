@@ -9,6 +9,7 @@ BFSERVERSETTINGS => 0x1421EFE10 // Not sure about this
 BFDedicatedServerSettings => 0x141C472E8 // Not sure about this
 
 //MULTI PURPOSE
+//GameTimeSettings => 141726fe0 (I don't know how to get offsets)
 ServerPlayer::SetTeamId => 0x140767A60
 EnginePeer::Init => 0x1408038F0
 LevelSetup::LevelSetup => 0x141464B10
