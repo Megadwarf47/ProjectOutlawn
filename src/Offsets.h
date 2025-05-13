@@ -25,23 +25,22 @@ Client::StateChange => 0x14053F180
 MessaageManager::DispatchMessage => 0x14035AD00
 OnlineManager::OnGotDisconnected => 0x14055D3B0
 
-
 //Offsets to find (Not sure if all of these exist)
 
-APPLY_SETTINGS => ?
+APPLY_SETTINGS => ? //Closest thing: "ApplySettingOnCreation" => 14168b748
 
-CLIENT_STATE_CHANGE => ?
-CLIENT_INIT_NETWORK => ?
+CLIENT_STATE_CHANGE => ? //Closest thing: "ClientStateChangingStateMessage" => 1416b5020
+CLIENT_INIT_NETWORK => ? //Closest thing: =>
 
-GET_CLIENT_INSTANCE => ?
-GET_SETTINGS_OBJECT => ?
+GET_CLIENT_INSTANCE => ? //Closest thing: =>
+GET_SETTINGS_OBJECT => ? //Closest thing: =>
 
-SERVER_START => ?
-SERVER_CONSTRUCTOR => ?
-SERVER_PATCH => ?
-SERVER_PATCH2 => ?
-SERVERPLAYERMANAGER => ?
-SERVERGAMECONTEXT_INSTANCE => ?
+SERVER_START => ? //Closest thing: =>
+SERVER_CONSTRUCTOR => ? //Closest thing: =>
+SERVER_PATCH => ? //Closest thing: =>
+SERVER_PATCH2 => ? //Closest thing: =>
+SERVERPLAYERMANAGER => ? //Closest thing: =>
+SERVERGAMECONTEXT_INSTANCE => ? //Closest thing: =>
 
 GLOBAL_CLIENT => ?
 GLOBAL_SETTINGS_MANAGER => ?
