@@ -10,5 +10,5 @@
 
 # Files done manully:
 
-`ServerPlayer.h`
+[`ServerPlayer.h`](/src/Server/Source/Public/SDK/ServerPlayer.h)
 
