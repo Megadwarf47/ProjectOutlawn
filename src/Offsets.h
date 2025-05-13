@@ -28,10 +28,10 @@ OnlineManager::OnGotDisconnected => 0x14055D3B0
 
 //Offsets to find (Not sure if all of these exist)
 
-? => APPLY_SETTINGS
-  
-? => CLIENT_STATE_CHANGE
-? => CLIENT_INIT_NETWORK
+APPLY_SETTINGS => ?
+
+CLIENT_STATE_CHANGE => ?
+CLIENT_INIT_NETWORK => ?
 
 GET_CLIENT_INSTANCE => ?
 GET_SETTINGS_OBJECT => ?
