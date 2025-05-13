@@ -30,7 +30,6 @@ OnlineManager::OnGotDisconnected => 0x14055D3B0
 
 APPLY_SETTINGS => ? //Closest thing: "ApplySettingOnCreation" => 14168b748
 
-CLIENT_STATE_CHANGE => ? //Closest thing: "ClientStateChangingStateMessage" => 1416b5020
 CLIENT_INIT_NETWORK => ? //Closest thing: "Network" => 141578778
 
 GET_CLIENT_INSTANCE => ? //Closest thing: "GetClientRect" => 141bc9ece
