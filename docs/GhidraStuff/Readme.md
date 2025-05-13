@@ -13,3 +13,5 @@
 [`ServerPlayer.h`](/src/Server/Source/Public/SDK/ServerPlayer.h)
 
 # Edited files
+
+[`Placeholder.h`](/src/Server/Source/Public/SDK/Placeholder.h)
