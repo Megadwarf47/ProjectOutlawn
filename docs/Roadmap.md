@@ -28,6 +28,6 @@
 
 # Alpha 0.2
 
-[🟨] [Tutorial](/GhidraStuff/TheNewStuff/TutorialNew.md) on [categories](/docs/GhidraStuff/BreeMsgs/Categories.h) that `Bree` is okay with 
+[🟨] [Tutorial](/docs/GhidraStuff/TheNewStuff/TutorialNew.md) on [categories](/docs/GhidraStuff/BreeMsgs/Categories.h) that `Bree` is okay with 
 
 [❌] RCON stuff
