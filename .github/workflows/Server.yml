@@ -48,16 +48,16 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: DLL
-          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build/Kyber.dll
+          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build/Release/Kyber.dll
 
       - name: Upload Launcher
         uses: actions/upload-artifact@v4
         with:
           name: Launcher
-          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build/Launcher/KyberLauncher.exe
+          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build/Launcher/Release/KyberLauncher.exe
 
       - name: Upload Installer
         uses: actions/upload-artifact@v4
         with:
           name: Installer
-          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build/Installer/KyberInstaller.exe
+          path: D:/a/ProjectOutlawn/ProjectOutlawn/ProjectOutlawn/src/Server/build/Installer/Release/KyberInstaller.exe
