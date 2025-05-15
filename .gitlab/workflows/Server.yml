@@ -26,8 +26,11 @@ build_server:
 
     - echo "Build Server"
     - call "C:\MyVS\VC\Auxiliary\Build\vcvars64.bat" && ^
-      cmake -S ProjectOutlawn\src\Server -B ProjectOutlawn\src\Server\build -G "NMake Makefiles" && ^
-      cmake --build ProjectOutlawn\src\Server\build --config Release
+      cd ProjectOutlawn/src/Server
+      mkdir build
+      cd build
+      cmake .. -G "Visual Studio 17 2022"
+      cmake --build . --config Release
 
   artifacts:
     paths:
