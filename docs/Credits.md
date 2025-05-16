@@ -24,7 +24,9 @@
 
 `@Nerosus`
 
-`@Twig6943` misc
+### Miscellaneous
+
+`@Twig6943`
 
 ### Special Thanks
 
