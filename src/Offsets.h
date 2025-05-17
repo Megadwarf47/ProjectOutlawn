@@ -7,8 +7,8 @@ Main::Init => 0x14000B070
 Main::SpawnServer => 0x140011AE0
 GameLoopInfo::Init => 0x14000AFB0
 
-BFSERVERSETTINGS => 0x1421EFE10 // Not sure about this
-BFDedicatedServerSettings => 0x141C472E8 // Not sure about this
+BFSERVERSETTINGS => 0x1421EFE10
+BFDedicatedServerSettings => 0x141C472E8
 
 //MULTI PURPOSE
 ServerPlayer::SetTeamId => 0x140767A60
