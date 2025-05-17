@@ -1,5 +1,7 @@
 //Offsets by Silkker
 
+ImageBase => 140000000
+
 //DEDI SERVER
 Main::Init => 0x14000B070
 Main::SpawnServer => 0x140011AE0
@@ -32,17 +34,13 @@ OnlineManager::OnGotDisconnected => 0x14055D3B0
 //Offsets to find (Not sure if all of these exist)
 
 APPLY_SETTINGS => ? //Closest thing: "ApplySettingOnCreation" => 14168b748
-
 CLIENT_INIT_NETWORK => ? //Closest thing: "Network" => 141578778
-
 GET_CLIENT_INSTANCE => ? //Closest thing: "GetClientRect" => 141bc9ece
-
 SERVER_START => ? //Closest thing: "ServerStartPointEntity" => 14170a7d0
 SERVER_CONSTRUCTOR => ? //Closest thing: => 
 SERVER_PATCH => ? //Closest thing: => 
 SERVER_PATCH2 => ? //Closest thing: => 
 SERVERPLAYERMANAGER => ? //Closest thing: "ServerPlayerManager" => 14170eb80 
 SERVERGAMECONTEXT_INSTANCE => ? //Closest thing: => 
-
 GLOBAL_CLIENT => ? //Closest thing: => "Client" => 1415ad418
 EXECUTIONCONTEXT_GETNATIVEDATAPATH => ? //Closest thing: "dataPath" => 1416725f0
