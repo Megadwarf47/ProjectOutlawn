@@ -29,7 +29,9 @@ It's not ready yet. We're trying to have the alpha release as soon as possible.
 ### What's needed to contribute?
 Assembly/Reverse engineering knowledge > Server
 
-Python/C++ > Launcher
+Reversing => Server
+
+Python/C++ => Launcher
 
 ### What are the system requirements to run the server?
 An ea account with the game.
