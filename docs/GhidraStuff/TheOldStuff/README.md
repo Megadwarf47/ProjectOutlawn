@@ -1,5 +1,3 @@
-# GhidraStuff
-
 # XRefs
 
 Starting XREF: `140358c10`
@@ -16,7 +14,7 @@ Follow this rule when looking for new `XRefs` is to check the first contructor
 
 ![XREFS](/docs/GhidraStuff/TheOldStuff/Images/README/1.png)
 
-# [String](https://github.com/Twig6943/CrzyecksGhidraNotes/blob/main/String.md)
+# [String](/docs/GhidraStuff/TheOldStuff/String.md)
 
 # getType
 
