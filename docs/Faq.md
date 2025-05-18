@@ -29,7 +29,7 @@ It's not ready yet. We're trying to have the alpha release as soon as possible.
 ### What's needed to contribute?
 Assembly/Reverse engineering knowledge > Server
 
-Reversing => Server
+Reversing skill => Server
 
 Python/C++ => Launcher
 
