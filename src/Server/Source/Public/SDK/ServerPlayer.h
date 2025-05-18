@@ -182,7 +182,7 @@ namespace fb {
 		
 		
 		//BF3 PDB:
-		//bool m_reviverPlayerIdValid;
+	//bool m_reviverPlayerIdValid;
         //unsigned int m_reviverPlayerId;
         //unsigned int m_reviveePlayerId;
     };
