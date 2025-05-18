@@ -4,9 +4,9 @@
 
 2.Search for the message you want to do inside `Data Type Manager` (It'll always be inside `fb`)
 
-<img src="/docs/GhidraStuff/TheNewStuff/Images/DataTypeManager.png">
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/DataTypeManager.png">
 
-<img src="/docs/GhidraStuff/TheNewStuff/Images/Structure2.png">
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Structure2.png">
 
 (Remove the spaces ghidra makes on DataTypes on the header file but keep them on ghidra)
 
@@ -37,11 +37,11 @@ namespace fb {
 
 ### The class name on the 2nd line changes.
 
-<img src="/docs/GhidraStuff/TheNewStuff/Images/Classes1.png" width="600"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Classes1.png" width="600"/>
 
 ### The category (`fb::ServerPlayer*`) and the structure name (`m_player`) also changes depending on the class
 
-<img src="/docs/GhidraStuff/TheNewStuff/Images/Category1.png" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Category1.png" width="400"/>
 
 # Here's a valid format that has stuff changed to give you an idea
 
@@ -65,33 +65,33 @@ You gotta compare the constructors's messages
 
 On bf3 pdb just do `G` to search 
 
-<img src="/docs/GhidraStuff/TheNewStuff/Images/bf3search.png" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/bf3search.png" width="400"/>
 
 On pvz go to `Window` > `Defined Strings`
 
-<img src="/docs/GhidraStuff/TheNewStuff/Images/pvzsearch.png" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/pvzsearch.png" width="400"/>
 
 On pvz somehow find the constructor (The path might be Only>bottom>middle right)
 
 Example constructor
 
-<img src="/docs/GhidraStuff/TheNewStuff/Images/examplecontructor.png" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/examplecontructor.png" width="400"/>
 
 Rename it to `fb::string::string` like so
 
-<img src="/docs/GhidraStuff/TheNewStuff/Images/fb_string_string.png" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/fb_string_string.png" width="400"/>
 
 Now you gotta `Edit function signature`
 
-<img src="/docs/GhidraStuff/TheNewStuff/Images/edit_function_signature.jpg" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/edit_function_signature.jpg" width="400"/>
 
 Change the calling convention to `__thiscall`
 
-<img src="/docs/GhidraStuff/TheNewStuff/Images/__thiscall.png" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/__thiscall.png" width="400"/>
 
 Then remove the param_1
 
-<img src="/docs/GhidraStuff/TheNewStuff/Images/param1.png" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/param1.png" width="400"/>
 
 
 
