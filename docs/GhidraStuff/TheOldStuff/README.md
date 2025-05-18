@@ -46,7 +46,7 @@ Should end up looking like this
 
 # Constructor
 
-`Constructor (Thing next to undefinedNUMBER` (The number is usually8 ) 
+`Constructor (Thing next to undefinedNUMBER)` (The number is usually 8 ) 
 
 Name it to `fb::string::string`
 
