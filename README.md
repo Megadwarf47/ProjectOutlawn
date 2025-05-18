@@ -1,6 +1,6 @@
 # Project Outlawn ✊
 
-<img src="Outlawn.jpg" width="800"/>
+<img src="/assets/Outlawn.jpg" width="800"/>
 
 ### Private servers for plants vs zombies garden warfare.
 

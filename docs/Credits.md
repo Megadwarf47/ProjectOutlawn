@@ -1,6 +1,6 @@
 # Project Outlawn ✊
 
-<img src="/Outlawn1.png" width="600"/>
+<img src="/assets/Outlawn1.png" width="600"/>
 
 ### Server
 

@@ -20,7 +20,7 @@
 
 [✅] Get [`ServerPlayer`](/docs/GhidraStuff/BreeMsgs/Categories.h#L1086) done
 
-[🟨] Finish [Offsets](https://github.com/Twig6943/ProjectOutlawn/blob/main/src/Offsets.h)
+[🟨] Finish [Offsets](/src/Offsets.h)
 
 [🟨] A Server that gets in-game
 
@@ -28,6 +28,6 @@
 
 # Alpha 0.2
 
-[🟨] [Tutorial](/docs/GhidraStuff/TheNewStuff/TutorialNew.md) on [categories](/docs/GhidraStuff/BreeMsgs/Categories.h) that `Bree` is okay with 
+[🟨] [Tutorial](/docs/GhidraStuff/MessagesTutorial/TutorialNew.md) on [categories](/docs/GhidraStuff/Messages/Categories.h) that's good.
 
 [❌] RCON stuff

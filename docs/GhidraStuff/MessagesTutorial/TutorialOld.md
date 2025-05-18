@@ -1,4 +1,4 @@
-# How to do messages for [categories](https://github.com/Twig6943/ProjectOutlawn/blob/main/GhidraNotes/BreeMsgs/Categories.h)
+# How to do messages for [categories](https://github.com/Twig6943/ProjectOutlawn/blob/main/GhidraNotes/Messages/Categories.h)
 
 1.Open up bf3 pdb in ghidra
 

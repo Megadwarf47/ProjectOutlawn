@@ -4,9 +4,9 @@
 
 # [.cpp files](/src/Server/Source/Private/SDK/)
 
-[The right format](/docs/GhidraStuff/BreeMsgs/RightFormatExample.h)
+[The right format](/docs/GhidraStuff/Messages/RightFormatExample.h)
 
-[Categories](/docs/GhidraStuff/BreeMsgs/Categories.h) > [Progress](/src/Server/Source/Public/SDK)
+[Categories](/docs/GhidraStuff/Messages/Categories.h) > [Progress](/src/Server/Source/Public/SDK)
 
 # Files written from scratch:
 
