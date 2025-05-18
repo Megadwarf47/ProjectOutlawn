@@ -8,7 +8,7 @@
 
 4.Click to `Edit Data Type`
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/TutorialOld/1.png">
+<img src="/docs/GhidraStuff/TheOldStuff/Images/MessagesTutorialOld/1.png">
 
 5.Open up PVZ executable in another ghidra instance and Open up `Data Type Manager` on that instance
 
@@ -20,32 +20,32 @@
 
 9.Give it the same name from bf3 pdb
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/TutorialOld/2.png">
+<img src="/docs/GhidraStuff/TheOldStuff/Images/MessagesTutorialOld/2.png">
 
 9.Just copy stuff from pdb and to their respective counterparts inside pvz
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/TutorialOld/3.png">
+<img src="/docs/GhidraStuff/TheOldStuff/Images/MessagesTutorialOld/3.png">
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/TutorialOld/4.png">
+<img src="/docs/GhidraStuff/TheOldStuff/Images/MessagesTutorialOld/4.png">
 
 10.Enable pack
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/TutorialOld/5.png">
+<img src="/docs/GhidraStuff/TheOldStuff/Images/MessagesTutorialOld/5.png">
 
 11.Save
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/TutorialOld/6.png">
+<img src="/docs/GhidraStuff/TheOldStuff/Images/MessagesTutorialOld/6.png">
 
 12.Right click the function on the decompiler and pick `Edit Function Signature`
 
 13.Pick `__thiscall` as the `Calling Convention`
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/TutorialOld/7.png">
+<img src="/docs/GhidraStuff/TheOldStuff/Images/MessagesTutorialOld/7.png">
 
 14.Pick the first `Index` and Enable `Use Custom Storage`
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/TutorialOld/8.png">
+<img src="/docs/GhidraStuff/TheOldStuff/Images/MessagesTutorialOld/8.png">
 
 15.Rename the `Datatype` of the first `Index` to its `Name + *` (Ends up as `Message*` in this case)
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/TutorialOld/9.png">
+<img src="/docs/GhidraStuff/TheOldStuff/Images/MessagesTutorialOld/9.png">

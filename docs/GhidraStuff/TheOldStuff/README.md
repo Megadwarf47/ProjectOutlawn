@@ -12,7 +12,7 @@ Follow this rule when looking for new `XRefs` is to check the first contructor
 
 `FB::Message:Message(param_1,0x9c775c5c,0x628e72e7,0xff);` //First paramiter is named param_1 and is inside paranthesis
 
-![XREFS](/docs/GhidraStuff/TheOldStuff/Images/README/1.png)
+<img src="/docs/GhidraStuff/TheOldStuff/Images/README/1.png">
 
 # [String](/docs/GhidraStuff/TheOldStuff/String.md)
 
@@ -24,11 +24,11 @@ getType is always the first member of the vftable
 
 Double click to  `LAB_1413f2920`  into a function by pressing `F` and then rename that function to `fb::string::getType`
 
-![gettype](/docs/GhidraStuff/TheOldStuff/Images/README/2.png)
+<img src="/docs/GhidraStuff/TheOldStuff/Images/README/2.png">
 
 Should end up looking like this
 
-![image](/docs/GhidraStuff/TheOldStuff/Images/README/3.png)
+<img src="/docs/GhidraStuff/TheOldStuff/Images/README/3.png">
 
 
 # Vftable
@@ -37,12 +37,11 @@ Should end up looking like this
 
 the vftable is this address in the constructor, name it to `fb::string::vftable`
 
-![image](/docs/GhidraStuff/TheOldStuff/Images/README/4.png)
+<img src="/docs/GhidraStuff/TheOldStuff/Images/README/4.png">
 
 Should end up looking like this
 
-![image](/docs/GhidraStuff/TheOldStuff/Images/README/5.png)
-
+<img src="/docs/GhidraStuff/TheOldStuff/Images/README/5.png">
 
 # Constructor
 
@@ -50,5 +49,5 @@ Should end up looking like this
 
 Name it to `fb::string::string`
 
-![image](/docs/GhidraStuff/TheOldStuff/Images/README/6.png)
+<img src="/docs/GhidraStuff/TheOldStuff/Images/README/6.png">
 
