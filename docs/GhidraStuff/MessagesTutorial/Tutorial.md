@@ -1,12 +1,12 @@
-# How to do messages for [categories](https://github.com/Twig6943/ProjectOutlawn/blob/main/docs/GhidraStuff/Messages/Categories.h)
+# How to do messages for [categories](/docs/GhidraStuff/Messages/Categories.h)
 
 1.Open up bf3 pdb in ghidra
 
 2.Search for the message you want to do inside `Data Type Manager` (It'll always be inside `fb`)
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/DataTypeManager.png">
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/1.png">
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/Structure2.png">
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/2.png">
 
 (Remove the spaces ghidra makes on DataTypes on the header file but keep them on ghidra)
 
@@ -37,11 +37,11 @@ namespace fb {
 
 ### The class name on the 2nd line changes.
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/Classes1.png" width="600"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/3.png" width="600"/>
 
 ### The category (`fb::ServerPlayer*`) and the structure name (`m_player`) also changes depending on the class
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/Category1.png" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/4.png" width="400"/>
 
 # Here's a valid format that has stuff changed to give you an idea
 
@@ -65,35 +65,30 @@ You gotta compare the constructors's messages
 
 On bf3 pdb just do `G` to search 
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/bf3search.png" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/5.png" width="400"/>
 
 On pvz go to `Window` > `Defined Strings`
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/pvzsearch.png" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/6.png" width="400"/>
 
 On pvz somehow find the constructor (The path might be Only>bottom>middle right)
 
 Example constructor
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/examplecontructor.png" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/7.png" width="400"/>
 
 Rename it to `fb::string::string` like so
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/fb_string_string.png" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/8.png" width="400"/>
 
 Now you gotta `Edit function signature`
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/edit_function_signature.jpg" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/9.jpg" width="400"/>
 
 Change the calling convention to `__thiscall`
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/__thiscall.png" width="400"/>
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/10.png" width="400"/>
 
 Then remove the param_1
 
-<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/param1.png" width="400"/>
-
-
-
-
-
+<img src="/docs/GhidraStuff/MessagesTutorial/Images/Tutorial/11.png" width="400"/>
