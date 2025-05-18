@@ -40,5 +40,5 @@ SERVER_PATCH => ? //Closest thing: =>
 SERVER_PATCH2 => ? //Closest thing: => 
 SERVERPLAYERMANAGER => ? //Closest thing: "ServerPlayerManager" => 14170eb80 
 SERVERGAMECONTEXT_INSTANCE => ? //Closest thing: => 
-GLOBAL_CLIENT => ? //Closest thing: => "Client" => 1415ad418
+GLOBAL_CLIENT => ? //Closest thing: => "Global" => 141836928 & "Client" => 1415ad418
 EXECUTIONCONTEXT_GETNATIVEDATAPATH => ? //Closest thing: "dataPath" => 1416725f0
