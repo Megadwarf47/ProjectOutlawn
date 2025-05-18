@@ -10,12 +10,12 @@
 
 ### This project is highly work in progress and the only reason its public is that in case it gets cancelled people can pick up development where it was left off. Currently it can't even run a functioning server. Don't get your hopes up ❗
 
+# [Credits 📜](/docs/Credits.md)
+
 # [Discord server 💬](https://discord.gg/WuM4hWNUND)
+
+# [Documentation 📄](/docs)
 
 # [Faq 🙋‍♂️](/docs/Faq.md)
 
 # [Roadmap 📋](/docs/Roadmap.md)
-
-# [Documentation 📄](/docs)
-
-# [Credits 📜](/docs/Credits.md)
