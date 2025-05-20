@@ -16,6 +16,6 @@
 
 # [Documentation 📄](/docs)
 
-# [Faq 🙋‍♂️](/docs/Faq.md)
+# [Faq 📌](/docs/Faq.md)
 
 # [Roadmap 📋](/docs/Roadmap.md)
