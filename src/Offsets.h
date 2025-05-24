@@ -31,7 +31,7 @@ GET_SETTINGS_OBJECT => 0x1403BCEA0 //SettingsManager::GetSettingsObject
 
 //Program.h
 GLOBAL_CLIENT => ? //
-GLOBAL_SETTINGS_MANAGER => ? //
+GLOBAL_SETTINGS_MANAGER => 0x141eac0b0 //
 GET_CLIENT_INSTANCE => ? //Closest thing: GetClientRect => 0x141bc9ece
 
 //PlatformUtils.cpp
